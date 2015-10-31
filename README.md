@@ -4,6 +4,6 @@
  - Lisa Peng
  - Mingtao Fu
  - Xiujia Zhao
- - Yingtian Zou  have cloned
+ - Yingtian Zou  have cloned-->adobe
 
 It's a personal blog written in Java.
