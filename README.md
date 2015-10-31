@@ -2,7 +2,7 @@
 ##The works of OOP course.
 >Members(ordered by first letter):
  - Lisa Peng
- - Mingtao Fu
+ - Mingtao Fua
  - Xiujia Zhao
  - Yingtian Zou
 
