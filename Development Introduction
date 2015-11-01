@@ -1,0 +1,18 @@
+Development Introduction
+
+Please use TomEE(jax-rs) instead of TomCat, I'm sorry.
+The configure method is same as TomCat.
+
+All source documents are in "src" that contains 3 packages, including "DA", "PD" and "Service".
+Service package contains the classes related to Front End.The classes are composed of some block written as
+    "Path('api/greeting')".So we can execute a function through visiting the Url "localhost:8080/api/greeting".
+    Please make sure that "api" is in every Url, such as "api/login", "api/article/1", etc.
+PD package contains the main classes like "User", "Article", etc.
+DA package contains the classes related to database(MySQL).
+
+About Git
+Please run "git pull" before you push your code.
+
+Please introduce the module when you commit.
+For example, when you finish the "publish article" module, you should commit as
+    "git commit -m 'article: publish article'".

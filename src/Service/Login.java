@@ -16,7 +16,7 @@ import java.util.Date;
 /**
  * 示例
  */
-@Path("greeting")
+@Path("api/greeting")
 public class Login {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
