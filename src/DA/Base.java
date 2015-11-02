@@ -10,8 +10,8 @@ public class Base {
 
 	public static Connection initialize() {
 		try {
-			conn = DriverManager.getConnection("jdbc:mysql://localhost/test?" +
-							"user=root&password=ningganmabu");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost/JavaBlog?" +
+							"user=hust&password=diaodiaodiao");
 
 			statement = conn.createStatement();         //??
 		} catch (SQLException ex) {
@@ -31,8 +31,34 @@ public class Base {
 		} catch (SQLException e) {
 			System.out.println(e);
 		}
-	
+
 	}
+
+    public static void createTables() {
+        PreparedStatement preparedStatement;
+        String[] sqlArr = {
+                "create table User(Id varchar(32) not null, Name varchar(32) not null, Pwd varchar(32) not null, " +
+                        "Date timestamp not null default 0, Type varchar(16) not null, Intro text, " +
+                        "LogoUrl varchar(64) default '/static/logos/default', primary key (Id))",
+                "create table Article(ID int not null auto_increment, Title varchar(64) not null, Content text, " +
+                        "Time timestamp not null default 0, ModifyTime timestamp not null, primary key (Id))",
+                "create table Comment(Id int not null auto_increment, Content text not null, Time timestamp not null default 0, " +
+                        "ArticleId int not null, User varchar(32) not null, primary key (Id), " +
+                        "foreign key (User) references User(Id))",
+                "create table Response(Id int not null auto_increment, Content text not null, Time timestamp not null default 0, " +
+                        "CommentId int not null, FromUser varchar(32) not null, ToUser varchar(32) not null, primary key (Id), " +
+                        "foreign key (FromUser) references User(Id), foreign key (ToUser) references User(Id) )"
+        };
+        //依次执行各语句以建表，具体执行在CreateTables.java中
+        for(int i = 0; i < sqlArr.length; i++) {
+            try {
+                preparedStatement = conn.prepareStatement(sqlArr[i]);
+                preparedStatement.execute();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+        }
+    }
 }
 
 /*
