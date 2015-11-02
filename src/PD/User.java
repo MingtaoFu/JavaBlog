@@ -35,6 +35,11 @@ public class User {
         this.logoUrl = logoUrl;
     }
 
+    //验证
+    public boolean validate() {
+        return false;
+    }
+
     public String getId() {
         return id;
     }
