@@ -50,8 +50,8 @@ public class Comment {
     public void add(){
         CommentDA.add(this);
     }
-//    public void delete(){
-//        CommentDA.delete(this);
-//    }
+    public static void delete(String ID){
+        CommentDA.delete(ID);
+    }
 
 }

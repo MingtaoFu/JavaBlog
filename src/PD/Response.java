@@ -53,7 +53,7 @@ public class Response {
     public void add(){
         ResponseDA.add(this);
     }
-//    public void delete(){
-//        ResponseDA.delete(this);
-//    }
+    public static void delete(String ID){
+        ResponseDA.delete(ID);
+    }
 }
