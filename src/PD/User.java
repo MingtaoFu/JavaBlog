@@ -3,7 +3,7 @@ package PD;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.Date;
+import java.sql.Timestamp;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -20,12 +20,12 @@ public class User {
     @XmlElement(name = "intro")
     String intro;
     @XmlElement(name = "registerTime")
-    Date date;
+    Timestamp date;
     @XmlElement(name = "logoUrl")
     String logoUrl;
 
     public User() {}
-    public User(String id, String name, String pwd, String type, String intro, Date date, String logoUrl) {
+    public User(String id, String name, String pwd, String type, String intro, Timestamp date, String logoUrl) {
         this.id = id;
         this.name = name;
         this.pwd = pwd;
@@ -80,11 +80,11 @@ public class User {
         this.intro = intro;
     }
 
-    public Date getDate() {
+    public Timestamp getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Timestamp date) {
         this.date = date;
     }
 

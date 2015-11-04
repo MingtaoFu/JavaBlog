@@ -2,7 +2,7 @@ package PD;
 
 import DA.ResponseDA;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  * Created by mingtao on 15-11-4.
@@ -10,7 +10,7 @@ import java.util.Date;
 public class Response {
     String ID;
     String content;
-    Date time;
+    Timestamp time;
     String commentID;
 
     public String getID() {
@@ -21,7 +21,7 @@ public class Response {
         return content;
     }
 
-    public Date getTime() {
+    public Timestamp getTime() {
         return time;
     }
 
@@ -40,7 +40,7 @@ public class Response {
     String fromUserID;
     String toUserID;
 
-    public Response(String ID, String content, Date time, String commentID, String fromUserID, String toUserID) {
+    public Response(String ID, String content, Timestamp time, String commentID, String fromUserID, String toUserID) {
         this.ID = ID;
         this.content = content;
         this.time = time;

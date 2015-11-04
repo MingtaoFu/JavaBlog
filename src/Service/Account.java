@@ -11,6 +11,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -35,7 +36,7 @@ public class Account {
         mingtao.setPwd("password");
         mingtao.setType("normal");
         mingtao.setIntro("a student");
-        mingtao.setDate(new Date());
+        mingtao.setDate(new Timestamp(System.currentTimeMillis()));
         mingtao.setLogoUrl("default");
         return mingtao;
     }

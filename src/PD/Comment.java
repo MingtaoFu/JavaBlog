@@ -2,7 +2,7 @@ package PD;
 
 import DA.CommentDA;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 /**
  * Created by mingtao on 15-11-4.
@@ -11,7 +11,7 @@ public class Comment {
     String ID;
     String articleID;
     String content;
-    Date time;
+    Timestamp time;
 
     public String getID() {
         return ID;
@@ -25,7 +25,7 @@ public class Comment {
         return content;
     }
 
-    public Date getTime() {
+    public Timestamp getTime() {
         return time;
     }
 
@@ -35,7 +35,7 @@ public class Comment {
 
     String userID;
 
-    public Comment(String ID, String articleID, String content, Date time, String userID) {
+    public Comment(String ID, String articleID, String content, Timestamp time, String userID) {
         this.ID = ID;
         this.articleID = articleID;
         this.content = content;

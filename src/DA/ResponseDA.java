@@ -2,9 +2,7 @@ package DA;
 
 import PD.Response;
 
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 /**
  * Created by mingtao on 15-11-4.

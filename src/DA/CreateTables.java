@@ -3,6 +3,7 @@ package DA;
 import PD.Comment;
 import PD.Response;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 /**
@@ -17,9 +18,9 @@ import java.util.Date;
 public class CreateTables {
     public static void main(String[] args) {
         Base.initialize();
-//        Base.createTables();
-//        Base.terminate();
-   //     CommentDA.add(new Comment("1","2","3",new Date(),"4"));
-     //   ResponseDA.add(new Response("1","2",new Date(),"3","4","5"));
+//      Base.createTables();
+//      Base.terminate();
+     //   CommentDA.add(new Comment("1","2","3",new Timestamp(System.currentTimeMillis()),"1"));
+    //    ResponseDA.add(new Response("1","2",new Timestamp(System.currentTimeMillis()),"3","4","5"));
     }
 }
