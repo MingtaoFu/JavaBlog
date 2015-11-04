@@ -1,10 +1,15 @@
 package PD;
 
+import DA.UserDA;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import java.sql.SQLException;
 import java.util.Date;
+import java.util.Random;
 import javax.xml.bind.annotation.XmlRootElement;
+import redis.clients.jedis.Jedis;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "userData")
@@ -33,6 +38,27 @@ public class User {
         this.intro = intro;
         this.date = date;
         this.logoUrl = logoUrl;
+    }
+
+    //生成token
+    public String generateToken() {
+        String base = "abcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < 8; i++) {
+            int number = random.nextInt(base.length());
+            sb.append(base.charAt(number));
+        }
+        return sb.toString();
+    }
+
+    public static int add(User user) {
+        try {
+            int status = UserDA.add(user);
+            return status;
+        } catch (Exception e) {
+            return 0;       //已存在
+        }
     }
 
     //验证
