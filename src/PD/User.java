@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.Date;
 import java.util.Random;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -25,12 +26,12 @@ public class User {
     @XmlElement(name = "intro")
     String intro;
     @XmlElement(name = "registerTime")
-    Date date;
+    Timestamp date;
     @XmlElement(name = "logoUrl")
     String logoUrl;
 
     public User() {}
-    public User(String id, String name, String pwd, String type, String intro, Date date, String logoUrl) {
+    public User(String id, String name, String pwd, String type, String intro, Timestamp date, String logoUrl) {
         this.id = id;
         this.name = name;
         this.pwd = pwd;
@@ -110,7 +111,7 @@ public class User {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(Timestamp date) {
         this.date = date;
     }
 
