@@ -9,8 +9,8 @@ import java.sql.SQLException;
  */
 public class ResponseDA {
     static public void add(Response response){
-        String sql="INSERT INTO response(Id,Content,Time,CommentId,FromUser,ToUser)" +
-                "VALUES ('"+response.getID()+"','"+response.getContent()+"','"+
+        String sql="INSERT INTO response(Content,Time,CommentId,FromUser,ToUser)" +
+                "VALUES ('"+response.getContent()+"','"+
                 response.getTime()+"','"+response.getCommentID()+"','"+
                 response.getFromUserID()+"','"+response.getToUserID()+"')";
         try{
@@ -22,4 +22,7 @@ public class ResponseDA {
             System.out.println("VendorError: " + ex.getErrorCode());
         }
     }
+//    static public void delete(Response response){
+//
+//    }
 }

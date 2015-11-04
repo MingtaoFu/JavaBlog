@@ -10,8 +10,8 @@ import java.text.DateFormatSymbols;
  */
 public class CommentDA {
     static public void add(Comment comment){
-        String sql="INSERT INTO comment(Id,Content,Time,ArticleId,User)" +
-                "VALUES ('"+comment.getID()+"','"+comment.getContent()+"','"+
+        String sql="INSERT INTO comment(Content,Time,ArticleId,User)" +
+                "VALUES ('"+comment.getContent()+"','"+
                 comment.getTime()+"','"+comment.getArticleID()+"','"+comment.getUserID()+"')";
         try{
             Base.statement.executeUpdate(sql);
@@ -22,4 +22,7 @@ public class CommentDA {
             System.out.println("VendorError: " + ex.getErrorCode());
         }
     }
+//    static public void delete(Comment comment){
+//
+//    }
 }

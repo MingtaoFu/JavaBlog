@@ -20,7 +20,7 @@ public class CreateTables {
         Base.initialize();
 //      Base.createTables();
 //      Base.terminate();
-     //   CommentDA.add(new Comment("1","2","3",new Timestamp(System.currentTimeMillis()),"1"));
-    //    ResponseDA.add(new Response("1","2",new Timestamp(System.currentTimeMillis()),"3","4","5"));
+//      new Comment("2","3",new Timestamp(System.currentTimeMillis()),"1").add();
+//      new Response("2",new Timestamp(System.currentTimeMillis()),"3","4","5").add();
     }
 }

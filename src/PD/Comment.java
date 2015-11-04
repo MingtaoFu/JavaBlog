@@ -12,6 +12,8 @@ public class Comment {
     String articleID;
     String content;
     Timestamp time;
+    String userID;
+
 
     public String getID() {
         return ID;
@@ -33,18 +35,23 @@ public class Comment {
         return userID;
     }
 
-    String userID;
 
-    public Comment(String ID, String articleID, String content, Timestamp time, String userID) {
+    public void setID(String ID) {
         this.ID = ID;
+    }
+
+    public Comment(String articleID, String content, Timestamp time, String userID) {
         this.articleID = articleID;
         this.content = content;
         this.time = time;
         this.userID = userID;
     }
 
-    public void add(Comment comment){
-        CommentDA.add(comment);
+    public void add(){
+        CommentDA.add(this);
     }
+//    public void delete(){
+//        CommentDA.delete(this);
+//    }
 
 }

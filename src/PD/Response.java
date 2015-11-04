@@ -12,6 +12,8 @@ public class Response {
     String content;
     Timestamp time;
     String commentID;
+    String fromUserID;
+    String toUserID;
 
     public String getID() {
         return ID;
@@ -37,18 +39,21 @@ public class Response {
         return toUserID;
     }
 
-    String fromUserID;
-    String toUserID;
-
-    public Response(String ID, String content, Timestamp time, String commentID, String fromUserID, String toUserID) {
+    public void setID(String ID) {
         this.ID = ID;
+    }
+
+    public Response( String content, Timestamp time, String commentID, String fromUserID, String toUserID) {
         this.content = content;
         this.time = time;
         this.commentID = commentID;
         this.fromUserID = fromUserID;
         this.toUserID = toUserID;
     }
-    public void add(Response response){
-        ResponseDA.add(response);
+    public void add(){
+        ResponseDA.add(this);
     }
+//    public void delete(){
+//        ResponseDA.delete(this);
+//    }
 }
