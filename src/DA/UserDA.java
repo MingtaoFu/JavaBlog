@@ -3,7 +3,7 @@ import PD.User;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
+import java.sql.Timestamp;
 
 public class UserDA {
     static User user;
@@ -11,7 +11,7 @@ public class UserDA {
     static String id;
     static String name;
     static String pwd;
-    static Date date;
+    static Timestamp date;
     static String type;
     static String intro;
     static String logoUrl;
