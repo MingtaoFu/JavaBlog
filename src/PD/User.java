@@ -107,7 +107,7 @@ public class User {
         this.intro = intro;
     }
 
-    public Date getDate() {
+    public Timestamp getDate() {
         return date;
     }
 
