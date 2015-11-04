@@ -1,14 +1,11 @@
 package Service;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
+import javax.ws.rs.*;
+
 import PD.*;
 
-import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
-import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.sql.Timestamp;
@@ -20,6 +17,24 @@ import java.util.Date;
 
 @Path("api/account")
 public class Account {
+
+    @POST
+    @Path("register")
+    @Produces(MediaType.APPLICATION_JSON)
+    public RT_Register register(@FormParam("id") String id,
+                         @FormParam("name") String name,
+                         @FormParam("pwd") String pwd) {
+        User user = new User(id, name, pwd, "normal", null, new Timestamp(System.currentTimeMillis()), null);
+        int status = User.add(user);
+        RT_Register register;
+        if(1 == status) {
+            register = new RT_Register(1, user.generateToken());
+        } else {
+            register = new RT_Register(status, null);
+        }
+
+        return register;
+    }
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)

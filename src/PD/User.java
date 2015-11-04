@@ -1,6 +1,7 @@
 package PD;
 
 import DA.UserDA;
+import DA.JedisDA;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -50,7 +51,11 @@ public class User {
             int number = random.nextInt(base.length());
             sb.append(base.charAt(number));
         }
-        return sb.toString();
+        String token = sb.toString();
+
+        JedisDA.set(this.id, token);
+
+        return token;
     }
 
     public static int add(User user) {
