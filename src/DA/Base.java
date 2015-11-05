@@ -4,6 +4,7 @@ import java.sql.*;
 import javax.swing.table.DefaultTableModel;
 import java.util.Objects;
 import java.util.ArrayList;
+
 public class Base {
     static Connection conn;
     static Statement statement;
@@ -43,7 +44,7 @@ public class Base {
                         "LogoUrl varchar(64) default '/static/logos/default', primary key (Id))",
                 "create table Article(ID int not null auto_increment, Title varchar(64) not null, Content text, " +
                         "Time timestamp not null default CURRENT_TIMESTAMP, ModifyTime timestamp not null, primary key (Id))",
-                "create table Comment(Id int not null auto_increment, Content text not null, Time timestamp not null default CURRENT_TIMESTAMP, " +
+                "create table Comment(Id int not null auto_increment, Content text not null, Time timestamp not null default ON UPDATE CURRENT_TIMESTAMP, " +
                         "ArticleId int not null, User varchar(32) not null, primary key (Id), " +
                         "foreign key (User) references User(Id))",
                 "create table Response(Id int not null auto_increment, Content text not null, Time timestamp not null default CURRENT_TIMESTAMP, " +
