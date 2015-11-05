@@ -1,18 +1,251 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e0c46ec5-456b-43b7-971c-1c479a1a5a5b" name="Default" comment="DA: add UserDA">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PD/Comment.java" afterPath="$PROJECT_DIR$/src/PD/Comment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DA/CommentDA.java" afterPath="$PROJECT_DIR$/src/DA/CommentDA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DA/CreateTables.java" afterPath="$PROJECT_DIR$/src/DA/CreateTables.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PD/Message.java" afterPath="$PROJECT_DIR$/src/PD/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DA/MessageDA.java" afterPath="$PROJECT_DIR$/src/DA/MessageDA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PD/Response.java" afterPath="$PROJECT_DIR$/src/PD/Response.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DA/ResponseDA.java" afterPath="$PROJECT_DIR$/src/DA/ResponseDA.java" />
+    <list default="true" id="e0c46ec5-456b-43b7-971c-1c479a1a5a5b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/editorTest.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/af.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/bn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/bs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/cy.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/eo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/fo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/fr-ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/gu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ka.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ku.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/mk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/mn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/no.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/si.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/sl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/sq.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/sr-latn.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/tt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/ug.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/vi.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/adapters/jquery.js" afterPath="$PROJECT_DIR$/web/CKEditor/adapters/jquery.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/build-config.js" afterPath="$PROJECT_DIR$/web/CKEditor/build-config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/ckeditor.js" afterPath="$PROJECT_DIR$/web/CKEditor/ckeditor.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/config.js" afterPath="$PROJECT_DIR$/web/CKEditor/config.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/contents.css" afterPath="$PROJECT_DIR$/web/CKEditor/contents.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/el.js" afterPath="$PROJECT_DIR$/web/CKEditor/lang/el.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/en-au.js" afterPath="$PROJECT_DIR$/web/CKEditor/lang/en-au.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/en-ca.js" afterPath="$PROJECT_DIR$/web/CKEditor/lang/en-ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/en-gb.js" afterPath="$PROJECT_DIR$/web/CKEditor/lang/en-gb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/en.js" afterPath="$PROJECT_DIR$/web/CKEditor/lang/en.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/zh-cn.js" afterPath="$PROJECT_DIR$/web/CKEditor/lang/zh-cn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/lang/zh.js" afterPath="$PROJECT_DIR$/web/CKEditor/lang/zh.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/a11yhelp.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/af.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/af.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/ar.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/ar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/bg.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/bg.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/ca.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/cs.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/cs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/cy.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/cy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/da.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/da.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/de.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/de.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/el.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/el.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/en-gb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/en.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/en.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/eo.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/eo.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/es.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/es.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/et.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/et.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/fa.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/fa.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/fi.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/fi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/fo.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/fo.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/fr.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/fr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/gl.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/gl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/gu.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/gu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/he.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/he.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/hi.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/hi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/hr.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/hr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/hu.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/hu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/id.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/id.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/it.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/it.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/ja.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/ja.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/km.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/km.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/ko.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/ko.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/ku.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/ku.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/lt.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/lt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/lv.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/lv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/mk.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/mk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/mn.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/mn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/nb.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/nb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/nl.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/nl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/no.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/no.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/pl.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/pl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/pt-br.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/pt.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/pt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/ro.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/ro.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/ru.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/ru.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/si.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/si.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/sk.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/sk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/sl.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/sl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/sq.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/sq.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/sr.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/sr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/sv.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/sv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/th.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/th.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/tr.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/tr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/tt.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/tt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/ug.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/ug.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/uk.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/uk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/vi.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/vi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/a11yhelp/dialogs/lang/zh.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/a11yhelp/dialogs/lang/zh.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/about/dialogs/about.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/about/dialogs/about.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/about/dialogs/logo_ckeditor.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/about/dialogs/logo_ckeditor.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/clipboard/dialogs/paste.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/clipboard/dialogs/paste.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/dialog/dialogDefinition.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/dialog/dialogDefinition.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/icons.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/icons.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/icons_hidpi.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/icons_hidpi.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/image/dialogs/image.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/image/dialogs/image.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/image/images/noimage.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/image/images/noimage.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/link/dialogs/anchor.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/link/dialogs/anchor.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/link/dialogs/link.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/link/dialogs/link.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/link/images/anchor.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/link/images/anchor.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/link/images/hidpi/anchor.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/link/images/hidpi/anchor.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/magicline/images/hidpi/icon-rtl.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/magicline/images/hidpi/icon-rtl.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/magicline/images/hidpi/icon.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/magicline/images/hidpi/icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/magicline/images/icon-rtl.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/magicline/images/icon-rtl.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/magicline/images/icon.png" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/magicline/images/icon.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/pastefromword/filter/default.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/pastefromword/filter/default.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/scayt/LICENSE.md" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/scayt/LICENSE.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/scayt/README.md" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/scayt/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/scayt/dialogs/options.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/scayt/dialogs/options.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/scayt/dialogs/toolbar.css" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/scayt/dialogs/toolbar.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/af.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/af.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/ar.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/ar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/bg.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/bg.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/ca.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/cs.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/cs.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/cy.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/cy.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/da.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/da.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/de.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/de.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/el.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/el.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/en-gb.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/en-gb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/en.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/en.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/eo.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/eo.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/es.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/es.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/et.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/et.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/fa.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/fa.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/fi.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/fi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/fr-ca.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/fr.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/fr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/gl.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/gl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/he.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/he.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/hr.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/hr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/hu.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/hu.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/id.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/id.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/it.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/it.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/ja.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/ja.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/km.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/km.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/ko.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/ko.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/ku.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/ku.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/lt.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/lt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/lv.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/lv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/nb.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/nb.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/nl.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/nl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/no.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/no.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/pl.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/pl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/pt-br.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/pt-br.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/pt.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/pt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/ru.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/ru.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/si.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/si.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/sk.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/sk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/sl.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/sl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/sq.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/sq.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/sv.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/sv.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/th.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/th.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/tr.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/tr.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/tt.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/tt.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/ug.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/ug.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/uk.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/uk.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/vi.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/vi.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/zh-cn.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/lang/zh.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/lang/zh.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/specialchar/dialogs/specialchar.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/specialchar/dialogs/specialchar.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/table/dialogs/table.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/table/dialogs/table.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/tabletools/dialogs/tableCell.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/tabletools/dialogs/tableCell.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/wsc/LICENSE.md" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/wsc/LICENSE.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/wsc/README.md" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/wsc/README.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/wsc/dialogs/ciframe.html" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/wsc/dialogs/ciframe.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/wsc/dialogs/tmpFrameset.html" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/wsc/dialogs/tmpFrameset.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/wsc/dialogs/wsc.css" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/wsc/dialogs/wsc.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/wsc/dialogs/wsc.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/wsc/dialogs/wsc.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/plugins/wsc/dialogs/wsc_ie.js" afterPath="$PROJECT_DIR$/web/CKEditor/plugins/wsc/dialogs/wsc_ie.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/dialog.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/dialog.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/dialog_ie.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/dialog_ie.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/dialog_ie7.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/dialog_ie7.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/dialog_ie8.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/dialog_ie8.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/dialog_iequirks.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/dialog_iequirks.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/editor.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/editor.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/editor_gecko.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/editor_gecko.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/editor_ie.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/editor_ie.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/editor_ie7.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/editor_ie7.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/editor_ie8.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/editor_ie8.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/editor_iequirks.css" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/editor_iequirks.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/icons.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/icons.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/icons_hidpi.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/icons_hidpi.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/arrow.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/arrow.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/close.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/close.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/hidpi/close.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/hidpi/close.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/hidpi/lock-open.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/hidpi/lock-open.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/hidpi/lock.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/hidpi/lock.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/hidpi/refresh.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/hidpi/refresh.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/lock-open.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/lock-open.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/lock.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/lock.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/refresh.png" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/refresh.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/images/spinner.gif" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/images/spinner.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/skins/moono/readme.md" afterPath="$PROJECT_DIR$/web/CKEditor/skins/moono/readme.md" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/js/CKEditor/styles.js" afterPath="$PROJECT_DIR$/web/CKEditor/styles.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_37_bin.xml" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_37_bin.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
+    <list id="e1a30ce8-cdeb-4cd3-9469-c077883b8434" name="New changelist" comment="New changelist" />
     <ignored path="JavaBlog.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,59 +267,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Comment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PD/Comment.java">
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PD/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#252#253#0" expanded="true" />
-                <element signature="e#277#278#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#379#380#0" expanded="true" />
-                <element signature="e#409#410#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#470#471#0" expanded="true" />
-                <element signature="e#503#504#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#873#874#0" expanded="true" />
-                <element signature="e#915#916#0" expanded="true" />
-                <element signature="e#951#952#0" expanded="true" />
+                <element signature="e#1668#1669#0" expanded="true" />
+                <element signature="e#1708#1709#0" expanded="true" />
+                <element signature="e#1752#1753#0" expanded="true" />
+                <element signature="e#1791#1792#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Response.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PD/Response.java">
+      <file leaf-file-name="Account.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Service/Account.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
-                <element signature="e#303#304#0" expanded="true" />
-                <element signature="e#337#338#0" expanded="true" />
-                <element signature="e#367#368#0" expanded="true" />
-                <element signature="e#401#402#0" expanded="true" />
-                <element signature="e#428#429#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#496#497#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#566#567#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#632#633#0" expanded="true" />
-                <element signature="e#668#669#0" expanded="true" />
-                <element signature="e#696#697#0" expanded="true" />
-                <element signature="e#1001#1002#0" expanded="true" />
-                <element signature="e#1037#1038#0" expanded="true" />
-                <element signature="e#1079#1080#0" expanded="true" />
-                <element signature="e#1116#1117#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editorTest.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/editorTest.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.3333335">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build-config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/CKEditor/build-config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.56239873">
+              <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/CKEditor/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDA.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DA/UserDA.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1446708884480" expanded="true" signature="626:770" placeholder="INSERT INTO ..." />
+                <marker date="1446708884480" expanded="true" signature="1254:1297" placeholder="SELECT userI..Test..." />
+                <marker date="1446708884480" expanded="true" signature="2161:2201" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
@@ -96,81 +343,24 @@
         <entry file="file://$PROJECT_DIR$/src/DA/CommentDA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="9" selection-start-line="10" selection-start-column="24" selection-end-line="33" selection-end-column="9" />
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1446645335851" expanded="true" signature="232:280" placeholder="INSERT INTO ..." />
-                <marker date="1446645335851" expanded="true" signature="232:310" placeholder="INSERT INTO ..." />
-                <marker date="1446645335851" expanded="true" signature="232:333" placeholder="INSERT INTO ..." />
-                <marker date="1446645335851" expanded="true" signature="232:337" placeholder="INSERT INTO ..." />
-                <marker date="1446645335851" expanded="true" signature="232:378" placeholder="INSERT INTO ..." />
-                <marker date="1446645335851" expanded="true" signature="232:407" placeholder="INSERT INTO ..." />
-                <marker date="1446645335851" expanded="true" signature="232:408" placeholder="INSERT INTO ..." />
-                <marker date="1446645335851" expanded="true" signature="232:431" placeholder="INSERT INTO ..." />
-                <marker date="1446645335851" expanded="true" signature="232:432" placeholder="INSERT INTO ..." />
-                <marker date="1446645335851" expanded="true" signature="818:847" placeholder="DELETE FROM ..." />
-                <marker date="1446645335851" expanded="true" signature="818:848" placeholder="DELETE FROM ..." />
-                <marker date="1446645335851" expanded="true" signature="818:855" placeholder="DELETE FROM ..." />
+                <marker date="1446646338608" expanded="true" signature="232:432" placeholder="INSERT INTO ..." />
+                <marker date="1446646338608" expanded="true" signature="818:855" placeholder="DELETE FROM ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResponseDA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DA/ResponseDA.java">
+      <file leaf-file-name="JedisDA.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DA/JedisDA.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1446645627312" expanded="true" signature="200:290" placeholder="INSERT INTO ..." />
-                <marker date="1446645627312" expanded="true" signature="200:291" placeholder="INSERT INTO ..." />
-                <marker date="1446645627312" expanded="true" signature="200:318" placeholder="INSERT INTO ..." />
-                <marker date="1446645627312" expanded="true" signature="200:436" placeholder="INSERT INTO ..." />
-                <marker date="1446645627312" expanded="true" signature="200:438" placeholder="INSERT INTO ..." />
-                <marker date="1446645627312" expanded="true" signature="200:466" placeholder="INSERT INTO ..." />
-                <marker date="1446645627312" expanded="true" signature="852:889" placeholder="DELETE FROM ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Message.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PD/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.960396">
-              <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#448#449#0" expanded="true" />
-                <element signature="e#477#478#0" expanded="true" />
-                <element signature="e#502#503#0" expanded="true" />
-                <element signature="e#536#537#0" expanded="true" />
-                <element signature="e#566#567#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#627#628#0" expanded="true" />
-                <element signature="e#660#661#0" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#712#713#0" expanded="true" />
-                <element signature="e#747#748#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#825#826#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageDA.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/DA/MessageDA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1446646162407" expanded="true" signature="199:267" placeholder="INSERT INTO ..." />
-                <marker date="1446646162407" expanded="true" signature="199:371" placeholder="INSERT INTO ..." />
-                <marker date="1446646162407" expanded="true" signature="755:796" placeholder="DELETE FROM ..." />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -181,9 +371,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Html5" />
         <option value="JavaScript File" />
         <option value="Class" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -202,19 +392,26 @@
         <option value="$PROJECT_DIR$/src/Service/Login.java" />
         <option value="$PROJECT_DIR$/web/js/controllers/base.js" />
         <option value="$PROJECT_DIR$/web/css/base.scss" />
-        <option value="$PROJECT_DIR$/web/index.html" />
         <option value="$PROJECT_DIR$/src/DA/ArticleDA.java" />
-        <option value="$PROJECT_DIR$/src/DA/Base.java" />
-        <option value="$PROJECT_DIR$/src/DA/UserDA.java" />
-        <option value="$PROJECT_DIR$/src/PD/User.java" />
-        <option value="$PROJECT_DIR$/src/Service/Account.java" />
         <option value="$PROJECT_DIR$/src/PD/Comment.java" />
         <option value="$PROJECT_DIR$/src/DA/CommentDA.java" />
         <option value="$PROJECT_DIR$/src/DA/ResponseDA.java" />
         <option value="$PROJECT_DIR$/src/PD/Response.java" />
-        <option value="$PROJECT_DIR$/src/DA/CreateTables.java" />
         <option value="$PROJECT_DIR$/src/PD/Message.java" />
         <option value="$PROJECT_DIR$/src/DA/MessageDA.java" />
+        <option value="$PROJECT_DIR$/src/DA/RedisTest.java" />
+        <option value="$PROJECT_DIR$/src/Service/Return.java" />
+        <option value="$PROJECT_DIR$/web/index.html" />
+        <option value="$PROJECT_DIR$/src/DA/CreateTables.java" />
+        <option value="$PROJECT_DIR$/src/DA/JedisDA.java" />
+        <option value="$PROJECT_DIR$/src/Service/RT.java" />
+        <option value="$PROJECT_DIR$/src/Service/Account.java" />
+        <option value="$PROJECT_DIR$/src/DA/UserDA.java" />
+        <option value="$PROJECT_DIR$/src/DA/Base.java" />
+        <option value="$PROJECT_DIR$/src/PD/User.java" />
+        <option value="$PROJECT_DIR$/web/js/CKEditor/config.js" />
+        <option value="$PROJECT_DIR$/web/CKEditor/build-config.js" />
+        <option value="$PROJECT_DIR$/web/editorTest.html" />
       </list>
     </option>
   </component>
@@ -241,10 +438,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1366" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -270,6 +465,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -277,6 +474,10 @@
               <option name="myItemId" value="JavaBlog" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -285,6 +486,96 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CKEditor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaBlog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CKEditor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lang" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,74 +591,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PD" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaBlog" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Base.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,13 +609,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files (x86)/MySQL/Connector.J 5.1/mysql-connector-java-5.1.37-bin.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/mysql-connector-java-5.1.37-bin.jar!/" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="SearchEverywhereHistoryKey" value="date&#9;PSI&#9;JAVA://DA.UserDA#date&#10;Date&#9;PSI&#9;JAVA://DA.UserDA#date" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/js/CKEditor" />
       <recent name="$PROJECT_DIR$/web/js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
     </key>
   </component>
   <component name="RunManager" selected="Application.createTables">
@@ -584,19 +815,6 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -672,7 +890,7 @@
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="F:/java jdk/jre" />
+      <option name="ALTERNATIVE_JRE_PATH" value="/usr/lib/jvm/jdk1.8.0_60/jre" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -680,7 +898,22 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="TomEE 7.0.62" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 7.0.62" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="F:/java jdk/jre">
+    <configuration default="false" name="Unnamed" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="DA.RedisTest" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaBlog" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TomEE 7.0.62" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 7.0.62" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="/usr/lib/jvm/jdk1.8.0_60/jre">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="JavaBlog:war exploded">
@@ -752,9 +985,10 @@
         </option>
       </method>
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.createTables" />
-      <item index="1" class="java.lang.String" itemvalue="TomEE Server.TomEE 7.0.62" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Unnamed" />
+      <item index="2" class="java.lang.String" itemvalue="TomEE Server.TomEE 7.0.62" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -764,6 +998,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="e0c46ec5-456b-43b7-971c-1c479a1a5a5b" name="Default" comment="" />
+      <changelist id="e1a30ce8-cdeb-4cd3-9469-c077883b8434" name="New changelist" comment="" />
       <created>1446359625766</created>
       <option name="number" value="Default" />
       <updated>1446359625766</updated>
@@ -774,6 +1009,9 @@
       <workItem from="1446564356633" duration="1416000" />
       <workItem from="1446613534753" duration="5217000" />
       <workItem from="1446636755420" duration="9397000" />
+      <workItem from="1446648195297" duration="4447000" />
+      <workItem from="1446693081082" duration="3751000" />
+      <workItem from="1446698223122" duration="13238000" />
     </task>
     <task id="LOCAL-00001" summary="all: add a development intro">
       <created>1446364175778</created>
@@ -835,19 +1073,67 @@
       <option name="project" value="LOCAL" />
       <updated>1446644193234</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="User: change Date to Timestamp">
+      <created>1446648313814</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1446648313814</updated>
+    </task>
+    <task id="LOCAL-00012" summary="User: change Date to Timestamp">
+      <created>1446648503367</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1446648503367</updated>
+    </task>
+    <task id="LOCAL-00013" summary="User: add register but bug">
+      <created>1446652793828</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1446652793828</updated>
+    </task>
+    <task id="LOCAL-00014" summary="User: add register">
+      <created>1446704184888</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1446704184888</updated>
+    </task>
+    <task id="LOCAL-00015" summary="User: add login">
+      <created>1446708321738</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1446708321738</updated>
+    </task>
+    <task id="LOCAL-00016" summary="DA: inserting del some fields">
+      <created>1446709676635</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1446709676635</updated>
+    </task>
+    <task id="LOCAL-00017" summary="User: add cookie validating">
+      <created>1446710573994</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1446710573994</updated>
+    </task>
+    <task id="LOCAL-00018" summary="front: add CKEditor dependencies">
+      <created>1446714491256</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1446714491256</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32711000" />
+    <option name="totallyTimeSpent" value="54967000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="743" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -855,24 +1141,24 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27244094" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.120743036" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20278184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24926686" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38235295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -926,10 +1212,19 @@
     <MESSAGE value="DA: add UserDA" />
     <MESSAGE value="java.util.Date改为java.sql.TimeStamp" />
     <MESSAGE value="temporary" />
-    <option name="LAST_COMMIT_MESSAGE" value="temporary" />
+    <MESSAGE value="User: change Date to Timestamp" />
+    <MESSAGE value="User: add register but bug" />
+    <MESSAGE value="User: add register" />
+    <MESSAGE value="User: add login" />
+    <MESSAGE value="DA: inserting del some fields" />
+    <MESSAGE value="User: add cookie validating" />
+    <MESSAGE value="front: add CKEditor dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="front: add CKEditor dependencies" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="21" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -937,156 +1232,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PD/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PD/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/ResponseDA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/MessageDA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PD/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/UserDA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1446641731935" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446641731935" expanded="true" signature="-1:-1" placeholder="SELECT userI..Test..." />
-            <marker date="1446641731935" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PD/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PD/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/CreateTables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/controllers/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Development Introduction">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1095,53 +1244,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/CreateTables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Development Introduction">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PD/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1668#1669#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1170,7 +1276,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1179,7 +1284,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1668#1669#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1198,7 +1306,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,7 +1314,10 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1668#1669#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1226,21 +1336,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45840406">
-          <caret line="3" column="1656" selection-start-line="3" selection-start-column="1656" selection-end-line="3" selection-end-column="1656" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/angular.min.js">
+    <entry file="file://$PROJECT_DIR$/Development Introduction">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1265,10 +1367,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.html">
+    <entry file="file://$PROJECT_DIR$/src/PD/Article.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1276,120 +1378,162 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PD/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Development Introduction">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/UserDA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1446641731935" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1446641731935" expanded="true" signature="-1:-1" placeholder="SELECT userI..Test..." />
-            <marker date="1446641731935" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/Base.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.35643566">
-          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PD/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6485149">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Service/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/CreateTables.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6881188">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/ResponseDA.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1446645627312" expanded="true" signature="200:290" placeholder="INSERT INTO ..." />
-            <marker date="1446645627312" expanded="true" signature="200:291" placeholder="INSERT INTO ..." />
-            <marker date="1446645627312" expanded="true" signature="200:318" placeholder="INSERT INTO ..." />
-            <marker date="1446645627312" expanded="true" signature="200:436" placeholder="INSERT INTO ..." />
-            <marker date="1446645627312" expanded="true" signature="200:438" placeholder="INSERT INTO ..." />
-            <marker date="1446645627312" expanded="true" signature="200:466" placeholder="INSERT INTO ..." />
-            <marker date="1446645627312" expanded="true" signature="852:889" placeholder="DELETE FROM ..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PD/Response.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="33" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DA/MessageDA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PD/Message.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="690" column="13" selection-start-line="690" selection-start-column="13" selection-end-line="690" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/JavaBlog_war_exploded.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaBlog.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/angular.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DA/RedisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DA/ResponseDA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <marker date="1446646338608" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1446646338608" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/RT.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DA/CreateTables.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DA/Base.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="125" selection-start-line="51" selection-start-column="125" selection-end-line="51" selection-end-column="125" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#303#304#0" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#696#697#0" expanded="true" />
-            <element signature="e#1001#1002#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
-            <element signature="e#1079#1080#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1397,25 +1541,10 @@
     <entry file="file://$PROJECT_DIR$/src/PD/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="4" selection-start-line="49" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#252#253#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#379#380#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#470#471#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#873#874#0" expanded="true" />
-            <element signature="e#915#916#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#838#839#0" expanded="false" />
+            <element signature="e#873#874#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1423,59 +1552,127 @@
     <entry file="file://$PROJECT_DIR$/src/DA/CommentDA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="9" selection-start-line="10" selection-start-column="24" selection-end-line="33" selection-end-column="9" />
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1446645335851" expanded="true" signature="232:280" placeholder="INSERT INTO ..." />
-            <marker date="1446645335851" expanded="true" signature="232:310" placeholder="INSERT INTO ..." />
-            <marker date="1446645335851" expanded="true" signature="232:333" placeholder="INSERT INTO ..." />
-            <marker date="1446645335851" expanded="true" signature="232:337" placeholder="INSERT INTO ..." />
-            <marker date="1446645335851" expanded="true" signature="232:378" placeholder="INSERT INTO ..." />
-            <marker date="1446645335851" expanded="true" signature="232:407" placeholder="INSERT INTO ..." />
-            <marker date="1446645335851" expanded="true" signature="232:408" placeholder="INSERT INTO ..." />
-            <marker date="1446645335851" expanded="true" signature="232:431" placeholder="INSERT INTO ..." />
-            <marker date="1446645335851" expanded="true" signature="232:432" placeholder="INSERT INTO ..." />
-            <marker date="1446645335851" expanded="true" signature="818:847" placeholder="DELETE FROM ..." />
-            <marker date="1446645335851" expanded="true" signature="818:848" placeholder="DELETE FROM ..." />
-            <marker date="1446645335851" expanded="true" signature="818:855" placeholder="DELETE FROM ..." />
+            <marker date="1446646338608" expanded="true" signature="232:432" placeholder="INSERT INTO ..." />
+            <marker date="1446646338608" expanded="true" signature="818:855" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DA/MessageDA.java">
+    <entry file="file://$PROJECT_DIR$/src/DA/JedisDA.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1446646162407" expanded="true" signature="199:267" placeholder="INSERT INTO ..." />
-            <marker date="1446646162407" expanded="true" signature="199:371" placeholder="INSERT INTO ..." />
-            <marker date="1446646162407" expanded="true" signature="755:796" placeholder="DELETE FROM ..." />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PD/Message.java">
+    <entry file="file://$PROJECT_DIR$/src/PD/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.960396">
-          <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding>
+            <element signature="e#1668#1669#0" expanded="true" />
+            <element signature="e#1708#1709#0" expanded="true" />
+            <element signature="e#1752#1753#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DA/UserDA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#448#449#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#825#826#0" expanded="true" />
+            <marker date="1446708884480" expanded="true" signature="626:770" placeholder="INSERT INTO ..." />
+            <marker date="1446708884480" expanded="true" signature="1254:1297" placeholder="SELECT userI..Test..." />
+            <marker date="1446708884480" expanded="true" signature="2161:2201" placeholder="DELETE FROM ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Service/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/CKEditor/ckeditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/CKEditor/lang/zh-cn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/CKEditor/lang/zh.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/CKEditor/adapters/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54159594">
+          <caret line="5" column="28013" selection-start-line="5" selection-start-column="28013" selection-end-line="5" selection-end-column="28013" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/editorTest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.3333335">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/CKEditor/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/CKEditor/build-config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56239873">
+          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1538,6 +1735,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1545,7 +1743,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>mysql-connector-java-5.1.37-bin1</last-edited>
+          <last-edited>mysql-connector-java-5.1.37-bin</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
