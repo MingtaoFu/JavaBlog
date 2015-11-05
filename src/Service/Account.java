@@ -18,11 +18,6 @@ import java.util.Date;
 
 @Path("api/account")
 public class Account {
-    public static void main(String[] args) {
-        System.out.println("xxxxxxxxxxxxx");
-
-    }
-
     @POST
     @Path("register")
     @Produces(MediaType.APPLICATION_JSON)
@@ -43,25 +38,22 @@ public class Account {
         return register;
     }
 
-    @GET
+    @POST
+    @Path("login")
     @Produces(MediaType.APPLICATION_JSON)
-    public User sayHi() {
-        /**
-         * 如果写成User mingtao = new User("U201417210", "mingtao", "password", "normal",
-         * "a student", new Date(),"deault");
-         * 就会出错，我不知道为什么
-         */
-
-        User mingtao = new User();
-        mingtao.setId("U201417210");
-        mingtao.setName("mingtao");
-        mingtao.setPwd("password");
-        mingtao.setType("normal");
-        mingtao.setIntro("a student");
-        mingtao.setDate(new Timestamp(System.currentTimeMillis()));
-        mingtao.setLogoUrl("default");
-        return mingtao;
+    public RT_Login login(@FormParam("id") String id,
+                          @FormParam("pwd") String pwd) {
+        Base.initialize();
+        User user = User.find(id);
+        Base.terminate();
+        RT_Login login;
+        if(user != null) {
+            if(user.getPwd().equals(pwd)) {
+                login = new RT_Login(1, user.generateToken());
+                return login;
+            }
+        }
+        login = new RT_Login(0, null);
+        return login;
     }
-
-
 }

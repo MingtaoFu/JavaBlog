@@ -17,10 +17,6 @@ public class UserDA {
     static String logoUrl;
        //添加记录
     public static int add(User user){
-        if(Base.conn == null) {
-            Base.initialize();
-        }
-
 
         id = user.getId();
         name = user.getName();
@@ -36,11 +32,10 @@ public class UserDA {
 
         System.out.println(sql);
 
-        try {
-            User c = find(id);
-            //throw new DuplicateException("用户名已存在");
-            return 0;       //用户名存在
-        } catch (NotFoundException e) {
+        User c = find(id);
+        if(c != null) {
+            return 0;
+        } else {
             try {
                 int result = Base.statement.executeUpdate(sql);
                 return 1;       //成功
@@ -51,14 +46,10 @@ public class UserDA {
         }
     }
 
-    public static User find(String key) throws NotFoundException{
+    public static User find(String key) {
         user = null;
-        /*
-        if(Base.conn == null) {
-            Base.initialize();
-        }
-        */
-        String sql = "SELECT Id, Name, Pwd FROM User WHERE Id = '" + key + "'";
+
+        String sql = "SELECT * FROM User WHERE Id = '" + key + "'";
 
         try {
             ResultSet rs = Base.statement.executeQuery(sql);
@@ -75,7 +66,7 @@ public class UserDA {
 
                 user = new User(id, name, pwd, type, intro, date, logoUrl);
             } else {
-                throw (new NotFoundException("没有该记录"));
+                return null;
             }
             rs.close();
         } catch (SQLException e) {

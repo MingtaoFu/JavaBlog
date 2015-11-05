@@ -63,6 +63,10 @@ public class User {
         return  UserDA.add(user);
     }
 
+    public static User find(String  key) {
+        return UserDA.find(key);
+    }
+
     //验证
     public boolean validate() {
         return false;

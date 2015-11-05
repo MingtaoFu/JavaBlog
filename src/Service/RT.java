@@ -12,38 +12,49 @@ public class RT {
 
 
 }
+
 @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlRootElement(name = "data")
-    class RT_Register{
-        @XmlElement(name = "status")
-        private int status;
-        @XmlElement(name = "token")
-        private String token;
+@XmlRootElement(name = "data")
+class RT_Register{
+    @XmlElement(name = "status")
+    private int status;
+    @XmlElement(name = "token")
+    private String token;
     public RT_Register() {}
-        public RT_Register(int status, String token){
-            setStatus(status);
-            setToken(token);
-        }
-
-        public int getStatus() {
-            return status;
-        }
-
-        public void setStatus(int status) {
-            this.status = status;
-        }
-
-        public String getToken() {
-            return token;
-        }
-
-        public void setToken(String token) {
-            this.token = token;
-        }
+    public RT_Register(int status, String token){
+        setStatus(status);
+        setToken(token);
     }
-/*
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "userData")
-public class User {
 
- */
+    public int getStatus() {
+                         return status;
+                                                    }
+
+    public void setStatus(int status) {
+                                    this.status = status;
+                                                                                 }
+
+    public String getToken() {
+                           return token;
+                                                       }
+
+    public void setToken(String token) {
+                                     this.token = token;
+                                                                                 }
+}
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "data")
+class RT_Login{
+    @XmlElement(name = "status")
+    private int status;
+    @XmlElement(name = "token")
+    private String token;
+
+    public RT_Login(){}
+    public RT_Login(int status, String token) {
+        this.status = status;
+        this.token = token;
+    }
+}
+
