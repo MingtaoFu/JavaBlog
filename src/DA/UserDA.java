@@ -16,7 +16,12 @@ public class UserDA {
     static String intro;
     static String logoUrl;
        //添加记录
-    public static int add(User user) throws DuplicateException{
+    public static int add(User user){
+        if(Base.conn == null) {
+            Base.initialize();
+        }
+
+
         id = user.getId();
         name = user.getName();
         pwd = user.getPwd();
@@ -25,7 +30,7 @@ public class UserDA {
         intro = user.getIntro();
         logoUrl = user.getLogoUrl();
 
-        String sql = "INSERT INTO Test (Id, Name, Pwd, Type, Intro, Date, LogoUrl)" +
+        String sql = "INSERT INTO User (Id, Name, Pwd, Type, Intro, Date, LogoUrl)" +
                 " VALUES ('" + id + "', '" + name + "', '" + pwd + "', '" + type + "', '" +
                 intro + "', '" + date + "', '" + logoUrl + "')";
 
@@ -48,7 +53,12 @@ public class UserDA {
 
     public static User find(String key) throws NotFoundException{
         user = null;
-        String sql = "SELECT userID, Name, password FROM Test WHERE userID = '" + key + "'";
+        /*
+        if(Base.conn == null) {
+            Base.initialize();
+        }
+        */
+        String sql = "SELECT Id, Name, Pwd FROM User WHERE Id = '" + key + "'";
 
         try {
             ResultSet rs = Base.statement.executeQuery(sql);
@@ -81,7 +91,7 @@ public class UserDA {
     public static void delete(User user) {
         id = user.getId();
 
-        String sql = "DELETE FROM Test WHERE userID = '" + id + "'";
+        String sql = "DELETE FROM User WHERE Id = '" + id + "'";
         System.out.println(sql);
         try {
             int result = Base.statement.executeUpdate(sql);

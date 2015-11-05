@@ -10,6 +10,7 @@ public class Base {
 
 	public static Connection initialize() {
 		try {
+            DriverManager.registerDriver(new com.mysql.jdbc.Driver ());
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/javablog?" +
 							"user=hust&password=diaodiaodiao");
 

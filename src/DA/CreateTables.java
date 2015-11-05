@@ -18,8 +18,8 @@ import java.util.Date;
 public class CreateTables {
     public static void main(String[] args) {
         Base.initialize();
-//      Base.createTables();
-//      Base.terminate();
+      Base.createTables();
+      Base.terminate();
 //      new Comment("2","3",new Timestamp(System.currentTimeMillis()),"1").add();
 //      new Response("2",new Timestamp(System.currentTimeMillis()),"3","4","5").add();
 //      Comment.delete("1");

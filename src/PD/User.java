@@ -53,18 +53,14 @@ public class User {
         }
         String token = sb.toString();
 
+        JedisDA.initialize();
         JedisDA.set(this.id, token);
 
         return token;
     }
 
     public static int add(User user) {
-        try {
-            int status = UserDA.add(user);
-            return status;
-        } catch (Exception e) {
-            return 0;       //已存在
-        }
+        return  UserDA.add(user);
     }
 
     //验证

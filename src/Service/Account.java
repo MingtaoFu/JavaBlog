@@ -2,6 +2,7 @@ package Service;
 
 import javax.ws.rs.*;
 
+import DA.Base;
 import PD.*;
 
 import javax.ws.rs.GET;
@@ -17,6 +18,10 @@ import java.util.Date;
 
 @Path("api/account")
 public class Account {
+    public static void main(String[] args) {
+        System.out.println("xxxxxxxxxxxxx");
+
+    }
 
     @POST
     @Path("register")
@@ -24,6 +29,7 @@ public class Account {
     public RT_Register register(@FormParam("id") String id,
                          @FormParam("name") String name,
                          @FormParam("pwd") String pwd) {
+        Base.initialize();
         User user = new User(id, name, pwd, "normal", null, new Timestamp(System.currentTimeMillis()), null);
         int status = User.add(user);
         RT_Register register;
@@ -33,6 +39,7 @@ public class Account {
             register = new RT_Register(status, null);
         }
 
+        Base.terminate();
         return register;
     }
 

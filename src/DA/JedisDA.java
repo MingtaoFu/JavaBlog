@@ -1,6 +1,8 @@
 package DA;
 
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisPool;
+
 
 public class JedisDA {
     private static Jedis jedis;
