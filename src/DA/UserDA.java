@@ -26,9 +26,9 @@ public class UserDA {
         intro = user.getIntro();
         logoUrl = user.getLogoUrl();
 
-        String sql = "INSERT INTO User (Id, Name, Pwd, Type, Intro, Date, LogoUrl)" +
-                " VALUES ('" + id + "', '" + name + "', '" + pwd + "', '" + type + "', '" +
-                intro + "', '" + date + "', '" + logoUrl + "')";
+        String sql = "INSERT INTO User (Id, Name, Pwd, Type)" +
+                " VALUES ('" + id + "', '" + name + "', '" + pwd + "', '" + type +
+                "')";
 
         System.out.println(sql);
 
