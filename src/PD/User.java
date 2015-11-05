@@ -68,8 +68,12 @@ public class User {
     }
 
     //验证
-    public boolean validate() {
-        return false;
+    public User validate(String id, String token) {
+        if(JedisDA.find(id).equals(token)) {
+            return UserDA.find(id);
+        } else {
+            return null;
+        }
     }
 
     public String getId() {
