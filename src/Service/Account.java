@@ -5,12 +5,15 @@ import javax.ws.rs.*;
 import DA.Base;
 import PD.*;
 
+import org.json.JSONObject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.sql.Timestamp;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 账号模块
@@ -46,14 +49,27 @@ public class Account {
         Base.initialize();
         User user = User.find(id);
         Base.terminate();
-        RT_Login login;
         if(user != null) {
             if(user.getPwd().equals(pwd)) {
-                login = new RT_Login(1, user.generateToken());
-                return login;
+                return new RT_Login(1, user.generateToken());
             }
         }
-        login = new RT_Login(0, null);
-        return login;
+        return new RT_Login(0, null);
     }
+
+    @GET
+    @Path("personalInfo")
+    @Produces(MediaType.APPLICATION_JSON)
+    public RT_PersonalInfo personalInfo(@CookieParam("id") String id,
+                             @CookieParam("token") String token) {
+        Base.initialize();
+        User user = User.validate(id, token);
+        Base.terminate();
+        if(user != null) {
+            return new RT_PersonalInfo(1, user);
+        } else {
+            return new RT_PersonalInfo(0, null);
+        }
+    }
+
 }

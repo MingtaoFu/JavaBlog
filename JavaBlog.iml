@@ -24,5 +24,6 @@
     <orderEntry type="library" name="mysql-connector-java-5.1.37-bin1" level="project" />
     <orderEntry type="library" name="jedis-2.7.3" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5.1.37-bin" level="project" />
+    <orderEntry type="library" name="json" level="project" />
   </component>
 </module>

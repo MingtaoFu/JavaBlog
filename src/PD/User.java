@@ -68,7 +68,7 @@ public class User {
     }
 
     //验证
-    public User validate(String id, String token) {
+    public static User validate(String id, String token) {
         if(JedisDA.find(id).equals(token)) {
             return UserDA.find(id);
         } else {
@@ -134,14 +134,14 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", pwd='" + pwd + '\'' +
-                ", type='" + type + '\'' +
-                ", intro='" + intro + '\'' +
-                ", date=" + date +
-                ", logoUrl='" + logoUrl + '\'' +
+        return "{" +
+                "id:'" + id + '\'' +
+                ", name:'" + name + '\'' +
+                ", pwd:'" + pwd + '\'' +
+                ", type:'" + type + '\'' +
+                ", intro:'" + intro + '\'' +
+                ", date:" + date +
+                ", logoUrl:'" + logoUrl + '\'' +
                 '}';
     }
 }
