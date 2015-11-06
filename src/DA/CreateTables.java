@@ -15,6 +15,10 @@ import java.util.Date;
  *      (mysql) create user 'hust'@'localhost' identified by 'diaodiaodiao';        //建用户
  *      (mysql) grant all privileges on javablog.* to hust@localhost identified by 'diaodiaodiao';      //授权
  */
+
+/**
+ * 一定要是MySQL 5.6
+ */
 public class CreateTables {
     public static void main(String[] args) {
         Base.initialize();

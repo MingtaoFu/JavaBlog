@@ -1,24 +1,28 @@
 package PD;
+
 import DA.ArticleDA;
 
 import java.sql.Timestamp;
 
+
 /**
  * Created by mingtao on 15-11-4.
  */
+
 public class Article {
-    String ID;
-    String articleID;
+    String id;
+    String title;
     String content;
     Timestamp time;
-    String userID;
+    Timestamp modifyTime;
 
-    public String getID() {
-        return ID;
+
+    public String getId() {
+        return id;
     }
 
-    public String getArticleID() {
-        return articleID;
+    public String getTitle() {
+        return title;
     }
 
     public String getContent() {
@@ -29,20 +33,23 @@ public class Article {
         return time;
     }
 
-    public String getUserID() {
-        return userID;
+    public Timestamp getModifyTime() {
+        return modifyTime;
     }
 
-    public Article(String articleID, String content, Timestamp time, String userID) {
-        this.articleID = articleID;
+    public Article(String id, String title, String content, Timestamp time, Timestamp modifyTime) {
+        this.id = id;
+        this.title = title;
         this.content = content;
         this.time = time;
-        this.userID = userID;
+        this.modifyTime = modifyTime;
     }
+
     public void add(){
         ArticleDA.add(this);
     }
-    public static void delete(String ID){
-        ArticleDA.delete(ID);
+    public static void delete(String id){
+        ArticleDA.delete(id);
     }
 }
+
