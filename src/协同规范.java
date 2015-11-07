@@ -23,7 +23,7 @@ PD class 编写 {
         则 Article 类属性理应为：id, title, content, time, modifyTime
         但以下三个字段不能由自己编写
         - Id 字段，为自动增加(auto_increment)的主键(primary key)，每次插入Id自动增一(但用户的Id是不一样的)
-        - Time 字段，类型为事件戳，其值为当前事件戳(current_timestamp)，插入时由MySQL自动设置
+        - Time 字段，类型为时间戳，其值为当前时间戳(current_timestamp)，插入时由MySQL自动设置
         - ModifyTime (只有 Article 有)，基本同Time，但值为 on update timestamp，如果一条记录被修改，ModifyTime的值自动更新,
           但Time值不会
           只有从 MySQL 5.6 起才支持一张表2个 timestamp 类型字段，请注意你的数据库版本
