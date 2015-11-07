@@ -43,7 +43,8 @@ public class Base {
                         "Date timestamp not null default CURRENT_TIMESTAMP, Type varchar(16) not null, Intro text, " +
                         "LogoUrl varchar(64) default '/static/logos/default', primary key (Id))",
                 "create table Article(Id int not null auto_increment, Title varchar(64) not null, Content text, " +
-                        "Time timestamp not null default CURRENT_TIMESTAMP, ModifyTime timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP , primary key (Id))",
+                        "Time timestamp not null default CURRENT_TIMESTAMP, ModifyTime timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP," +
+                        " primary key (Id))",
                 "create table Comment(Id int not null auto_increment, Content text not null, Time timestamp not null default CURRENT_TIMESTAMP, " +
                         "ArticleId int not null, User varchar(32) not null, primary key (Id), " +
                         "foreign key (User) references User(Id))",
@@ -51,7 +52,7 @@ public class Base {
                         "CommentId int not null, FromUser varchar(32) not null, ToUser varchar(32) not null, primary key (Id), " +
                         "foreign key (FromUser) references User(Id), foreign key (ToUser) references User(Id) )",
                 "create Table Message(Id int not null auto_increment, Content text not null, Time timestamp not null default CURRENT_TIMESTAMP," +
-                        "User varchar(32) not null, primary key(Id) )"
+                        "User varchar(32) not null, primary key(Id), foreign key (User) references User(Id))"
         };
         //依次执行各语句以建表，具体执行在CreateTables.java中
         for(int i = 0; i < sqlArr.length; i++) {
