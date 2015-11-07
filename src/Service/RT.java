@@ -20,9 +20,9 @@ public class RT {
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
 class RT_Register{
-    @XmlElement(name = "status")
+    @XmlElement()
     private int status;
-    @XmlElement(name = "token")
+    @XmlElement()
     private String token;
     public RT_Register() {}
     public RT_Register(int status, String token){
@@ -65,9 +65,9 @@ class RT_Login{
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
 class RT_All{
-    @XmlElement(name = "status")
+    @XmlElement()
     private int status;
-    @XmlElement(name = "data")
+    @XmlElement()
     private String  data;
 
     public RT_All(){}
