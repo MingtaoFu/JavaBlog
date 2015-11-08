@@ -1,6 +1,5 @@
 package PD;
 
-import DA.CommentDA;
 import DA.MessageDA;
 
 import java.sql.Timestamp;
