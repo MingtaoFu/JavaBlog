@@ -98,7 +98,16 @@ Service class 编写 {
     对于函数的返回值：
         要返回 Json 需要定义特定的类，见 Service 包中的 RT.java。
 
-        //没电了，该类剩余部分再补
+    对于前端的访问，除了通过 url 的不同来区分开来之外，还有另外的一些参数，如QueryParam，FormParam，CookieParam
+    QueryParam(查询参数): 标记为 GET 请求的 url 使用该参数。例如前端访问 "api/article?id=1" 即可用
+        @QueryParam("id") int id
+        获取到 id 的值
+    FormParam(表单参数): 标记为 POST 请求的url 使用该参数，获取方法同 QueryParam
+    CookieParam: 通用，一般用于携带个人验证信息。在本项目中，登录后，后台 Account 模块会生成 token （令牌）给前端，
+        作为身份证，每一个需要身份验证的 url （例如评论、回复、留言等等），都需要验证 id 与 token 是否匹配才能继续执行，
+        可以从 CookieParam 中分别获得 id 与 token 的值。
+        User 类提供了一个静态方法 validate 来验证 id 与 token 值的有效性。获得 id 与 token 后执行User.validate(id, token)，
+        若验证通过，直接返回 User 对象，否则返回 null 。
 
 }
 
