@@ -69,7 +69,9 @@ public class User {
 
     //验证
     public static User validate(String id, String token) {
-        if(JedisDA.find(id).equals(token)) {
+        JedisDA.initialize();
+        String jedisToken = JedisDA.find(id);
+        if(jedisToken != null && jedisToken.equals(token)) {
             return UserDA.find(id);
         } else {
             return null;

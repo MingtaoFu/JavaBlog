@@ -76,6 +76,7 @@ class RT_All{
         this.data = data;
     }
 }
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
 class RT_PersonalInfo{
@@ -109,6 +110,15 @@ class RT_PersonalInfo{
         }
 
     }
-
 }
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "data")
+class RT_Logout{
+    @XmlElement()
+    private int status;
+    public RT_Logout(){}
+    public RT_Logout(int status) {
+        this.status = status;
+    }
+}

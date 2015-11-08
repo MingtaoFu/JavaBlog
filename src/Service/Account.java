@@ -3,6 +3,7 @@ package Service;
 import javax.ws.rs.*;
 
 import DA.Base;
+import DA.JedisDA;
 import PD.*;
 
 import javax.ws.rs.GET;
@@ -71,4 +72,16 @@ public class Account {
         }
     }
 
+    @POST
+    @Path("logout")
+    @Produces(MediaType.APPLICATION_JSON)
+    public RT_Logout logout(@CookieParam("id") String id,
+                             @CookieParam("token") String token) {
+        JedisDA.initialize();
+        if(token.equals(JedisDA.find(id))) {
+            JedisDA.del(id);
+        }
+        return new RT_Logout(1);
+    }
 }
+

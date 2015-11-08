@@ -16,12 +16,26 @@ angular.module("app", [])
                         $scope.$apply(function() {
 
                             $scope.info = resp.data;
+
+                            $.post("api/account/logout", function() {
+                    $scope.$apply(function() {
+                        $.getJSON("api/account/personalInfo", function (resp) {
+                            $scope.$apply(function () {
+
+                                $scope.info2 = resp.data;
+                            });
+
+                        });
+                    });
+                });
                         });
 
                     });
                 }
 
                 $scope.data = resp;
+
+
 
             });
         });
