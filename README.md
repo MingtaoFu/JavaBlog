@@ -4,6 +4,13 @@
  - Lisa Peng
  - Mingtao Fu
  - Xiujia Zhao
- - Yingtian Zou  have cloned-->adobe
+ - Yingtian Zou
 
 It's a personal blog written in Java.
+
+>dependencies:
+  - jersey
+  - TomEE
+  - jedis
+  - mysql-connector-java
+
