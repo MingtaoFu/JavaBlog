@@ -4,6 +4,7 @@ import PD.Comment;
 import PD.Response;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -22,10 +23,27 @@ import java.util.Date;
 public class CreateTables {
     public static void main(String[] args) {
         Base.initialize();
-      Base.createTables();
-      Base.terminate();
-//      new Comment("2","3",new Timestamp(System.currentTimeMillis()),"1").add();
-//      new Response("2",new Timestamp(System.currentTimeMillis()),"3","4","5").add();
+//      Base.createTables();
+//      Base.terminate();
+//      new Comment("2","3","1").add();
+//        for(int i=0;i<3;i++) {
+//            ArrayList<Comment> c = CommentDA.find("2");
+//            System.out.println(c.get(0).getId());
+//            System.out.println(c.get(0).getContent());
+//            System.out.println(c.get(0).getArticleId());
+//            System.out.println(c.get(0).getTime());
+//            System.out.println(c.get(0).getUserId());
+//        }
+//        for(int i=0;i<3;i++) {
+//            ArrayList<Response> c = ResponseDA.find("3");
+//            System.out.println(c.get(i).getId());
+//            System.out.println(c.get(i).getContent());
+//            System.out.println(c.get(i).getCommentId());
+//            System.out.println(c.get(i).getTime());
+//            System.out.println(c.get(i).getFromUser());
+//            System.out.println(c.get(i).getToUser());
+//        }
+        //new Response("2","3","1","1").add();
 //      Comment.delete("1");
     }
 }

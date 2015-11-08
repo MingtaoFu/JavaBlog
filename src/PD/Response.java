@@ -3,20 +3,21 @@ package PD;
 import DA.ResponseDA;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
 /**
  * Created by mingtao on 15-11-4.
  */
 public class Response {
-    String ID;
+    String id;
     String content;
     Timestamp time;
-    String commentID;
-    String fromUserID;
-    String toUserID;
+    String commentId;
+    String fromUser ;
+    String toUser ;
 
-    public String getID() {
-        return ID;
+    public String getId() {
+        return id;
     }
 
     public String getContent() {
@@ -27,32 +28,36 @@ public class Response {
         return time;
     }
 
-    public String getCommentID() {
-        return commentID;
+    public String getCommentId() {
+        return commentId;
     }
 
-    public String getFromUserID() {
-        return fromUserID;
+    public String getFromUser () {
+        return fromUser ;
     }
 
-    public String getToUserID() {
-        return toUserID;
+    public String getToUser () {
+        return toUser ;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setId(String ID) {
+        this.id = ID;
+    }
+    public void setTime(Timestamp time)
+    {
+        this.time=time;
     }
 
-    public Response( String content, Timestamp time, String commentID, String fromUserID, String toUserID) {
+    public Response( String content,  String commentID, String fromUserID, String toUserID) {
         this.content = content;
-        this.time = time;
-        this.commentID = commentID;
-        this.fromUserID = fromUserID;
-        this.toUserID = toUserID;
+        this.commentId = commentID;
+        this.fromUser  = fromUserID;
+        this.toUser  = toUserID;
     }
     public void add(){
         ResponseDA.add(this);
     }
+    public ArrayList<Response> find(String commentId){return ResponseDA.find(commentId);}
     public static void delete(String ID){
         ResponseDA.delete(ID);
     }
