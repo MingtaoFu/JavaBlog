@@ -12,11 +12,8 @@ import java.util.Date;
 /**
  * Created by mingtao on 15-11-4.
  */
-public class RT {
 
-
-}
-
+//注册
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
 class RT_Register{
@@ -24,29 +21,15 @@ class RT_Register{
     private int status;
     @XmlElement()
     private String token;
+
     public RT_Register() {}
     public RT_Register(int status, String token){
-        setStatus(status);
-        setToken(token);
+        this.status = status;
+        this.token = token;
     }
-
-    public int getStatus() {
-                         return status;
-                                                    }
-
-    public void setStatus(int status) {
-                                    this.status = status;
-                                                                                 }
-
-    public String getToken() {
-                           return token;
-                                                       }
-
-    public void setToken(String token) {
-                                     this.token = token;
-                                                                                 }
 }
 
+//登录
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
 class RT_Login{
@@ -62,21 +45,7 @@ class RT_Login{
     }
 }
 
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "data")
-class RT_All{
-    @XmlElement()
-    private int status;
-    @XmlElement()
-    private String  data;
-
-    public RT_All(){}
-    public RT_All(int status, String  data) {
-        this.status = status;
-        this.data = data;
-    }
-}
-
+//用户信息
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
 class RT_PersonalInfo{
@@ -112,6 +81,7 @@ class RT_PersonalInfo{
     }
 }
 
+//登出
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
 class RT_Logout{
