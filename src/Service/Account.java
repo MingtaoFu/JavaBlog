@@ -62,6 +62,10 @@ public class Account {
     @Produces(MediaType.APPLICATION_JSON)
     public RT_PersonalInfo personalInfo(@CookieParam("id") String id,
                              @CookieParam("token") String token) {
+        //一定要加上 null 判断，否则在 jedis 会出问题
+        if(id == null || token == null) {
+            return new RT_PersonalInfo(0, null);
+        }
         Base.initialize();
         User user = User.validate(id, token);
         Base.terminate();
@@ -77,6 +81,9 @@ public class Account {
     @Produces(MediaType.APPLICATION_JSON)
     public RT_Logout logout(@CookieParam("id") String id,
                              @CookieParam("token") String token) {
+        if(id == null || token == null) {
+            return new RT_Logout(1);
+        }
         JedisDA.initialize();
         if(token.equals(JedisDA.find(id))) {
             JedisDA.del(id);

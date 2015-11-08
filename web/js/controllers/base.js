@@ -5,6 +5,7 @@
 angular.module("app", [])
 .controller("test", function($scope) {
         console.log(1);
+        /*
         $.post("api/account/login", {id: "da", pwd: "dada"}, function(resp) {
             $scope.$apply(function() {
 
@@ -12,25 +13,7 @@ angular.module("app", [])
                 if(data.status) {
                     document.cookie = "id=da";
                     document.cookie = "token="+data.token;
-                    $.getJSON("api/account/personalInfo", function(resp) {
-                        $scope.$apply(function() {
 
-                            $scope.info = resp.data;
-
-                            $.post("api/account/logout", function() {
-                    $scope.$apply(function() {
-                        $.getJSON("api/account/personalInfo", function (resp) {
-                            $scope.$apply(function () {
-
-                                $scope.info2 = resp.data;
-                            });
-
-                        });
-                    });
-                });
-                        });
-
-                    });
                 }
 
                 $scope.data = resp;
@@ -39,4 +22,23 @@ angular.module("app", [])
 
             });
         });
+        */
+        $.getJSON("api/account/personalInfo", function(resp) {
+                        $scope.$apply(function() {
+
+                            $scope.info = resp.data;
+
+                            $.post("api/account/logout", function() {
+                                $scope.$apply(function() {
+                                    $.getJSON("api/account/personalInfo", function (resp) {
+                                        $scope.$apply(function () {
+
+                                            $scope.info2 = resp.data;
+                                        });
+
+                                    });
+                                });
+                            });
+                        });
+                    });
     });
