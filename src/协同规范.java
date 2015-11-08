@@ -108,6 +108,7 @@ Service class 编写 {
         可以从 CookieParam 中分别获得 id 与 token 的值。
         User 类提供了一个静态方法 validate 来验证 id 与 token 值的有效性。获得 id 与 token 后执行User.validate(id, token)，
         若验证通过，直接返回 User 对象，否则返回 null 。
+    请从 Service.Account 获取示例
 
 }
 
