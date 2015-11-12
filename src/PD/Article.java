@@ -1,7 +1,5 @@
 package PD;
 
-import DA.ArticleDA;
-
 import java.sql.Timestamp;
 
 
