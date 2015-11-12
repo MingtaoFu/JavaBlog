@@ -26,12 +26,13 @@ public class Article {
     public RT_Publish publish(@FormParam("title") String title,
                                 @FormParam("content") String content,@CookieParam("id") String id,
                              @CookieParam("token") String token) {
+
         Base.initialize();
         RT_Publish publish;
 
         User currentUser=User.validate(id,token);
         PD.Article article=new PD.Article(0,title,content,null,new Timestamp(System.currentTimeMillis()));
-        if (currentUser.getType().equals("root")){
+        if (currentUser != null && currentUser.getType().equals("root")){
             publish= new RT_Publish(1,article.getIndex());
             article.setIndex(article.add());
         }
