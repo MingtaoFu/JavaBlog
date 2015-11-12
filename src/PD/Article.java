@@ -1,53 +1,59 @@
 package PD;
 
-import java.sql.Timestamp;
 
+import java.sql.Timestamp;
+import DA.*;
 
 /**
- * Created by mingtao on 15-11-4.
+ * Created by zouyingtian on 15/11/12.
  */
-
 public class Article {
-    String id;
-    String title;
-    String content;
-    Timestamp time;
-    Timestamp modifyTime;
+	String id;
+	int index;
+	String title;
+	String content;
+	Timestamp time;
+	Timestamp modifyTime;
 
 
-    public String getId() {
-        return id;
-    }
+	public String getId() {return id;}
+    public int getIndex() {
+			return index;
+		}
 
-    public String getTitle() {
-        return title;
-    }
+    public String getTitle() {return title;}
+    public Timestamp getModifyTime () {
+            return modifyTime;
+        }
 
     public String getContent() {
         return content;
     }
 
-    public Timestamp getTime() {
-        return time;
-    }
 
-    public Timestamp getModifyTime() {
-        return modifyTime;
-    }
+    //        public Article(String id, String title, String content, Timestamp time, Timestamp modifyTime) {
+//            this.id = id;}
+    public void setIndex ( int index){
+            this.index = index;
+        }
 
-    public Article(String id, String title, String content, Timestamp time, Timestamp modifyTime) {
-        this.id = id;
-        this.title = title;
-        this.content = content;
-        this.time = time;
-        this.modifyTime = modifyTime;
-    }
+        public Article( int index, String title, String content, Timestamp time, Timestamp modifyTime){
+            this.index = index;
+            this.title = title;
+            this.content = content;
+            this.time = time;
+            this.modifyTime = modifyTime;
+        }
 
-    public void add(){
-        ArticleDA.add(this);
-    }
-    public static void delete(String id){
-        ArticleDA.delete(id);
-    }
-}
 
+        public int add () {
+            return ArticleDA.add(this);
+        }
+
+
+        public static void delete ( int index){
+            ArticleDA.delete(index);
+        }
+
+
+    }
