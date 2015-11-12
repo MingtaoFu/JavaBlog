@@ -25,8 +25,8 @@ angular.module("app", [])
         */
         $.getJSON("api/account/personalInfo", function(resp) {
                         $scope.$apply(function() {
-
                             $scope.info = resp.data;
+
 
                             $.post("api/account/logout", function() {
                                 $scope.$apply(function() {
@@ -35,6 +35,7 @@ angular.module("app", [])
 
                                             $scope.info2 = resp.data;
                                         });
+
 
                                     });
                                 });

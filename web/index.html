@@ -3,17 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <title>个人博客</title>
+
+    <!-- External libraries, don't modify -->
+    <link type="text/css" rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/cssreset-min.css">
+    <link type="text/css" rel="stylesheet" href="css/cssbase-min.css">
+    <!-- External libraries End -->
+
     <link type="text/css" rel="stylesheet" href="css/base.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <div id="hero" class="test1">
+                <div class="flr inb" id="blogInfo">
+                    <h1>XXX的博客</h1>
+                    <p>slogon</p>
+                    <nav>
+                        <a>主页</a>
+                        <a>文章</a>
+                        <a>登录</a>
+                        <a>sxjx</a>
+
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- aside bar -->
+        <aside class="boRa5 inb fll test2">
+
+            <section>
+                <div class="blTitle">
+                    <span>关于我</span>
+                </div>
+                <div class="txtC">
+                    <img src="" height="200" width="100">
+                </div>
+                <p class="inden2">
+                    blablabla<br>
+                    blablabla
+                    blablabla<br>
+                    blablabla<br>
+                    blablabla<br>
+                </p>
+
+            </section>
+
+            <section>
+
+            </section>
+
+        </aside>
+
+        <!-- document main block -->
+        <section id="main" class="fll boRa5 test3">
+            <div class="bloTitle">
+                <span>博文</span>
+            </div>
+
+            <div id="liCon">
+
+                <!-- article list -->
+                <div class="article test4">
+                    <h2 class="arTitle">文章标题</h2>
+                    <hr>
+                    <p class="preArticle inden2">
+                        很久很久以前，blablablablablablablablablablablablablabla<br>
+                        blablablablablablablablablablablablablablablablablabl<br>
+                        blablablablablablablablablablablablablablablablablab
+                    </p>
+                    <hr>
+                    <span class="glyphicon glyphicon-comment"></span> 评论(10)
+                    <span class="glyphicon glyphicon-heart"></span> 赞(38)
+                    <span class="glyphicon glyphicon-eye-open"></span> 阅读(123)
+                </div>
+
+                <div class="article test5">
+                    <h2 class="arTitle">文章标题</h2>
+                    <hr>
+                    <p class="preArticle inden2">
+                        很久很久以前，blablablablablablablablablablablablablabla<br>
+                        blablablablablablablablablablablablablablablablablabl<br>
+                        blablablablablablablablablablablablablablablablablab
+                    </p>
+                    <hr>
+                    <span class="glyphicon glyphicon-comment"></span> 评论(10)
+                    <span class="glyphicon glyphicon-heart"></span> 赞(38)
+                    <span class="glyphicon glyphicon-eye-open"></span> 阅读(123)
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+    </div>
+
+
 
 {{data}}
 <br>
 {{info}}
 {{info2}}
 
-<script src="js/jquery.min.js"></script>
-<script src="js/angular.min.js"></script>
-<script src="js/controllers/base.js"></script>
+    <!-- External libraries, don't modify -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <!-- External libraries End -->
+
+    <script src="js/controllers/base-compiled.min.js"></script>
 </body>
 </html>

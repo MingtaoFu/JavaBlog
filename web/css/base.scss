@@ -1,3 +1,29 @@
 body{
   background: white;
 }
+
+/**
+* 测使用背景类
+*/
+.test1{background-color: #F5F5F5}
+.test2{background-color: #DFF0D8}
+.test3{background-color: #D9EDF7}
+.test4{background-color: #FCF8E3}
+.test5{background-color: #F2DEDE}
+
+/**
+* 正式类
+*/
+
+.flr{float: right}
+.fll{float: left}
+
+.inb{display: inline-block}
+.in{display: inline}
+.blo{display: block}
+
+.txtC{text-align: center}
+
+.boRa5{border-radius: 5px}
+
+.inden2{text-indent: 2em}
