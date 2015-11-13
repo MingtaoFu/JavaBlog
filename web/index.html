@@ -12,6 +12,7 @@
 
     <link type="text/css" rel="stylesheet" href="css/base.css">
     <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="container">
@@ -70,6 +71,72 @@
 <br>
 {{info}}
 {{info2}}
+
+    <!-- login and register -->
+    <div id="loginPanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="javascript:void 0" aria-controls="login" role="tab" data-toggle="tab">登录</a>
+            </li>
+            <li role="presentation">
+                <a href="javascript:void 0" aria-controls="register" role="tab" data-toggle="tab">注册</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="login">
+                <div class="pad">
+                    <form class="pad">
+                        <p>
+                            <label for="loginNOInput">账号</label>&nbsp;
+                            <input id="loginNOInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <p>
+                            <label for="loginPWDInput">密码</label>&nbsp;
+                            <input id="loginPWDInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <br>
+                        <div class="btn-group loginBtn" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default">关闭</button>
+                            <button type="button" class="btn btn-primary">登录</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="register">
+<div class="pad">
+                    <form class="pad">
+                        <p>
+                            <label for="registerNOInput">账号</label>&nbsp;
+                            <input id="registerNOInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <p>
+                            <label for="registerNameInput">昵称</label>&nbsp;
+                            <input id="registerNameInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <p>
+                            <label for="registerPWDInput">密码</label>&nbsp;
+                            <input id="registerPWDInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <br>
+                        <div class="btn-group loginBtn" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default">关闭</button>
+                            <button type="button" class="btn btn-primary">注册</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- login and register ends-->
 
     <!-- External libraries, don't modify -->
     <script src="js/jquery.min.js"></script>

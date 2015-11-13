@@ -10,13 +10,12 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/', {
-
                 templateUrl: 'view/articleList.html',
             })
             .when('/article', {
                 templateUrl: 'view/article.html',
                 //controller: '',
-            })
+            });
     }])
     .controller("test", function($scope, rqService) {
         console.log(rqService);
