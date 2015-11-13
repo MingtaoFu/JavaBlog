@@ -56,50 +56,7 @@
 
         <!-- document main block -->
         <section id="main" class="fll boRa5 rela test3">
-            <div class="bloTitle padx">
-                <h2 class="bloTitle">博文</h2>
-            </div>
-
-            <div id="liCon" class="rela padx">
-
-                <!-- article list -->
-                <div class="article art1 padx test4">
-                    <h3 class="arTitle">文章标题</h3>
-                    <hr>
-                    <p class="preArticle inden2">
-                        很久很久以前，blablablablablablablablablablablablablabla<br>
-                        blablablablablablablablablablablablablablablablablabl<br>
-                        blablablablablablablablablablablablablablablablablab
-                    </p>
-                    <hr>
-                    <p>
-                        <span class="glyphicon glyphicon-comment"></span> 评论(10)
-                        &nbsp;
-                        <span class="glyphicon glyphicon-heart"></span> 赞(38)
-                        &nbsp;
-                        <span class="glyphicon glyphicon-eye-open"></span> 阅读(123)
-                    </p>
-                </div>
-
-                <div class="article art2 padx test5">
-                    <h3 class="arTitle">文章标题</h3>
-                    <hr>
-                    <p class="preArticle inden2">
-                        很久很久以前，blablablablablablablablablablablablablabla<br>
-                        blablablablablablablablablablablablablablablablablabl<br>
-                        blablablablablablablablablablablablablablablablablab
-                    </p>
-                    <hr>
-                    <p>
-                        <span class="glyphicon glyphicon-comment"></span> 评论(10)
-                        &nbsp;
-                        <span class="glyphicon glyphicon-heart"></span> 赞(38)
-                        &nbsp;
-                        <span class="glyphicon glyphicon-eye-open"></span> 阅读(123)
-                    </p>
-                </div>
-
-            </div>
+            <div ng-view></div>
         </section>
 
         <footer>
@@ -118,8 +75,10 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
     <!-- External libraries End -->
 
-    <script src="js/controllers/base-compiled.min.js"></script>
+    <script src="js/modules/request-compiled.js"></script>
+    <script src="js/controllers/base-compiled.js"></script>
 </body>
 </html>
