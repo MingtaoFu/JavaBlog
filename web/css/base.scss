@@ -1,5 +1,16 @@
 body{
   background: white;
+  font-family: lanting, Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+  font-family: lanting;
+  src: url('/css/font/lanting.ttf');
+}
+
+@font-face {
+  font-family: lantingx;
+  src: url('/css/font/lantingx.ttf');
 }
 
 /**
@@ -14,6 +25,8 @@ body{
 /**
 * 正式类
 */
+
+h3{font-weight: normal; font-size: 17px}
 
 .flr{float: right}
 .fll{float: left}
@@ -31,4 +44,6 @@ body{
 .rela{position: relative}
 .abso{position: absolute}
 
-.pad{padding: 3%}
+.padx{padding-left: 3%; padding-right: 3%}
+.pady{padding-top: 3%; padding-bottom: 3%}
+.pad{padding:3%;}
