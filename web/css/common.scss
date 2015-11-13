@@ -4,8 +4,26 @@
   background-image: url("../img/hero.png");
   background-repeat: no-repeat;
   background-color: #BDDBE7;
+
+  h1{
+    top: 35px;
+  }
+  .slogan{
+    top: 40px;
+  }
+  nav{
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+
+    a{
+      display: inline-block;
+      margin-right: 30px;
+    }
+  }
 }
-#blogInfo{width: 150px}
+#blogInfo{width: 300px; height: 100%; left: 50%}
 #aside{width: 30%}
 #main{width: 67%; margin-left: 3%; border: 1px solid #9DCBE2;}
 
