@@ -1,0 +1,57 @@
+#header {
+  margin-bottom: 20px;
+  overflow: hidden; }
+
+#hero {
+  height: 270px;
+  background-image: url("../img/hero.png");
+  background-repeat: no-repeat;
+  background-color: #BDDBE7; }
+  #hero h1 {
+    top: 35px; }
+  #hero .slogan {
+    top: 40px; }
+  #hero nav {
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px; }
+    #hero nav a {
+      display: inline-block;
+      margin-right: 30px; }
+
+#blogInfo {
+  width: 300px;
+  height: 100%;
+  left: 50%; }
+
+#aside {
+  width: 30%; }
+
+#main {
+  width: 67%;
+  margin-left: 3%;
+  border: 1px solid #9DCBE2; }
+
+hr {
+  border: 0;
+  background-color: #C7C7C1;
+  height: 1px; }
+
+.article {
+  border-radius: 4px;
+  margin-bottom: 20px; }
+
+.art1 {
+  background-color: #dff0d8;
+  border: 1px solid #BAD6AF; }
+
+.art2 {
+  background-color: #fcf8e3;
+  border: 1px solid #ECCFCF; }
+
+.art3 {
+  background-color: #F2DEDE;
+  border: 1px solid #D2B5B5; }
+
+/*# sourceMappingURL=common.css.map */

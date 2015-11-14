@@ -12,6 +12,7 @@
 
     <link type="text/css" rel="stylesheet" href="css/base.css">
     <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="container">
@@ -56,50 +57,7 @@
 
         <!-- document main block -->
         <section id="main" class="fll boRa5 rela test3">
-            <div class="bloTitle padx">
-                <h2 class="bloTitle">博文</h2>
-            </div>
-
-            <div id="liCon" class="rela padx">
-
-                <!-- article list -->
-                <div class="article art1 padx test4">
-                    <h3 class="arTitle">文章标题</h3>
-                    <hr>
-                    <p class="preArticle inden2">
-                        很久很久以前，blablablablablablablablablablablablablabla<br>
-                        blablablablablablablablablablablablablablablablablabl<br>
-                        blablablablablablablablablablablablablablablablablab
-                    </p>
-                    <hr>
-                    <p>
-                        <span class="glyphicon glyphicon-comment"></span> 评论(10)
-                        &nbsp;
-                        <span class="glyphicon glyphicon-heart"></span> 赞(38)
-                        &nbsp;
-                        <span class="glyphicon glyphicon-eye-open"></span> 阅读(123)
-                    </p>
-                </div>
-
-                <div class="article art2 padx test5">
-                    <h3 class="arTitle">文章标题</h3>
-                    <hr>
-                    <p class="preArticle inden2">
-                        很久很久以前，blablablablablablablablablablablablablabla<br>
-                        blablablablablablablablablablablablablablablablablabl<br>
-                        blablablablablablablablablablablablablablablablablab
-                    </p>
-                    <hr>
-                    <p>
-                        <span class="glyphicon glyphicon-comment"></span> 评论(10)
-                        &nbsp;
-                        <span class="glyphicon glyphicon-heart"></span> 赞(38)
-                        &nbsp;
-                        <span class="glyphicon glyphicon-eye-open"></span> 阅读(123)
-                    </p>
-                </div>
-
-            </div>
+            <div ng-view></div>
         </section>
 
         <footer>
@@ -114,12 +72,89 @@
 {{info}}
 {{info2}}
 
+    <!-- login and register -->
+    <div id="loginPanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="javascript:void 0" aria-controls="login" role="tab" data-toggle="tab">登录</a>
+            </li>
+            <li role="presentation">
+                <a href="javascript:void 0" aria-controls="register" role="tab" data-toggle="tab">注册</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="login">
+                <div class="pad">
+                    <form class="pad">
+                        <p>
+                            <label for="loginNOInput">账号</label>&nbsp;
+                            <input id="loginNOInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <p>
+                            <label for="loginPWDInput">密码</label>&nbsp;
+                            <input id="loginPWDInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <br>
+                        <div class="btn-group loginBtn" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default">关闭</button>
+                            <button type="button" class="btn btn-primary">登录</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="register">
+                <div class="pad">
+                    <form class="pad">
+                        <p>
+                            <label for="registerNOInput">账号</label>&nbsp;
+                            <input id="registerNOInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <p>
+                            <label for="registerNameInput">昵称</label>&nbsp;
+                            <input id="registerNameInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <p>
+                            <label for="registerPWDInput">密码</label>&nbsp;
+                            <input id="registerPWDInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <br>
+                        <div class="btn-group loginBtn" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default">关闭</button>
+                            <button type="button" class="btn btn-primary">注册</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login and register ends-->
+
+    <!-- personalCenter -->
+    <div class="panel panel-primary" id="personalCenter">
+        <div class="panel-heading">
+            <h3 class="panel-title">个人中心</h3>
+        </div>
+        <div class="panel-body">
+        </div>
+    </div>
+    <!-- personalCenter ends -->
+
     <!-- External libraries, don't modify -->
     <script src="js/jquery.min.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
     <!-- External libraries End -->
 
-    <script src="js/controllers/base-compiled.min.js"></script>
+    <script src="js/modules/request-compiled.js"></script>
+    <script src="js/controllers/base-compiled.js"></script>
 </body>
 </html>

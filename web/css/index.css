@@ -1,10 +1,8 @@
-#loginPanel{
+#loginPanel {
   display: none;
-
   background-color: white;
   border-radius: 5px;
   border: 1px solid #ddd;
-  //display: inline-block;
   width: 300px;
   height: 350px;
   position: fixed;
@@ -14,46 +12,36 @@
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-
-  input{
+  transform: translate(-50%, -50%); }
+  #loginPanel input {
     display: inline-block;
-    width: 19em;
-  }
-  .loginBtn{
-    float: right;
-  }
-}
+    width: 19em; }
+  #loginPanel .loginBtn {
+    float: right; }
 
-#personalCenter{
+#personalCenter {
   z-index: 2;
   position: fixed;
   display: inline-block;
   width: 100%;
   max-width: 500px;
-  height: 500px;
-}
+  height: 500px; }
 
-#infoCon{
+#infoCon {
   display: inline-block;
-  width: 280px;
-
-  #infoForm{
-    height: 250px;
-  }
-  label{
-    font-weight: normal;
-  }
-  input{
+  width: 280px; }
+  #infoCon #infoForm {
+    height: 250px; }
+  #infoCon label {
+    font-weight: normal; }
+  #infoCon input {
     float: right;
-    background-color: transparent;
-  }
-  #intro *{
+    background-color: transparent; }
+  #infoCon #intro * {
     display: inline-block;
-    vertical-align: top;
-  }
-  #modifyText{
+    vertical-align: top; }
+  #infoCon #modifyText {
     resize: none;
-    height: 100px;
-  }
-}
+    height: 100px; }
+
+/*# sourceMappingURL=index.css.map */
