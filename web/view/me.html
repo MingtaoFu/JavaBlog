@@ -12,19 +12,25 @@
         <hr>
         <div id="infoCon">
             <div>
-                <img src="" width="200" height="200">
+                <img srcset="rootdata.info.logo" width="200" height="200">
             </div>
             <br>
             <form class="txtL" id="infoForm">
-                <p>账号</p>
+                <p>
+                    账号
+                    <span class="infoValue">{{rootdata.info.id}}</span>
+                </p>
                 <p>
                     <label for="modifyInput">用户名</label>
-                    <input id="modifyInput">
+                    <input id="modifyInput" ng-model="rootdata.info.name" class="infoValue">
                 </p>
-                <p>注册时间</p>
+                <p>
+                    注册时间
+                    <span class="infoValue">{{rootdata.info.date}}</span>
+                </p>
                 <p id="intro">
                     <label for="modifyText">个人简介</label>
-                    <textarea class="flr" id="modifyText" resize></textarea>
+                    <textarea class="flr infoValue" id="modifyText" ng-model="rootdata.info.intro"></textarea>
                 </p>
             </form>
             <hr>

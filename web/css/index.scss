@@ -1,10 +1,10 @@
 #loginPanel{
-  display: none;
+  //display: none;
 
   background-color: white;
   border-radius: 5px;
   border: 1px solid #ddd;
-  //display: inline-block;
+  display: inline-block;
   width: 300px;
   height: 350px;
   position: fixed;
@@ -40,6 +40,12 @@
 
   #infoForm{
     height: 250px;
+
+    .infoValue{
+      display: inline-block;
+      width: 182px;
+      float: right;
+    }
   }
   label{
     font-weight: normal;

@@ -13,7 +13,8 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
         templateUrl: 'view/article.html'
     }). //controller: '',
     when('/me', {
-        templateUrl: 'view/me.html'
+        templateUrl: 'view/me.html',
+        controller: 'me'
     });
 }]).controller("test", function ($scope, rqService) {
     console.log(rqService);
@@ -42,6 +43,45 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
                     });
                 });
             });
+        });
+    });
+}).controller('main', function ($scope, $rootScope) {
+    $rootScope.rootdata = {
+        login: {
+            id: '',
+            pwd: ''
+        },
+        register: {
+            id: '',
+            name: '',
+            pwd: ''
+        },
+        info: {},
+        blogInfo: {}
+    };
+
+    $rootScope.status = {
+        isValidated: false,
+        loginPanel: false
+
+    };
+
+    $scope.loginSubmit = function () {
+        $.post('api/account/login', $rootScope.rootdata.login, function (resp) {
+            $scope.$apply(function () {
+                if (resp.data.status) {
+                    document.cookie = "id=" + $rootScope.rootdata.login.id;
+                    document.cookie = "token=" + resp.data.token;
+                    $rootScope.status.isValidated = true;
+                    $scope.status.loginPanel = false;
+                } else {}
+            });
+        });
+    };
+}).controller('me', function ($scope, $rootScope) {
+    $.getJSON('api/account/personalInfo', function (resp) {
+        $scope.$apply(function () {
+            $rootScope.rootdata.info = resp.data;
         });
     });
 });
