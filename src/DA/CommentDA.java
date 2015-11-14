@@ -36,7 +36,7 @@ public class CommentDA {
                 do {
                     comment = new Comment(resultSet.getString(4), resultSet.getString(2), resultSet.getString(5));
                     comment.setId(resultSet.getString(1));
-                    comment.setTime(resultSet.getTimestamp(3));
+                    comment.setTime(resultSet.getDate(3));
                     comments.add(comment);
                 }while (resultSet.next());
                 resultSet.close();
