@@ -15,6 +15,9 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
             .when('/article', {
                 templateUrl: 'view/article.html',
                 //controller: '',
+            })
+            .when('/me', {
+                templateUrl: 'view/me.html',
             });
     }])
     .controller("test", function($scope, rqService) {

@@ -11,9 +11,11 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
         templateUrl: 'view/articleList.html'
     }).when('/article', {
         templateUrl: 'view/article.html'
+    }). //controller: '',
+    when('/me', {
+        templateUrl: 'view/me.html'
     });
-}]). //controller: '',
-controller("test", function ($scope, rqService) {
+}]).controller("test", function ($scope, rqService) {
     console.log(rqService);
     /*
      $.post("api/account/login", {id: "da", pwd: "dada"}, function(resp) {
