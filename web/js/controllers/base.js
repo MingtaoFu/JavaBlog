@@ -19,6 +19,9 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
             .when('/me', {
                 templateUrl: 'view/me.html',
                 controller: 'me'
+            })
+            .when('/admin', {
+                templateUrl: 'view/editor.html'
             });
     }])
     .controller("test", function($scope, rqService) {

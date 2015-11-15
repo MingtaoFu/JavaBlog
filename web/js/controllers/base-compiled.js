@@ -15,6 +15,8 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
     when('/me', {
         templateUrl: 'view/me.html',
         controller: 'me'
+    }).when('/admin', {
+        templateUrl: 'view/editor.html'
     });
 }]).controller("test", function ($scope, rqService) {
     console.log(rqService);
