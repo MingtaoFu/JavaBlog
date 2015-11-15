@@ -84,6 +84,9 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
             $rootScope.rootdata.info = resp.data;
         });
     });
+
+    //修改密码
+    $scope.modifyPwd = function () {};
 });
 
 //# sourceMappingURL=base-compiled.js.map

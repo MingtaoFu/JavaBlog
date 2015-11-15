@@ -105,5 +105,10 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
             $scope.$apply(function() {
                 $rootScope.rootdata.info = resp.data;
             });
-        })
+        });
+
+        //修改密码
+        $scope.modifyPwd = function() {
+
+        }
     });

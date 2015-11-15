@@ -30,6 +30,14 @@
 #infoCon {
   display: inline-block;
   width: 280px; }
+  #infoCon form > div {
+    height: 34px;
+    margin-bottom: 10px; }
+    #infoCon form > div label {
+      line-height: 34px; }
+  #infoCon form input {
+    float: right;
+    background-color: transparent; }
   #infoCon #infoForm {
     height: 250px; }
     #infoCon #infoForm .infoValue {
@@ -45,14 +53,15 @@
         text-indent: 13px; }
   #infoCon label {
     font-weight: normal; }
-  #infoCon input {
-    float: right;
-    background-color: transparent; }
   #infoCon #intro * {
     display: inline-block;
     vertical-align: top; }
   #infoCon #modifyText {
     resize: none;
     height: 100px; }
+
+#modifyForm {
+  border-radius: 3px;
+  border: 1px solid #ddd; }
 
 /*# sourceMappingURL=index.css.map */

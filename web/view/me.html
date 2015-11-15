@@ -34,21 +34,24 @@
                 </div>
             </form>
             <hr>
-            <button type="button" class="btn btn-default">修改密码</button>
-            <form>
-                <div>
-                    <label for="oldPwd">旧密码</label>
-                    <input class="form-control" id="oldPwd">
-                </div>
-                <div>
-                    <label for="newPwd">新密码</label>
-                    <input class="form-control" id="newPwd">
-                </div>
-                <div>
-                    <label for="rePwd">重复输入</label>
-                    <input class="form-control" id="rePwd">
-                </div>
-            </form>
+            <div class="txtL">
+                <p><a>修改密码>>></a></p>
+                <form class="pad" id="modifyForm" name="modifyForm">
+                    <div>
+                        <label for="oldPwd">旧密码</label>
+                        <input class="form-control" id="oldPwd" type="password">
+                    </div>
+                    <div>
+                        <label for="newPwd">新密码</label>
+                        <input class="form-control" id="newPwd" type="password">
+                    </div>
+                    <div>
+                        <label for="rePwd">重复输入</label>
+                        <input class="form-control" id="rePwd" type="password">
+                    </div>
+                    <input type="submit" class="btn btn-default" style="float: none">
+                </form>
+            </div>
         </div>
     </div>
 
