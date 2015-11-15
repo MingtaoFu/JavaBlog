@@ -46,6 +46,17 @@
       width: 182px;
       float: right;
     }
+
+    &>div{
+      height: 34px;
+      margin-bottom: 10px;
+      label, span{
+        line-height: 34px;
+      }
+      span{
+        text-indent: 13px;
+      }
+    }
   }
   label{
     font-weight: normal;

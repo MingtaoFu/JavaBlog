@@ -36,6 +36,13 @@
       display: inline-block;
       width: 182px;
       float: right; }
+    #infoCon #infoForm > div {
+      height: 34px;
+      margin-bottom: 10px; }
+      #infoCon #infoForm > div label, #infoCon #infoForm > div span {
+        line-height: 34px; }
+      #infoCon #infoForm > div span {
+        text-indent: 13px; }
   #infoCon label {
     font-weight: normal; }
   #infoCon input {

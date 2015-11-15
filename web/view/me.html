@@ -16,27 +16,38 @@
             </div>
             <br>
             <form class="txtL" id="infoForm">
-                <p>
-                    账号
+                <div>
+                    <label>账号</label>
                     <span class="infoValue">{{rootdata.info.id}}</span>
-                </p>
-                <p>
+                </div>
+                <div>
                     <label for="modifyInput">用户名</label>
-                    <input id="modifyInput" ng-model="rootdata.info.name" class="infoValue">
-                </p>
-                <p>
-                    注册时间
-                    <span class="infoValue">{{rootdata.info.date}}</span>
-                </p>
-                <p id="intro">
+                    <input id="modifyInput" ng-model="rootdata.info.name" class="infoValue form-control">
+                </div>
+                <div>
+                    <label>注册时间</label>
+                    <span class="infoValue">{{rootdata.info.date.replace("T", " ").replace("+08:00", "")}}</span>
+                </div>
+                <div id="intro">
                     <label for="modifyText">个人简介</label>
-                    <textarea class="flr infoValue" id="modifyText" ng-model="rootdata.info.intro"></textarea>
-                </p>
+                    <textarea class="flr infoValue form-control" id="modifyText" ng-model="rootdata.info.intro"></textarea>
+                </div>
             </form>
             <hr>
+            <button type="button" class="btn btn-default">修改密码</button>
             <form>
-                <input>
-                <button type="button">修改密码</button>
+                <div>
+                    <label for="oldPwd">旧密码</label>
+                    <input class="form-control" id="oldPwd">
+                </div>
+                <div>
+                    <label for="newPwd">新密码</label>
+                    <input class="form-control" id="newPwd">
+                </div>
+                <div>
+                    <label for="rePwd">重复输入</label>
+                    <input class="form-control" id="rePwd">
+                </div>
             </form>
         </div>
     </div>
