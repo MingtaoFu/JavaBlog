@@ -2,7 +2,8 @@ package PD;
 
 import DA.CommentDA;
 
-import java.sql.Timestamp;
+import javax.xml.bind.annotation.XmlElement;
+import java.sql.Date;
 import java.util.ArrayList;
 
 /**
@@ -10,9 +11,12 @@ import java.util.ArrayList;
  */
 public class Comment {
     String id;
+    Date time;
+    @XmlElement()
     String articleId;
+    @XmlElement()
     String content;
-    Timestamp time;
+    @XmlElement()
     String user;
 
 
@@ -28,7 +32,7 @@ public class Comment {
         return content;
     }
 
-    public Timestamp getTime() {
+    public Date getTime() {
         return time;
     }
 
@@ -40,7 +44,7 @@ public class Comment {
     public void setId(String ID) {
         this.id = ID;
     }
-    public void setTime(Timestamp time) {
+    public void setTime(Date time) {
         this.time = time;
     }
 

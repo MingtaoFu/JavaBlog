@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+</head>
+<body>
+    <div class="pad txtC">
+        <div class="txtC">
+            <h2>个人中心</h2>
+        </div>
+        <hr>
+        <div id="infoCon">
+            <div>
+                <img srcset="rootdata.info.logo" width="200" height="200">
+            </div>
+            <br>
+            <form class="txtL" id="infoForm">
+                <div>
+                    <label>账号</label>
+                    <span class="infoValue">{{rootdata.info.id}}</span>
+                </div>
+                <div>
+                    <label for="modifyInput">用户名</label>
+                    <input id="modifyInput" ng-model="rootdata.info.name" class="infoValue form-control">
+                </div>
+                <div>
+                    <label>注册时间</label>
+                    <span class="infoValue">{{rootdata.info.date.replace("T", " ").replace("+08:00", "")}}</span>
+                </div>
+                <div id="intro">
+                    <label for="modifyText">个人简介</label>
+                    <textarea class="flr infoValue form-control" id="modifyText" ng-model="rootdata.info.intro"></textarea>
+                </div>
+            </form>
+            <hr>
+            <div class="txtL">
+                <p><a>修改密码>>></a></p>
+                <form class="pad" id="modifyForm" name="modifyForm">
+                    <div>
+                        <label for="oldPwd">旧密码</label>
+                        <input class="form-control" id="oldPwd" type="password">
+                    </div>
+                    <div>
+                        <label for="newPwd">新密码</label>
+                        <input class="form-control" id="newPwd" type="password">
+                    </div>
+                    <div>
+                        <label for="rePwd">重复输入</label>
+                        <input class="form-control" id="rePwd" type="password">
+                    </div>
+                    <input type="submit" class="btn btn-default" style="float: none">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

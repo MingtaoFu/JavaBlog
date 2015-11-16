@@ -1,0 +1,87 @@
+@charset "UTF-8";
+body {
+  background: white;
+  font-family: lanting, Arial, Helvetica, sans-serif; }
+
+@font-face {
+  font-family: lanting;
+  src: url("/css/font/lanting.ttf"); }
+@font-face {
+  font-family: lantingx;
+  src: url("/css/font/lantingx.ttf"); }
+/**
+* 测使用背景类
+*/
+.test1 {
+  background-color: #F5F5F5; }
+
+.test2 {
+  background-color: #DFF0D8; }
+
+.test3 {
+  background-color: #D9EDF7; }
+
+.test4 {
+  background-color: #FCF8E3; }
+
+.test5 {
+  background-color: #F2DEDE; }
+
+/**
+* 正式类
+*/
+h3 {
+  font-weight: normal;
+  font-size: 17px; }
+
+a {
+  text-decoration: none; }
+
+.flr {
+  float: right; }
+
+.fll {
+  float: left; }
+
+.inb {
+  display: inline-block; }
+
+.in {
+  display: inline; }
+
+.blo {
+  display: block; }
+
+.txtC {
+  text-align: center; }
+
+.txtL {
+  text-align: left; }
+
+.boRa5 {
+  border-radius: 5px; }
+
+.inden2 {
+  text-indent: 2em; }
+
+.rela {
+  position: relative; }
+
+.abso {
+  position: absolute; }
+
+.padx {
+  padding-left: 3%;
+  padding-right: 3%; }
+
+.pady {
+  padding-top: 3%;
+  padding-bottom: 3%; }
+
+.pad {
+  padding: 3%; }
+
+.noF {
+  float: none; }
+
+/*# sourceMappingURL=base.css.map */

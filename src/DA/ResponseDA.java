@@ -38,7 +38,7 @@ public class ResponseDA {
                     response = new Response(resultSet.getString(2), resultSet.getString(3),
                             resultSet.getString(4),resultSet.getString(5));
                     response.setId(resultSet.getString(1));
-                    response.setTime(resultSet.getTimestamp(3));
+                    response.setTime(resultSet.getDate(3));
                     responses.add(response);
                 }while (resultSet.next());
                 resultSet.close();

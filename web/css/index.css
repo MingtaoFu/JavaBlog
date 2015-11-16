@@ -1,0 +1,67 @@
+#loginPanel {
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  display: inline-block;
+  width: 300px;
+  height: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  #loginPanel input {
+    display: inline-block;
+    width: 19em; }
+  #loginPanel .loginBtn {
+    float: right; }
+
+#personalCenter {
+  z-index: 2;
+  position: fixed;
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+  height: 500px; }
+
+#infoCon {
+  display: inline-block;
+  width: 280px; }
+  #infoCon form > div {
+    height: 34px;
+    margin-bottom: 10px; }
+    #infoCon form > div label {
+      line-height: 34px; }
+  #infoCon form input {
+    float: right;
+    background-color: transparent; }
+  #infoCon #infoForm {
+    height: 250px; }
+    #infoCon #infoForm .infoValue {
+      display: inline-block;
+      width: 182px;
+      float: right; }
+    #infoCon #infoForm > div {
+      height: 34px;
+      margin-bottom: 10px; }
+      #infoCon #infoForm > div label, #infoCon #infoForm > div span {
+        line-height: 34px; }
+      #infoCon #infoForm > div span {
+        text-indent: 13px; }
+  #infoCon label {
+    font-weight: normal; }
+  #infoCon #intro * {
+    display: inline-block;
+    vertical-align: top; }
+  #infoCon #modifyText {
+    resize: none;
+    height: 100px; }
+
+#modifyForm {
+  border-radius: 3px;
+  border: 1px solid #ddd; }
+
+/*# sourceMappingURL=index.css.map */
