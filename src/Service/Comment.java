@@ -61,14 +61,26 @@ public class Comment {
         }
         return deleteComment;
     }
-
-    @GET
-    @Path("getAll")
-    @Produces(MediaType.APPLICATION_JSON)
-    public RT_getAllComment getAllComment(){
-        Base.initialize();
-
-        return null;
-    }
+//
+//    @POST
+//    @Path("getAll")
+//    @Produces(MediaType.APPLICATION_JSON)
+//    public RT_GetAllComment getAllComment(@FormParam("articleId")String articleId,
+//                                          @CookieParam("id")String id,
+//                                          @CookieParam("token")String token){
+//        Base.initialize();
+//        if(token == null || id == null){
+//            return new RT_GetAllComment(0);
+//        }
+//        User currentUser=User.validate(id, token);
+//        RT_GetAllComment getAllComment;
+//        if(currentUser == null){
+//            getAllComment=new RT_GetAllComment(2);
+//        }
+//        else{
+//            getAllComment=new RT_GetAllComment(1,PD.Comment.find(articleId));
+//        }
+//        return getAllComment;
+//    }
 
 }

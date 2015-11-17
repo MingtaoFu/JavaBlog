@@ -1,47 +1,54 @@
 package PD;
 
 import DA.ResponseDA;
+import com.sun.xml.internal.txw2.annotation.XmlNamespace;
 
 import javax.xml.bind.annotation.XmlElement;
-import java.sql.Date;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.sql.Date;
 
 /**
  * Created by mingtao on 15-11-4.
  */
-public class Response {
-    String id;
-    Date time;
-    @XmlElement()
-    String content;
-    @XmlElement()
-    String commentId;
-    @XmlElement()
-    String fromUser ;
-    @XmlElement()
-    String toUser ;
+//@XmlType(name = "response")
+//@XmlRootElement(name = "response")
 
+public class Response {
+    private String id;
+    private String time;
+    private String content;
+    private String commentId;
+    private String fromUser ;
+    private String toUser ;
+
+    public Response() {
+    }
+
+    @XmlElement()
     public String getId() {
         return id;
     }
-
+    @XmlElement()
     public String getContent() {
         return content;
     }
-
-    public Date getTime() {
+    @XmlElement()
+    public String  getTime() {
         return time;
     }
-
+    @XmlElement()
     public String getCommentId() {
         return commentId;
     }
-
+    @XmlElement()
     public String getFromUser () {
         return fromUser ;
     }
-
+    @XmlElement()
     public String getToUser () {
         return toUser ;
     }
@@ -49,21 +56,21 @@ public class Response {
     public void setId(String ID) {
         this.id = ID;
     }
-    public void setTime(Date time)
+    public void setTime(String time)
     {
         this.time=time;
     }
 
-    public Response( String content,  String commentID, String fromUserID, String toUserID) {
+    public Response( String content,  String commentID, String fromUser, String toUser) {
         this.content = content;
         this.commentId = commentID;
-        this.fromUser  = fromUserID;
-        this.toUser  = toUserID;
+        this.fromUser  = fromUser;
+        this.toUser  = toUser;
     }
     public void add(){
         ResponseDA.add(this);
     }
-    public ArrayList<Response> find(String commentId){return ResponseDA.find(commentId);}
+    public static ArrayList<Response> find(String commentId){return ResponseDA.find(commentId);}
     public static void delete(String ID){
         ResponseDA.delete(ID);
     }

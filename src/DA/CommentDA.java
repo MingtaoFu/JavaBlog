@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class CommentDA {
     static public void add(Comment comment){
         String sql="INSERT INTO comment(Content,ArticleId,User)" +
-                "VALUES ('"+comment.getContent()+"','"+comment.getArticleId()+"','"+comment.getUserId()+"')";
+                "VALUES ('"+comment.getContent()+"','"+comment.getArticleId()+"','"+comment.getUser()+"')";
         try{
             Base.statement.executeUpdate(sql);
         }
@@ -31,12 +31,15 @@ public class CommentDA {
             ResultSet resultSet=Base.statement.executeQuery(sql);
             if(!resultSet.next()){
                 resultSet.close();
+                comments=null;///??????????????????
             }
             else {
                 do {
                     comment = new Comment(resultSet.getString(4), resultSet.getString(2), resultSet.getString(5));
                     comment.setId(resultSet.getString(1));
-                    comment.setTime(resultSet.getDate(3));
+                    String time=resultSet.getString(3);//去掉最后“.0”
+                    comment.setTime(time.substring(0,time.length()-2));
+                    //comment.setResponses(ResponseDA.find(comment.getId()));
                     comments.add(comment);
                 }while (resultSet.next());
                 resultSet.close();
@@ -59,5 +62,28 @@ public class CommentDA {
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
         }
+    }
+    public static ArrayList<String> getCommentId(String articleId){//?????????????
+        String sql = "SELECT id FROM comment WHERE ArticleId='"+articleId+"'";
+        ArrayList<String> commentId=new ArrayList<String>();
+        try {
+            ResultSet resultSet=Base.statement.executeQuery(sql);
+            if(!resultSet.next()){
+                resultSet.close();
+                commentId=null;
+            }
+            else {
+                do {
+                    commentId.add(resultSet.getString(1));
+                }while (resultSet.next());
+                resultSet.close();
+            }
+        }
+        catch (SQLException ex){
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        return commentId;
     }
 }

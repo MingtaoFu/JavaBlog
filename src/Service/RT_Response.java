@@ -1,10 +1,10 @@
 package Service;
 
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import PD.*;
+
+import javax.xml.bind.annotation.*;
+import java.util.ArrayList;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
@@ -29,3 +29,18 @@ class RT_DeleteResponse{
         this.status=status;
     }
 }
+
+//class RT_GetAllResponse{
+////    @XmlElement()
+////    private int status;
+//        @XmlElement()
+//        private ArrayList<PD.Response> responses;
+//
+//        public RT_GetAllResponse( ArrayList<PD.Response> responses) {
+//            this.responses = responses;
+//        }
+//
+//        public RT_GetAllResponse() {
+//
+//        }
+//}

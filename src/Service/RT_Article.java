@@ -21,8 +21,6 @@ class RT_Publish{
     private int status;
     @XmlElement()
     private int index;
-
-    public RT_Publish() {}
     public RT_Publish(int status,int index){
         this.status = status;
         this.index=index;
@@ -37,32 +35,32 @@ class RT_Modify{
     private int status;
     @XmlElement()
     private int index;
+    public  RT_Modify(int status, int index){
+        this.status=status;
+        this.index=index;
+
+    }
+
+
+}
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "data")
+class RT_ArticleList{
+    @XmlElement()
+    private int status;
+    @XmlElement()
+    private int index;
     @XmlElement()
     private String title;
     @XmlElement()
     private String content;
     @XmlElement()
     private Date modifytime;
-    public  RT_Modify(int status, int index,String title,String content,Date modifytime){
-        this.status=status;
+    public RT_ArticleList(int status,int index,String title,String content,Date modifytime){
+        this.status = status;
         this.index=index;
         this.title=title;
         this.content=content;
         this.modifytime=modifytime;
-
     }
-
-
 }
-//@XmlAccessorType(XmlAccessType.FIELD)
-//@XmlRootElement(name = "data")
-//class RT_ArticleList{
-//    @XmlElement()
-//    private int status;
-//    @XmlElement()
-//    private int index;
-//    public RT_ArticleList(int status,int index){
-//        this.status = status;
-//        this.index=index;
-//    }
-//}

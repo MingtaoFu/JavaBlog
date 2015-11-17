@@ -35,10 +35,11 @@ public class ResponseDA {
             }
             else {
                 do {
-                    response = new Response(resultSet.getString(2), resultSet.getString(3),
-                            resultSet.getString(4),resultSet.getString(5));
+                    response = new Response(resultSet.getString(2), resultSet.getString(4),
+                            resultSet.getString(5),resultSet.getString(6));
                     response.setId(resultSet.getString(1));
-                    response.setTime(resultSet.getDate(3));
+                    String time=resultSet.getString(3);//去掉最后“.0”
+                    response.setTime(time.substring(0, time.length()-2));
                     responses.add(response);
                 }while (resultSet.next());
                 resultSet.close();

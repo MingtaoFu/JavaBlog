@@ -3,64 +3,75 @@ package PD;
 import DA.CommentDA;
 
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.sql.Date;
 import java.util.ArrayList;
 
 /**
  * Created by mingtao on 15-11-4.
  */
+//@XmlType(name = "comment")
+//    @XmlRootElement(name = "comment")
 public class Comment {
-    String id;
-    Date time;
-    @XmlElement()
-    String articleId;
-    @XmlElement()
-    String content;
-    @XmlElement()
-    String user;
+    private String id;
+    private String time;
+    private String articleId;
+    private String content;
+    private String user;
+//    @XmlElement()//???????????????????????????????
+//    ArrayList<Response> responses;
 
-
+    public Comment() {
+    }
+    @XmlElement()
     public String getId() {
         return id;
     }
-
+    @XmlElement()
     public String getArticleId() {
         return articleId;
     }
-
+    @XmlElement()
     public String getContent() {
         return content;
     }
-
-    public Date getTime() {
+    @XmlElement()
+    public String getTime() {
         return time;
     }
-
-    public String getUserId() {
+    @XmlElement()
+    public String getUser() {
         return user;
     }
 
+//    public void setResponses(ArrayList<Response> responses) {
+//        this.responses = responses;
+//    }
 
     public void setId(String ID) {
         this.id = ID;
     }
-    public void setTime(Date time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
-    public Comment(String articleID, String content, String userID) {
+    public Comment(String articleID, String content, String user) {
         this.articleId = articleID;
         this.content = content;
         //this.time = time;
-        this.user  = userID;
+        this.user  = user;
     }
 
     public void add(){
         CommentDA.add(this);
     }
-    public ArrayList<Comment> find(String articleId){return CommentDA.find(articleId);}
+    public static ArrayList<Comment> find(String articleId){return CommentDA.find(articleId);}
     public static void delete(String ID){
         CommentDA.delete(ID);
     }
-
+    public static ArrayList<String> getCommentId(String articleId){//???????????
+        return CommentDA.getCommentId(articleId);
+    }
 }

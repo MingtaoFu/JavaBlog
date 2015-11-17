@@ -1,18 +1,22 @@
 package Service;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import PD.*;
+
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 
 
 //添加评论
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
+//@XmlSeeAlso({RT_GetAllResponse.class})
 class RT_AddComment{
     @XmlElement()
     private int status;
+
+
+    public RT_AddComment() {
+    }
 
     public RT_AddComment(int status){
         this.status = status;
@@ -30,16 +34,22 @@ class RT_DeleteComment {
     }
 }
 
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement(name = "data")
-class RT_getAllComment {
-    @XmlElement()
-    private ArrayList<Comment> comments;
-
-    public RT_getAllComment() {
-    }
-
-    public RT_getAllComment(ArrayList<Comment> comments) {
-        this.comments = comments;
-    }
-}
+//@XmlAccessorType(XmlAccessType.FIELD)
+//@XmlRootElement(name = "data")
+//class RT_GetAllComment {
+//    @XmlElement()
+//    private ArrayList<PD.Comment> comments;
+////    @XmlElement()
+//////    private int status;
+////    @XmlElement()
+////    private ArrayList<RT_GetAllResponse> allResponses;
+//
+//    public RT_GetAllComment() {
+//    }
+//
+//    public RT_GetAllComment(ArrayList<PD.Comment> comments) {
+//        this.comments = comments;
+//        //    this.status = status;
+////        this.allResponses = allResponses;
+//    }
+//}
