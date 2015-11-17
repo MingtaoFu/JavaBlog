@@ -32,6 +32,7 @@ public class ResponseDA {
             ResultSet resultSet=Base.statement.executeQuery(sql);
             if(!resultSet.next()){
                 resultSet.close();
+                responses=null;
             }
             else {
                 do {
@@ -46,9 +47,10 @@ public class ResponseDA {
             }
         }
         catch (SQLException ex){
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
+            ArrayList<Response>cc=new ArrayList<Response>();
+            Response c=new Response("$","$","$","$");
+            cc.add(c);
+            return cc;
         }
         return responses;
     }

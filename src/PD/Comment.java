@@ -1,6 +1,7 @@
 package PD;
 
 import DA.CommentDA;
+import DA.StatusException;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -67,7 +68,9 @@ public class Comment {
     public void add(){
         CommentDA.add(this);
     }
-    public static ArrayList<Comment> find(String articleId){return CommentDA.find(articleId);}
+    public static ArrayList<Comment> find(String articleId){
+        return CommentDA.find(articleId);
+    }
     public static void delete(String ID){
         CommentDA.delete(ID);
     }

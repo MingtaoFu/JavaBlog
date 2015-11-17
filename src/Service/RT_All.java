@@ -26,8 +26,8 @@ class RT_All{
     private ArrayList<PD.Response> responses;
 
 
-    public int getStatus() {
-        return status;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public ArrayList<PD.Comment> getComment() {

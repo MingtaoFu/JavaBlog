@@ -31,7 +31,7 @@ public class CommentDA {
             ResultSet resultSet=Base.statement.executeQuery(sql);
             if(!resultSet.next()){
                 resultSet.close();
-                comments=null;///??????????????????
+                comments=null;
             }
             else {
                 do {
@@ -46,9 +46,10 @@ public class CommentDA {
             }
         }
         catch (SQLException ex){
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
+            ArrayList<Comment>cc=new ArrayList<Comment>();
+            Comment c=new Comment("$","$","$");
+            cc.add(c);
+            return cc;
         }
         return comments;
     }
