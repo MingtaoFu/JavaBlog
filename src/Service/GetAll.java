@@ -16,10 +16,10 @@ import java.util.ArrayList;
  */
 @Path("api/article")
 public class GetAll {
-    @POST
+    @GET
     @Path("oneArticleContent")
     @Produces(MediaType.APPLICATION_JSON)
-    public RT_All getAll(@FormParam("articleId") String articleId
+    public RT_All getAll(@QueryParam("articleId") String articleId
                           /*@CookieParam("id") String id,
                          @CookieParam("token")String token*/){
         Base.initialize();
