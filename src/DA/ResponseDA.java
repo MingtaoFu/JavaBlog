@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class ResponseDA {
     static public void add(Response response){
-        String sql="INSERT INTO response(Content,CommentId,FromUser,ToUser)" +
+        String sql="INSERT INTO Response(Content,CommentId,FromUser,ToUser)" +
                 "VALUES ('"+response.getContent()+"','"+response.getCommentId()+"','"+
                 response.getFromUser()+"','"+response.getToUser()+"')";
         try{
@@ -25,7 +25,7 @@ public class ResponseDA {
     }
 
     static public ArrayList<Response> find(String commentId){
-        String sql = "SELECT * FROM response WHERE CommentId='"+commentId+"'";
+        String sql = "SELECT * FROM Response WHERE CommentId='"+commentId+"'";
         Response response;
         ArrayList<Response>responses = new ArrayList<Response>();
         try{
@@ -53,7 +53,7 @@ public class ResponseDA {
         return responses;
     }
     static public void delete(String ID){
-        String sql="DELETE FROM respond WHERE Id='"+ID+"'";
+        String sql="DELETE FROM Response WHERE Id='"+ID+"'";
         try{
             Base.statement.executeUpdate(sql);
         }

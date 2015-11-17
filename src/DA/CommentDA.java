@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class CommentDA {
     static public void add(Comment comment){
-        String sql="INSERT INTO comment(Content,ArticleId,User)" +
+        String sql="INSERT INTO Comment(Content,ArticleId,User)" +
                 "VALUES ('"+comment.getContent()+"','"+comment.getArticleId()+"','"+comment.getUser()+"')";
         try{
             Base.statement.executeUpdate(sql);
@@ -24,7 +24,7 @@ public class CommentDA {
         }
     }
     static public ArrayList<Comment> find(String articleId){
-        String sql = "SELECT * FROM comment WHERE ArticleId='"+articleId+"'";
+        String sql = "SELECT * FROM Comment WHERE ArticleId='"+articleId+"'";
         Comment comment;
         ArrayList<Comment>comments = new ArrayList<Comment>();
         try{
@@ -53,7 +53,7 @@ public class CommentDA {
         return comments;
     }
     static public void delete(String ID){
-        String sql="DELETE FROM comment WHERE Id='"+ID+"'";
+        String sql="DELETE FROM Comment WHERE Id='"+ID+"'";
         try{
             Base.statement.executeUpdate(sql);
         }
@@ -64,7 +64,7 @@ public class CommentDA {
         }
     }
     public static ArrayList<String> getCommentId(String articleId){//?????????????
-        String sql = "SELECT id FROM comment WHERE ArticleId='"+articleId+"'";
+        String sql = "SELECT id FROM Comment WHERE ArticleId='"+articleId+"'";
         ArrayList<String> commentId=new ArrayList<String>();
         try {
             ResultSet resultSet=Base.statement.executeQuery(sql);
