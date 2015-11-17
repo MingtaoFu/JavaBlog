@@ -64,15 +64,20 @@
   border-radius: 3px;
   border: 1px solid #ddd; }
 
-#commentCon {
-  background-color: #DFF0D8; }
-
 .commentContent {
   font-size: 15px; }
 
 .responseCon {
   font-size: 14px; }
   .responseCon .resp {
-    margin-bottom: 10px; }
+    text-indent: 1em;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer; }
+    .responseCon .resp:hover {
+      background-color: #F5F5F5; }
+
+#mainArticle {
+  background-color: white; }
 
 /*# sourceMappingURL=index.css.map */
