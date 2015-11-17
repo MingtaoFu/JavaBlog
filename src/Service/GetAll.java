@@ -19,20 +19,20 @@ public class GetAll {
     @POST
     @Path("oneArticleContent")
     @Produces(MediaType.APPLICATION_JSON)
-    public RT_All getAll(@FormParam("articleId") String articleId,
-                          @CookieParam("id") String id,
-                         @CookieParam("token")String token){
+    public RT_All getAll(@FormParam("articleId") String articleId
+                          /*@CookieParam("id") String id,
+                         @CookieParam("token")String token*/){
         Base.initialize();
-        if(id==null||token==null){
-            Base.terminate();
-            return new RT_All(0);
-        }
+//        if(id==null||token==null){
+//            Base.terminate();
+//            return new RT_All(0);
+//        }
         RT_All all;
-        User currentUser=User.validate(id, token);
-        if (currentUser==null){
-            all=new RT_All(2);
-        }
-        else {
+//        User currentUser=User.validate(id, token);
+//        if (currentUser==null){
+//            all=new RT_All(2);
+//        }
+//        else {
 //      article属性
 //        ArrayList<ArrayList<PD.Response>> responses = new ArrayList<ArrayList<PD.Response>>();
 //        ArrayList<PD.Response>response = new ArrayList<PD.Response>();
@@ -49,7 +49,7 @@ public class GetAll {
             }
 
             all = new RT_All(1,PD.Comment.find(articleId), response1);
-        }
+//        }
         Base.terminate();
         return all;
     }
