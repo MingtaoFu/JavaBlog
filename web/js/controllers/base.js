@@ -14,7 +14,7 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
             })
             .when('/article', {
                 templateUrl: 'view/article.html',
-                //controller: '',
+                controller: 'article'
             })
             .when('/me', {
                 templateUrl: 'view/me.html',
@@ -148,4 +148,46 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
                 });
             });
         }
+    })
+    .controller('article', function($scope, $location) {
+        $scope.comments = [];
+        //$scope.getComment = function() {
+            $.getJSON('api/article/oneArticleContent', $location.search(), function(resp) {
+                $scope.$apply(function() {
+                    var data = resp.data;
+                    switch (data.status) {
+                        case 1:
+                            //非常不优雅，要改
+                            if(data.comments) {
+                                if(typeof data.comments.length == "number") {
+                                    $scope.comments = data.comments;
+                                } else {
+                                    $scope.comments = [data.comments];
+                                }
+                                var resps = data.responses;
+                                var comms = $scope.comments;
+                                if(resps) {
+                                    if(typeof resps.length != "number") {
+                                        resps = [resps];
+                                    }
+                                    for (var i = 0;i < resps.length;i++) {
+                                        for (var j = 0;j<comms.length;j++) {
+                                            if (!comms[j].resps) {
+                                                comms[j].resps = [];
+                                            }
+                                            if (comms[j].id == resps[i].commentId) {
+                                                comms[j].resps.push(resps[i]);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case 2:
+                            break;
+                    }
+                });
+            });
+       // }
+
     });
