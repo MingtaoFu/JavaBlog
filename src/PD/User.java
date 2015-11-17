@@ -59,6 +59,10 @@ public class User {
         return token;
     }
 
+    public boolean modifyPwd(String newPwd) {
+        return UserDA.modifyPwd(this, newPwd);
+    }
+
     public static int add(User user) {
         return  UserDA.add(user);
     }

@@ -15,6 +15,9 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
     when('/me', {
         templateUrl: 'view/me.html',
         controller: 'me'
+    }).when('/admin', {
+        templateUrl: 'view/editor.html',
+        controller: 'admin'
     });
 }]).controller("test", function ($scope, rqService) {
     console.log(rqService);
@@ -84,6 +87,41 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
             $rootScope.rootdata.info = resp.data;
         });
     });
+
+    //修改密码
+    $scope.modifyPwd = function () {};
+}).controller('admin', function ($scope) {
+    $scope.publishStatus = '';
+    $scope.data = {
+        article: {
+            title: '',
+            content: ''
+        }
+    };
+
+    //发表文章
+    $scope.publish = function () {
+        $scope.data.article.content = CKEDITOR.instances.editor.getData();
+        $.post('api/article/publish', $scope.data.article, function (resp) {
+            $scope.$apply(function () {
+                console.log(resp.data.status);
+                switch (resp.data.status) {
+                    case 0:
+                        $scope.publishStatus = "身份认证失败，请重新登录";
+                        break;
+                    case 1:
+                        $scope.publishStatus = "发表成功，跳转中...";
+                        break;
+                    case 2:
+                        $scope.publishStatus = "服务器错误，请稍后再试";
+                        break;
+                    case 3:
+                        $scope.publishStatus = "您没有权限发表文章";
+                        break;
+                }
+            });
+        });
+    };
 });
 
 //# sourceMappingURL=base-compiled.js.map

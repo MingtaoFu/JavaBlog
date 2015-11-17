@@ -81,4 +81,10 @@ a {
 .pad {
   padding: 3%; }
 
+.noF {
+  float: none; }
+
+.wrap {
+  word-wrap: break-word; }
+
 /*# sourceMappingURL=base.css.map */

@@ -46,6 +46,17 @@ public class UserDA {
         }
     }
 
+    public static boolean modifyPwd(User user, String newPwd) {
+        String sql = "UPDATE User SET Pwd = '" + newPwd + "' WHERE Id = '" + user.getId() + "'";
+
+        try {
+            Base.statement.executeUpdate(sql);
+            return true;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
     public static User find(String key) {
         user = null;
 

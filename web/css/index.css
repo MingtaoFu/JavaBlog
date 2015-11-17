@@ -30,22 +30,54 @@
 #infoCon {
   display: inline-block;
   width: 280px; }
+  #infoCon form > div {
+    height: 34px;
+    margin-bottom: 10px; }
+    #infoCon form > div label {
+      line-height: 34px; }
+  #infoCon form input {
+    float: right;
+    background-color: transparent; }
   #infoCon #infoForm {
     height: 250px; }
     #infoCon #infoForm .infoValue {
       display: inline-block;
       width: 182px;
       float: right; }
+    #infoCon #infoForm > div {
+      height: 34px;
+      margin-bottom: 10px; }
+      #infoCon #infoForm > div label, #infoCon #infoForm > div span {
+        line-height: 34px; }
+      #infoCon #infoForm > div span {
+        text-indent: 13px; }
   #infoCon label {
     font-weight: normal; }
-  #infoCon input {
-    float: right;
-    background-color: transparent; }
   #infoCon #intro * {
     display: inline-block;
     vertical-align: top; }
   #infoCon #modifyText {
     resize: none;
     height: 100px; }
+
+#modifyForm {
+  border-radius: 3px;
+  border: 1px solid #ddd; }
+
+.commentContent {
+  font-size: 15px; }
+
+.responseCon {
+  font-size: 14px; }
+  .responseCon .resp {
+    text-indent: 1em;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer; }
+    .responseCon .resp:hover {
+      background-color: #F5F5F5; }
+
+#mainArticle {
+  background-color: white; }
 
 /*# sourceMappingURL=index.css.map */

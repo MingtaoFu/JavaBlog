@@ -38,6 +38,20 @@
   display: inline-block;
   width: 280px;
 
+  form{
+    &>div{
+      height: 34px;
+      margin-bottom: 10px;
+      label{
+        line-height: 34px;
+      }
+    }
+
+    input{
+      float: right;
+      background-color: transparent;
+    }
+  }
   #infoForm{
     height: 250px;
 
@@ -46,14 +60,22 @@
       width: 182px;
       float: right;
     }
+
+    &>div{
+      height: 34px;
+      margin-bottom: 10px;
+      label, span{
+        line-height: 34px;
+      }
+      span{
+        text-indent: 13px;
+      }
+    }
   }
   label{
     font-weight: normal;
   }
-  input{
-    float: right;
-    background-color: transparent;
-  }
+
   #intro *{
     display: inline-block;
     vertical-align: top;
@@ -63,3 +85,33 @@
     height: 100px;
   }
 }
+
+#modifyForm{
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+
+
+#commentCon{
+  .comment{
+
+  }
+}
+.commentContent{
+  font-size: 15px;
+}
+
+.responseCon{
+  font-size: 14px;
+  .resp{
+    text-indent: 1em;
+    //margin-bottom: 10px;
+    margin: 0;
+    padding: 5px;
+    cursor: pointer;
+    &:hover{
+      background-color: #F5F5F5;
+    }
+  }
+}
+#mainArticle{background-color: white;}

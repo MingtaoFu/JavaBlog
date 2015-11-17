@@ -8,18 +8,16 @@ import DA.*;
  * Created by zouyingtian on 15/11/12.
  */
 public class Article {
-	String id;
-	int index;
+	int id;
+	//int index;
 	String title;
 	String content;
 	Timestamp time;
 	Timestamp modifyTime;
 
 
-	public String getId() {return id;}
-    public int getIndex() {
-			return index;
-		}
+	public int getId() {return id;}
+
 
     public String getTitle() {return title;}
     public Timestamp getModifyTime () {
@@ -33,12 +31,12 @@ public class Article {
 
     //        public Article(String id, String title, String content, Timestamp time, Timestamp modifyTime) {
 //            this.id = id;}
-    public void setIndex ( int index){
-            this.index = index;
+    public void setIndex (int id){
+            this.id = id;
         }
 
-        public Article( int index, String title, String content, Timestamp time, Timestamp modifyTime){
-            this.index = index;
+        public Article( int id, String title, String content, Timestamp time, Timestamp modifyTime){
+            this.id=id;
             this.title = title;
             this.content = content;
             this.time = time;
@@ -54,6 +52,11 @@ public class Article {
         public static void delete ( int index){
             ArticleDA.delete(index);
         }
+
+//        public static Article query(int index){
+//            return  ArticleDA.query(index);
+//        }
+        //public  static
 
 
     }
