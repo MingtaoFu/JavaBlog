@@ -47,16 +47,15 @@ public class GetAll {
         }
         for (int i = 0; i < commentId.size(); i++) {
             response2 = PD.Response.find(commentId.get(i));
-            if(response2==null){
-                return new RT_All(3);
+            if(response2!=null){
+                if(i==0&&response2.get(0).getFromUser().equals("$")&&
+                         response2.get(0).getToUser().equals("$")){
+                    return new RT_All(2);
+                }
+                response1.addAll(response1.size(), response2);
+    //            response=PD.Response.find(commentId.get(i));
+    //            responses.add(response);
             }
-            if(i==0&&response2.get(0).getFromUser().equals("$")&&
-                    response2.get(0).getToUser().equals("$")){
-                return new RT_All(2);
-            }
-            response1.addAll(response1.size(), response2);
-//            response=PD.Response.find(commentId.get(i));
-//            responses.add(response);
         }
         ArrayList<PD.Comment>c=PD.Comment.find(articleId);
         if (c.get(0).getUser().equals("$")){
