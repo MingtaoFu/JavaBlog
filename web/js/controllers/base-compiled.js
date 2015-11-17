@@ -123,7 +123,14 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
         });
     };
 }).controller('article', function ($scope, $location) {
+    $scope.commentUserList = [];
+    $scope.changeToUser = function (cId, rId) {
+        console.log(cId + "," + rId);
+        $scope.commentUserList[cId] = $scope.comments[cId].resps[rId].fromUser;
+    };
+
     $scope.comments = [];
+
     //$scope.getComment = function() {
     $.getJSON('api/article/oneArticleContent', $location.search(), function (resp) {
         $scope.$apply(function () {
@@ -137,6 +144,11 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
                         } else {
                             $scope.comments = [data.comments];
                         }
+                        //设置commentUserList
+                        for (var i in $scope.comments) {
+                            $scope.commentUserList.push($scope.comments[i].user);
+                        }
+                        ///////
                         var resps = data.responses;
                         var comms = $scope.comments;
                         if (resps) {

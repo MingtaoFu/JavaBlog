@@ -41,13 +41,15 @@
                 <blockquote class="commentContent">
                     {{comment.content}}
                 </blockquote>
-                <section class="responseCon padx">
-                    <p class="resp" title="回复" ng-repeat="resp in comment.resps">
+                <section class="responseCon padx" ng-init="p_index=$index">
+                    <p class="resp" title="回复" ng-repeat="resp in comment.resps" ng-click="changeToUser(p_index, $index)">
                         <a>{{resp.fromUser}}</a>&nbsp;回复&nbsp;<a>{{resp.toUser}}</a>: {{resp.content}}
                     </p>
                     <div class="pad">
-                        <label class="fll">回复 Mingtao Fu</label>
+                        <label class="fll">回复 {{commentUserList[$index]}}</label>
                         <input class="form-control">
+                        <br>
+                        <button class="btn btn-default">提交</button>
                     </div>
                 </section>
                 <hr>
