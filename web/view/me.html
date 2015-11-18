@@ -36,20 +36,32 @@
             <hr>
             <div class="txtL">
                 <p><a>修改密码>>></a></p>
-                <form class="pad" id="modifyForm" name="modifyForm">
+                <form class="pad" id="modifyForm" name="modifyForm" ng-submit="modifyPwd()">
                     <div>
                         <label for="oldPwd">旧密码</label>
-                        <input class="form-control" id="oldPwd" type="password">
+                        <input class="form-control" id="oldPwd" type="password"
+                        ng-model="pwdData.oldPwd" name="oldPwd" required>
                     </div>
+
                     <div>
                         <label for="newPwd">新密码</label>
-                        <input class="form-control" id="newPwd" type="password">
+                        <input class="form-control" id="newPwd" type="password" ng-pattern="/^[A-Za-z0-9_]{6,20}$/"
+                        ng-model="pwdData.newPwd" name="newPwd" required>
                     </div>
+                    <span ng-if="modifyForm.newPwd.$error.required || modifyForm.newPwd.$error.pattern" class="error">
+                                6-20位，可含字母、数字及下划线
+                    </span>
+
                     <div>
                         <label for="rePwd">重复输入</label>
-                        <input class="form-control" id="rePwd" type="password">
+                        <input class="form-control" id="rePwd" type="password" name="rePwd" ng-model="pwdData.rePwd" required>
                     </div>
-                    <input type="submit" class="btn btn-default" style="float: none">
+                    <span ng-if="modifyForm.rePwd.$error.same" class="error">
+                        两次输入不一致
+                    </span>
+
+                    <br>
+                    <input type="submit" class="btn btn-default" style="float: none" ng-disabled="modifyForm.$invalid">
                 </form>
             </div>
         </div>

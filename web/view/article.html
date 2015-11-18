@@ -30,51 +30,31 @@
             </a>
         </p>
         <div id="commentCon" class="pad">
-            <div class="comment">
+            <div class="comment" ng-repeat="comment in comments">
                 <p>
                     <img src="" width="24" height="24">
-                    <a>Mingtao Fu</a>:
+                    <a>{{comment.user}}</a>:
                     &nbsp;
                     &nbsp;
                     <a class="glyphicon glyphicon-edit" title="回复" style="text-decoration: none"></a>
                 </p>
                 <blockquote class="commentContent">
-                    dsaddsadsadasdasdsadas
-                    das
+                    {{comment.content}}
                 </blockquote>
-                <section class="responseCon padx">
-                    <p class="resp" title="回复">
-                        <a>xxx</a>&nbsp;回复&nbsp;<a>Mingtao Fu</a>: blablablablabla
-                    </p>
-                    <p class="resp" title="回复">
-                        <a>xxx</a>&nbsp;回复&nbsp;<a>Mingtao Fu</a>: blablablablabla
+                <section class="responseCon padx" ng-init="p_index=$index">
+                    <p class="resp" title="回复" ng-repeat="resp in comment.resps" ng-click="changeToUser(p_index, $index)">
+                        <a>{{resp.fromUser}}</a>&nbsp;回复&nbsp;<a>{{resp.toUser}}</a>: {{resp.content}}
                     </p>
                     <div class="pad">
-                        <label class="fll">回复 Mingtao Fu</label>
+                        <label class="fll">回复 {{commentUserList[$index]}}</label>
                         <input class="form-control">
+                        <br>
+                        <button class="btn btn-default">提交</button>
                     </div>
                 </section>
+                <hr>
             </div>
-            <hr>
-            <div class="comment">
-                <p>
-                    <img src="" width="24" height="24">
-                    <a>Mingtao Fu</a>:
-                &nbsp;
-                &nbsp;
-                <a class="glyphicon glyphicon-edit" title="回复" style="text-decoration: none"></a>
-                </p>
-                <blockquote class="commentContent">
-                    dsaddsadsadasdasdsadas
-                    das
 
-                </blockquote>
-                <section class="responseCon padx">
-                    <p class="resp" title="回复">
-                        <a>xxx</a>&nbsp;回复&nbsp;<a>Mingtao Fu</a>: blablablablabla
-                    </p>
-                </section>
-            </div>
         </div>
     </div>
 </body>

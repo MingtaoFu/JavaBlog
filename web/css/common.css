@@ -54,4 +54,8 @@ hr {
   background-color: #F2DEDE;
   border: 1px solid #D2B5B5; }
 
+.error {
+  color: red;
+  font-size: 14px; }
+
 /*# sourceMappingURL=common.css.map */
