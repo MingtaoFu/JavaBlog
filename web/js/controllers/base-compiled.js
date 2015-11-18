@@ -82,14 +82,40 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
         });
     };
 }).controller('me', function ($scope, $rootScope) {
+    $scope.pwdData = {
+        oldPwd: '',
+        newPwd: '',
+        rePwd: ''
+    };
+
     $.getJSON('api/account/personalInfo', function (resp) {
         $scope.$apply(function () {
             $rootScope.rootdata.info = resp.data;
         });
     });
 
+    $scope.$watch("pwdData.rePwd", function () {
+        var data = $scope.pwdData;
+        if (data.newPwd == data.rePwd) {
+            $scope.modifyForm.rePwd.$error.same = false;
+        } else {
+            $scope.modifyForm.rePwd.$error.same = true;
+        }
+    });
+
+    $scope.$watch("pwdData.newPwd", function () {
+        var data = $scope.pwdData;
+        if (data.newPwd == data.rePwd) {
+            $scope.modifyForm.rePwd.$error.same = false;
+        } else {
+            $scope.modifyForm.rePwd.$error.same = true;
+        }
+    });
+
     //修改密码
-    $scope.modifyPwd = function () {};
+    $scope.modifyPwd = function () {
+        $.post('api/account/modifyPwd', $scope.pwdData, function (resp) {});
+    };
 }).controller('admin', function ($scope) {
     $scope.publishStatus = '';
     $scope.data = {
@@ -131,7 +157,6 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
 
     $scope.comments = [];
 
-    //$scope.getComment = function() {
     $.getJSON('api/article/oneArticleContent', $location.search(), function (resp) {
         $scope.$apply(function () {
             var data = resp.data;
@@ -173,7 +198,18 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
             }
         });
     });
-    // }
+
+    $scope.postComment = function () {
+        $.post('api/???', $location.search(), function (resp) {
+            $scope.$apply(function () {});
+        });
+    };
+
+    $scope.postResponse = function () {
+        $.post('api/???', { commentId: 1, toUser: 'x' }, function (resp) {
+            $scope.$apply(function () {});
+        });
+    };
 });
 
 //# sourceMappingURL=base-compiled.js.map

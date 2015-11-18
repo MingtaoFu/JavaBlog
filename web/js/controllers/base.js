@@ -105,15 +105,46 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
         };
     })
     .controller('me', function($scope, $rootScope) {
+        $scope.pwdData = {
+            oldPwd: '',
+            newPwd: '',
+            rePwd: ''
+        };
+
         $.getJSON('api/account/personalInfo', function(resp) {
             $scope.$apply(function() {
                 $rootScope.rootdata.info = resp.data;
             });
         });
 
+
+        $scope.$watch("pwdData.rePwd", function() {
+            var data = $scope.pwdData;
+            if(data.newPwd == data.rePwd) {
+                $scope.modifyForm.rePwd.$error.same = false;
+            } else {
+                $scope.modifyForm.rePwd.$error.same = true;
+            }
+        });
+
+        $scope.$watch("pwdData.newPwd", function() {
+            var data = $scope.pwdData;
+            if(data.newPwd == data.rePwd) {
+                $scope.modifyForm.rePwd.$error.same = false;
+            } else {
+                $scope.modifyForm.rePwd.$error.same = true;
+            }
+        });
+
+
+
+
+
         //修改密码
         $scope.modifyPwd = function() {
+            $.post('api/account/modifyPwd', $scope.pwdData, function(resp) {
 
+            });
         }
     })
     .controller('admin', function($scope) {
@@ -158,48 +189,59 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
 
         $scope.comments = [];
 
-        //$scope.getComment = function() {
-            $.getJSON('api/article/oneArticleContent', $location.search(), function(resp) {
-                $scope.$apply(function() {
-                    var data = resp.data;
-                    switch (data.status) {
-                        case 1:
-                            //非常不优雅，要改
-                            if(data.comments) {
-                                if(typeof data.comments.length == "number") {
-                                    $scope.comments = data.comments;
-                                } else {
-                                    $scope.comments = [data.comments];
+        $.getJSON('api/article/oneArticleContent', $location.search(), function(resp) {
+            $scope.$apply(function() {
+                var data = resp.data;
+                switch (data.status) {
+                    case 1:
+                        //非常不优雅，要改
+                        if(data.comments) {
+                            if(typeof data.comments.length == "number") {
+                                $scope.comments = data.comments;
+                            } else {
+                                $scope.comments = [data.comments];
+                            }
+                            //设置commentUserList
+                            for (var i in $scope.comments) {
+                                $scope.commentUserList.push($scope.comments[i].user);
+                            }
+                            ///////
+                            var resps = data.responses;
+                            var comms = $scope.comments;
+                            if(resps) {
+                                if(typeof resps.length != "number") {
+                                    resps = [resps];
                                 }
-                                //设置commentUserList
-                                for (var i in $scope.comments) {
-                                    $scope.commentUserList.push($scope.comments[i].user);
-                                }
-                                ///////
-                                var resps = data.responses;
-                                var comms = $scope.comments;
-                                if(resps) {
-                                    if(typeof resps.length != "number") {
-                                        resps = [resps];
-                                    }
-                                    for (var i = 0;i < resps.length;i++) {
-                                        for (var j = 0;j<comms.length;j++) {
-                                            if (!comms[j].resps) {
-                                                comms[j].resps = [];
-                                            }
-                                            if (comms[j].id == resps[i].commentId) {
-                                                comms[j].resps.push(resps[i]);
-                                            }
+                                for (var i = 0;i < resps.length;i++) {
+                                    for (var j = 0;j<comms.length;j++) {
+                                        if (!comms[j].resps) {
+                                            comms[j].resps = [];
+                                        }
+                                        if (comms[j].id == resps[i].commentId) {
+                                            comms[j].resps.push(resps[i]);
                                         }
                                     }
                                 }
                             }
-                            break;
-                        case 2:
-                            break;
-                    }
+                        }
+                        break;
+                    case 2:
+                        break;
+                }
+            });
+        });
+
+        $scope.postComment = function() {
+            $.post('api/???', $location.search(), function(resp) {
+                $scope.$apply(function() {
                 });
             });
-       // }
+        };
 
+        $scope.postResponse = function() {
+            $.post('api/???', {commentId: 1, toUser: 'x'}, function(resp) {
+                $scope.$apply(function() {
+                });
+            });
+        };
     });
