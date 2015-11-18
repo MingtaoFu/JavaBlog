@@ -38,7 +38,6 @@ public class Article {
 
         Base.initialize();
         RT_Publish publish;
-
         User currentUser=User.validate(id,token);
             PD.Article article=new PD.Article(0,title,content,null,new Timestamp(System.currentTimeMillis()));
         if (currentUser != null && currentUser.getType().equals("root")){
@@ -51,10 +50,7 @@ public class Article {
                 publish = new RT_Publish(1, article.getId());
             }
         }
-//        else  if (currentUser.getType().equals("normal")){
-//
-//        }
-        else if (currentUser.getType().equals("normal")){
+        else if (currentUser != null && currentUser.getType().equals("normal")){
             publish = new RT_Publish(3,0);
         }
         else  publish= new RT_Publish(0,0);
@@ -84,13 +80,15 @@ public class Article {
         Base.terminate();
         return  modify;
     }
+
+
     @GET
     @Path("articleList")
     @Produces(MediaType.APPLICATION_JSON)
-    public  ArrayList<PD.Article> articleList() {
+    public  RT_ArticleList articleList() {
         Base.initialize();
         ArticleDA articleDA=new ArticleDA();
-        ArrayList articleList=articleDA.query();
+        RT_ArticleList articleList=new RT_ArticleList(1,articleDA.query());
         Base.terminate();
         return  articleList;
     }

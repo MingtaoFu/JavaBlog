@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -47,6 +48,24 @@ class RT_Modify{
 
 
 }
+
+//文章列表
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "list")
+class  RT_ArticleList{
+    @XmlElement()
+    private  int status;
+    @XmlElement()
+    private ArrayList<Article> articles;
+    public RT_ArticleList(){}
+    public RT_ArticleList(int status,ArrayList<Article> articles) {
+        this.status = status;
+        this.articles = articles;
+    }
+
+}
+
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
 class RT_ArticleContent{

@@ -41,13 +41,18 @@ public class ArticleDA {
     }
 
     static public ArrayList query() {
-        String sql = "SELECT * FROM article";
+        String sql = "SELECT * FROM Article";
         try {
-            Base.statement.executeUpdate(sql);
             ResultSet rs = Base.statement.executeQuery(sql);
-            ArrayList arrayList=new ArrayList();
+            ArrayList<Article> arrayList=new ArrayList<Article>();
             while (rs.next()){
-                Article getArticle= new Article(rs.getRow(),rs.getNString("Title"),rs.getNString("Content"),rs.getTimestamp("Time"),rs.getTimestamp("ModifyTime"));
+
+                int a= rs.getInt("ID");
+                System.out.println(a);
+//                String b=rs.getNString("Title");
+//                String c=rs.getString(2);
+                //Article getArticle = new Article(rs.getRow(), rs.getNString("Title"), rs.getNString("Content"), rs.getTimestamp("Time"), rs.getTimestamp("ModifyTime"));
+                Article getArticle=new Article(rs.getInt("ID"),rs.getString("Title"),rs.getString("Content"),rs.getTimestamp(4),rs.getTimestamp(5));
                 arrayList.add(getArticle);
             }
             return  arrayList;
