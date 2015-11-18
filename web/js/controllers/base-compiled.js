@@ -148,8 +148,10 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
             });
         });
     };
-}).controller('article', function ($scope, $location) {
+}).controller('article', function ($scope, $location, $anchorScroll) {
     $scope.commentUserList = [];
+
+    //回复时变换对象
     $scope.changeToUser = function (cId, rId) {
         console.log(cId + "," + rId);
         $scope.commentUserList[cId] = $scope.comments[cId].resps[rId].fromUser;
@@ -157,57 +159,111 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
 
     $scope.comments = [];
 
-    $.getJSON('api/article/oneArticleContent', $location.search(), function (resp) {
-        $scope.$apply(function () {
-            var data = resp.data;
-            switch (data.status) {
-                case 1:
-                    //非常不优雅，要改
-                    if (data.comments) {
-                        if (typeof data.comments.length == "number") {
-                            $scope.comments = data.comments;
-                        } else {
-                            $scope.comments = [data.comments];
-                        }
-                        //设置commentUserList
-                        for (var i in $scope.comments) {
-                            $scope.commentUserList.push($scope.comments[i].user);
-                        }
-                        ///////
-                        var resps = data.responses;
-                        var comms = $scope.comments;
-                        if (resps) {
-                            if (typeof resps.length != "number") {
-                                resps = [resps];
+    $scope.newComment = '';
+    $scope.newResponse = [];
+
+    //获取评论和回复
+    $scope.getData = function () {
+        $.getJSON('api/article/oneArticleContent', $location.search(), function (resp) {
+            $scope.$apply(function () {
+                var data = resp.data;
+                switch (data.status) {
+                    case 1:
+                        //非常不优雅，要改
+                        if (data.comments) {
+                            if (typeof data.comments.length == "number") {
+                                $scope.comments = data.comments;
+                            } else {
+                                $scope.comments = [data.comments];
                             }
-                            for (var i = 0; i < resps.length; i++) {
-                                for (var j = 0; j < comms.length; j++) {
-                                    if (!comms[j].resps) {
-                                        comms[j].resps = [];
-                                    }
-                                    if (comms[j].id == resps[i].commentId) {
-                                        comms[j].resps.push(resps[i]);
+                            //设置commentUserList
+                            for (var i in $scope.comments) {
+                                $scope.commentUserList.push($scope.comments[i].user);
+                            }
+                            ///////
+                            var resps = data.responses;
+                            var comms = $scope.comments;
+                            if (resps) {
+                                if (typeof resps.length != "number") {
+                                    resps = [resps];
+                                }
+                                for (var i = 0; i < resps.length; i++) {
+                                    for (var j = 0; j < comms.length; j++) {
+                                        if (!comms[j].resps) {
+                                            comms[j].resps = [];
+                                        }
+                                        if (comms[j].id == resps[i].commentId) {
+                                            comms[j].resps.push(resps[i]);
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
-                    break;
-                case 2:
-                    break;
-            }
-        });
-    });
-
-    $scope.postComment = function () {
-        $.post('api/???', $location.search(), function (resp) {
-            $scope.$apply(function () {});
+                        break;
+                    case 2:
+                        break;
+                }
+            });
         });
     };
 
-    $scope.postResponse = function () {
-        $.post('api/???', { commentId: 1, toUser: 'x' }, function (resp) {
-            $scope.$apply(function () {});
+    $scope.getData();
+
+    //锚点定位
+    $scope.goto = function (id) {
+        $location.hash(id);
+        $anchorScroll();
+    };
+
+    //发表评论
+    $scope.postComment = function () {
+        $.post('api/article/comment/add', { articleId: $location.search().articleId, content: $scope.newComment }, function (resp) {
+            $scope.$apply(function () {
+                switch (resp.data.status) {
+                    case 1:
+                        $scope.getData();
+                        break;
+                    case 0:
+                        alert("登录状态失效，请重新登录");
+                        break;
+                    case 3:
+                        alert("登录状态失效，请重新登录");
+                        break;
+                    case 2:
+                        alert("服务器错误，请稍后再试");
+                        break;
+                    case 4:
+                        alert("非法操作");
+                        break;
+                }
+            });
+        });
+    };
+
+    //发表回复
+    $scope.postResponse = function (index) {
+        var toUser = $scope.commentUserList[index];
+        var commentId = $scope.comments[index].id;
+        $.post('api/article/comment/response/add', { commentId: commentId, toUser: toUser, content: $scope.newResponse[index] }, function (resp) {
+            $scope.$apply(function () {
+                switch (resp.data.status) {
+                    case 1:
+                        $scope.getData();
+                        break;
+                    case 0:
+                        alert("登录状态失效，请重新登录");
+                        break;
+                    case 3:
+                        alert("登录状态失效，请重新登录");
+                        break;
+                    case 2:
+                        alert("服务器错误，请稍后再试");
+                        break;
+                    case 4:
+                        alert("非法操作");
+                        break;
+                }
+            });
         });
     };
 });
