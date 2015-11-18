@@ -67,11 +67,11 @@ public class Response {
         this.fromUser  = fromUser;
         this.toUser  = toUser;
     }
-    public void add(){
-        ResponseDA.add(this);
+    public int add(){
+        return ResponseDA.add(this);
     }
     public static ArrayList<Response> find(String commentId){return ResponseDA.find(commentId);}
-    public static void delete(String ID){
-        ResponseDA.delete(ID);
+    public static int delete(String ID){
+        return ResponseDA.delete(ID);
     }
 }

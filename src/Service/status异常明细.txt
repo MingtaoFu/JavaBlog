@@ -1,0 +1,13 @@
+﻿1：一切正常
+0：id或token不存在
+2：访问数据库异常
+3：登录状态验证错误
+4：添加回复时toUser不存在
+5：删除失败：要删除的内容不存在
+
+
+Comment表的articleId字段和Article表的Id字段关联？
+Response表的commentId字段和Comment表的Id字段关联？
+删除一条Comment时是否要删掉其中的所有Responses？
+
+昨晚的各种测试！！！！！！！！！！！！！！！

@@ -41,27 +41,29 @@ public class GetAll {
         ArrayList<PD.Response> response1 = new ArrayList<PD.Response>();
         ArrayList<PD.Response> response2 = new ArrayList<PD.Response>();
 
-        ArrayList<String> commentId = PD.Comment.getCommentId(articleId);
-        if(commentId==null){
-            return new RT_All(3);
-        }
-        for (int i = 0; i < commentId.size(); i++) {
-            response2 = PD.Response.find(commentId.get(i));
-            if(response2!=null){
-                if(i==0&&response2.get(0).getFromUser().equals("$")&&
-                         response2.get(0).getToUser().equals("$")){
-                    return new RT_All(2);
+//        ArrayList<String> commentId = PD.Comment.getCommentId(articleId);
+        ArrayList<PD.Comment> comment = PD.Comment.find(articleId);
+
+        if(comment != null) {
+            if (comment.get(0).getUser().equals("$")) {
+                Base.terminate();
+                return new RT_All(2);
+            }
+            for (int i = 0; i < comment.size(); i++) {
+                response2 = PD.Response.find(comment.get(i).getId());
+                if (response2 != null) {
+                    if (i == 0 && response2.get(0).getFromUser().equals("$") &&
+                            response2.get(0).getToUser().equals("$")) {
+                        Base.terminate();
+                        return new RT_All(2);
+                    }
+                    response1.addAll(response1.size(), response2);
+                    //            response=PD.Response.find(commentId.get(i));
+                    //            responses.add(response);
                 }
-                response1.addAll(response1.size(), response2);
-    //            response=PD.Response.find(commentId.get(i));
-    //            responses.add(response);
             }
         }
-        ArrayList<PD.Comment>c=PD.Comment.find(articleId);
-        if (c.get(0).getUser().equals("$")){
-            return new RT_All(2);
-        }
-        all = new RT_All(1,c,response1);
+        all = new RT_All(1,comment,response1);
 //        }
         Base.terminate();
         return all;

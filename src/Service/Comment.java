@@ -22,19 +22,18 @@ public class Comment {
                                     @FormParam("articleId") String articleId,
                                     @CookieParam("id") String id,
                                     @CookieParam("token") String token){
-        Base.initialize();
         if(token == null || id == null){
             return new RT_AddComment(0);
         }
+        Base.initialize();
         User currentUser=User.validate(id, token);
         RT_AddComment addComment;
         if(currentUser == null){
-            addComment=new RT_AddComment(2);
+            addComment=new RT_AddComment(3);
         }
         else{
-            PD.Comment comment=new PD.Comment(articleId,content,currentUser.getId());
-            comment.add();
-            addComment=new RT_AddComment(1);
+            PD.Comment comment=new PD.Comment(articleId,content,id);
+            addComment=new RT_AddComment(comment.add());
         }
         Base.terminate();
         return addComment;
@@ -43,21 +42,20 @@ public class Comment {
     @POST
     @Path("delete")
     @Produces(MediaType.APPLICATION_JSON)//删除Comment时会把其所有Response也删除！
-    public RT_DeleteComment deleteComment(@FormParam("id") String commentId,
+    public RT_DeleteComment deleteComment(@FormParam("commentId") String commentId,
                                           @CookieParam("id") String id,
                                           @CookieParam("token") String token){
-        Base.initialize();
         if(token == null || id == null){
             return new RT_DeleteComment(0);
         }
+        Base.initialize();
         User currentUser=User.validate(id, token);
         RT_DeleteComment deleteComment;
         if(currentUser == null){
-            deleteComment=new RT_DeleteComment(2);
+            deleteComment=new RT_DeleteComment(3);
         }
         else{
-            PD.Comment.delete(commentId);
-            deleteComment=new RT_DeleteComment(1);
+            deleteComment=new RT_DeleteComment(PD.Comment.delete(commentId));
         }
         return deleteComment;
     }

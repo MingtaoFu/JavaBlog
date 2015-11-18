@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Created by mingtao on 15-11-4.
  */
 public class ResponseDA {
-    static public void add(Response response){
+    static public int add(Response response){
         String sql="INSERT INTO Response(Content,CommentId,FromUser,ToUser)" +
                 "VALUES ('"+response.getContent()+"','"+response.getCommentId()+"','"+
                 response.getFromUser()+"','"+response.getToUser()+"')";
@@ -21,7 +21,9 @@ public class ResponseDA {
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
+            return 2;
         }
+        return 1;
     }
 
     static public ArrayList<Response> find(String commentId){
@@ -54,15 +56,33 @@ public class ResponseDA {
         }
         return responses;
     }
-    static public void delete(String ID){
-        String sql="DELETE FROM Response WHERE Id='"+ID+"'";
-        try{
-            Base.statement.executeUpdate(sql);
+    static public int delete(String ID){
+        String sql1="SELECT * FROM Response WHERE Id='"+ID+"'";
+        try {
+            ResultSet resultSet=Base.statement.executeQuery(sql1);
+            if(!resultSet.next()) {
+                resultSet.close();
+                return 5;
+            }
+            resultSet.close();
         }
         catch (SQLException ex){
             System.out.println("SQLException: " + ex.getMessage());
             System.out.println("SQLState: " + ex.getSQLState());
             System.out.println("VendorError: " + ex.getErrorCode());
+            return 2;
         }
+
+        String sql2="DELETE FROM Response WHERE Id='"+ID+"'";
+        try{
+            Base.statement.executeUpdate(sql2);
+        }
+        catch (SQLException ex){
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+            return 2;
+        }
+        return 1;
     }
 }

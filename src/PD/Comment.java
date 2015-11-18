@@ -60,16 +60,17 @@ public class Comment {
         this.user  = user;
     }
 
-    public void add(){
-        CommentDA.add(this);
+    public int add(){
+        return CommentDA.add(this);
     }
     public static ArrayList<Comment> find(String articleId){
         return CommentDA.find(articleId);
     }
-    public static void delete(String ID){
-        CommentDA.delete(ID);
+    public static int delete(String ID){
+        return CommentDA.delete(ID);
     }
-    public static ArrayList<String> getCommentId(String articleId){//???????????
-        return CommentDA.getCommentId(articleId);
-    }
+
+//    public static ArrayList<String> getCommentId(String articleId){//???????????
+//        return CommentDA.getCommentId(articleId);
+//    }
 }
