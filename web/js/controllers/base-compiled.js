@@ -94,21 +94,21 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
         });
     });
 
-    $scope.$watch("pwdData.rePwd", function () {
-        var data = $scope.pwdData;
-        if (data.newPwd == data.rePwd) {
+    $scope.$watch("modifyForm.rePwd.$viewValue", function () {
+        if ($scope.modifyForm.rePwd.$viewValue == $scope.modifyForm.newPwd.$viewValue) {
             $scope.modifyForm.rePwd.$error.same = false;
         } else {
             $scope.modifyForm.rePwd.$error.same = true;
+            $scope.modifyForm.$invalid = true;
         }
     });
 
-    $scope.$watch("pwdData.newPwd", function () {
-        var data = $scope.pwdData;
-        if (data.newPwd == data.rePwd) {
+    $scope.$watch("modifyForm.newPwd.$viewValue", function () {
+        if ($scope.modifyForm.rePwd.$viewValue == $scope.modifyForm.newPwd.$viewValue) {
             $scope.modifyForm.rePwd.$error.same = false;
         } else {
             $scope.modifyForm.rePwd.$error.same = true;
+            $scope.modifyForm.$invalid = true;
         }
     });
 
