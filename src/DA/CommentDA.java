@@ -104,6 +104,25 @@ public class CommentDA {
         }
         return 1;
     }
+
+    public static int getCommentNum(String articleId){
+        String sql = "SELECT id FROM Comment WHERE ArticleId='"+articleId+"'";
+        int num=0;
+        try {
+            ResultSet resultSet=Base.statement.executeQuery(sql);
+            while (resultSet.next()){
+                num++;
+            }
+            resultSet.close();
+        }
+        catch (SQLException ex){
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+            return -2;
+        }
+        return num;
+    }
 }
 //    public static ArrayList<String> getCommentId(String articleId){//?????????????
 //        String sql = "SELECT id FROM Comment WHERE ArticleId='"+articleId+"'";

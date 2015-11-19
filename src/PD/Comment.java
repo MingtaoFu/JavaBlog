@@ -69,7 +69,7 @@ public class Comment {
     public static int delete(String ID){
         return CommentDA.delete(ID);
     }
-
+    public static int getCommentNum(String articleId){return CommentDA.getCommentNum(articleId);}
 //    public static ArrayList<String> getCommentId(String articleId){//???????????
 //        return CommentDA.getCommentId(articleId);
 //    }
