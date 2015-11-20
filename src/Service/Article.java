@@ -102,7 +102,7 @@ public class Article {
         for(int i=0;i<articleList.articles.size();i++){
             PD.Article article=articleList.articles.get(i);
             int a=article.getId();
-            article.setCommentNum(PD.Comment.getCommentNum(Integer.toString(a)));
+            article.setCommentNum(PD.Comment.getCommentNum(a));
         }
         Base.terminate();
         return  articleList;
