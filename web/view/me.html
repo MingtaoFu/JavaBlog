@@ -15,14 +15,15 @@
                 <img srcset="rootdata.info.logo" width="200" height="200">
             </div>
             <br>
-            <form class="txtL" id="infoForm">
+            <form class="txtL rela" id="infoForm">
                 <div>
                     <label>账号</label>
                     <span class="infoValue">{{rootdata.info.id}}</span>
                 </div>
                 <div>
                     <label for="modifyInput">用户名</label>
-                    <input id="modifyInput" ng-model="rootdata.info.name" class="infoValue form-control">
+                    <input id="modifyInput" ng-model="rootdata.info.name" class="infoValue form-control {{status.editModel?'':'editModel'}}"
+                           ng-disabled="!status.editModel">
                 </div>
                 <div>
                     <label>注册时间</label>
@@ -30,8 +31,12 @@
                 </div>
                 <div id="intro">
                     <label for="modifyText">个人简介</label>
-                    <textarea class="flr infoValue form-control" id="modifyText" ng-model="rootdata.info.intro"></textarea>
+                    <textarea class="flr infoValue form-control {{status.editModel?'':'editModel'}}" id="modifyText" ng-disabled="!status.editModel"
+                              ng-model="rootdata.info.intro"></textarea>
                 </div>
+                <button type="button" class="btn btn-default fll bot"
+                        ng-click="status.editModel=!status.editModel">{{status.editModel?'关闭':'修改'}}</button>
+                <button type="button" class="btn btn-default fll bot" style="left: 70px;" ng-if="status.editModel">提交</button>
             </form>
             <hr>
             <div class="txtL">

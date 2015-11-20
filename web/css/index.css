@@ -39,11 +39,16 @@
     float: right;
     background-color: transparent; }
   #infoCon #infoForm {
-    height: 250px; }
+    height: 280px; }
     #infoCon #infoForm .infoValue {
       display: inline-block;
       width: 182px;
       float: right; }
+    #infoCon #infoForm .editModel {
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+      cursor: auto; }
     #infoCon #infoForm > div {
       height: 34px;
       margin-bottom: 10px; }
