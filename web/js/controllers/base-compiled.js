@@ -8,7 +8,8 @@
 
 angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-        templateUrl: 'view/articleList.html'
+        templateUrl: 'view/articleList.html',
+        controller: 'index'
     }).when('/article', {
         templateUrl: 'view/article.html',
         controller: 'article'
@@ -19,34 +20,19 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
         templateUrl: 'view/editor.html',
         controller: 'admin'
     });
-}]).controller("test", function ($scope, rqService) {
-    console.log(rqService);
-    /*
-     $.post("api/account/login", {id: "da", pwd: "dada"}, function(resp) {
-     $scope.$apply(function() {
-      var data = resp.data;
-     if(data.status) {
-     document.cookie = "id=da";
-     document.cookie = "token="+data.token;
-      }
-      $scope.data = resp;
-        });
-     });
-     */
-    $.getJSON("api/account/personalInfo", function (resp) {
-        $scope.$apply(function () {
-            $scope.info = resp.data;
-            $.post("api/account/logout", function () {
-                $scope.$apply(function () {
-                    $.getJSON("api/account/personalInfo", function (resp) {
-                        $scope.$apply(function () {
+}]).filter('trustHtml', function ($sce) {
+    return function (input) {
+        return $sce.trustAsHtml(input);
+    };
+}).controller('index', function ($scope) {
+    $scope.articleList = [];
 
-                            $scope.info2 = resp.data;
-                        });
-                    });
-                });
-            });
-        });
+    $.getJSON('api/article/articleList', function (resp) {
+        switch (resp.list.status) {
+            case 1:
+                $scope.articleList = resp.list.articles;
+                break;
+        }
     });
 }).controller('main', function ($scope, $rootScope) {
     $rootScope.rootdata = {

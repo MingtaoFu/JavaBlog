@@ -11,6 +11,22 @@
 
     <div id="liCon" class="rela padx">
 
+
+        <div class="article art1 padx test4" ng-repeat="article in articleList">
+            <a href="#/article?articleId={{article.id}}"><h3 class="arTitle">{{article.title}}</h3></a>
+            <hr>
+            <p class="preArticle inden2" ng-bind-html="article.content | trustHtml">
+            </p>
+            <hr>
+            <p>
+                <span class="glyphicon glyphicon-comment"></span> 评论({{article.commentNum}})
+                &nbsp;
+                <span class="glyphicon glyphicon-heart"></span> 赞(38)
+                &nbsp;
+                <span class="glyphicon glyphicon-eye-open"></span> 阅读(123)
+            </p>
+        </div>
+
         <!-- article list -->
         <div class="article art1 padx test4">
             <h3 class="arTitle">文章标题</h3>

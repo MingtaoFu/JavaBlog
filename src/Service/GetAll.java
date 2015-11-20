@@ -15,12 +15,12 @@ import java.util.ArrayList;
 /**
  * Created by pc on 2015/11/14.
  */
-@Path("api/article")
+@Path("api/article/oneArticleContent")
 public class GetAll {
+
     @GET
-    @Path("oneArticleContent")
     @Produces(MediaType.APPLICATION_JSON)
-    public RT_All getAll(@QueryParam("articleId") int articleId
+    public RT_All getAll(@QueryParam("articleId") int  articleId
                           /*@CookieParam("id") String id,
                          @CookieParam("token")String token*/){
         Base.initialize();
