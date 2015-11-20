@@ -56,7 +56,10 @@ class  RT_ArticleList{
     @XmlElement()
     private  int status;
     @XmlElement()
-    private ArrayList<Article> articles;
+    public ArrayList<Article> articles;
+
+//    @XmlElement()
+//    private int comments;
     public RT_ArticleList(){}
     public RT_ArticleList(int status,ArrayList<Article> articles) {
         this.status = status;

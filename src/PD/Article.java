@@ -6,6 +6,7 @@ import DA.*;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -18,15 +19,16 @@ public class Article {
 	//int index;
 	String title;
 	String content;
-	Timestamp time;
-	Timestamp modifyTime;
+	String time;
+	String modifyTime;
+    int commentNum;
 
     @XmlElement()
 	public int getId() {return id;}
     @XmlElement()
     public String getTitle() {return title;}
     @XmlElement()
-    public Timestamp getModifyTime () {
+    public String getModifyTime () {
         return modifyTime;
 //        String modifyTimeStr = "";
 //        DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
@@ -44,13 +46,17 @@ public class Article {
         return content;
     }
     @XmlElement()
-    public  Timestamp getTime(){return  time;}
+    public  String getTime(){return  time;}
+    @XmlElement()
+    public int getCommentNum() {return commentNum;}
+
+    public void setCommentNum(int comments){this.commentNum=comments;}
 
     public void setIndex (int id){
             this.id = id;
         }
 
-        public Article( int id, String title, String content, Timestamp time, Timestamp modifyTime){
+        public Article( int id, String title, String content, String time, String modifyTime){
             this.id=id;
             this.title = title;
             this.content = content;
@@ -67,6 +73,7 @@ public class Article {
         public static void delete ( int index){
             ArticleDA.delete(index);
         }
-
-
+        public  static ArrayList queryList(){
+            return ArticleDA.query();
+        }
     }
