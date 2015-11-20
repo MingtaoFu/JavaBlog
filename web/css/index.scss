@@ -53,12 +53,20 @@
     }
   }
   #infoForm{
-    height: 250px;
+    height: 280px;
 
     .infoValue{
       display: inline-block;
       width: 182px;
       float: right;
+    }
+
+    .editModel{
+      background-color: transparent;
+      border: 0;
+      box-shadow: none;
+
+      cursor: auto;
     }
 
     &>div{

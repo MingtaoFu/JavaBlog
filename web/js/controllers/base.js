@@ -105,18 +105,30 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
         };
     })
     .controller('me', function($scope, $rootScope) {
+
+        $scope.status = {
+            //是否在编辑状态
+            editModel: false
+        };
+
+
+
         $scope.pwdData = {
             oldPwd: '',
             newPwd: '',
             rePwd: ''
         };
 
-        $.getJSON('api/account/personalInfo', function(resp) {
-            $scope.$apply(function() {
-                $rootScope.rootdata.info = resp.data;
+        $scope.getData = function () {
+            $.getJSON('api/account/personalInfo', function(resp) {
+                $scope.$apply(function() {
+                    $rootScope.rootdata.info = resp.data;
+                });
             });
-        });
+        };
 
+
+        $scope.getData();
 
         $scope.$watch("modifyForm.rePwd.$viewValue", function() {
             if($scope.modifyForm.rePwd.$viewValue == $scope.modifyForm.newPwd.$viewValue) {
@@ -139,7 +151,22 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
         //修改密码
         $scope.modifyPwd = function() {
             $.post('api/account/modifyPwd', $scope.pwdData, function(resp) {
-
+                $scope.$apply(function() {
+                    switch (resp.data.status) {
+                        case 1:
+                            alert("操作成功");
+                            break;
+                        case 0:
+                            alert("登录状态失效，请重新登录");
+                            break;
+                        case 3:
+                            alert("旧密码错误");
+                            break;
+                        case 2:
+                            alert("服务器错误，请稍后再试");
+                            break;
+                    }
+                });
             });
         }
     })

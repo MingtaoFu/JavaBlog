@@ -87,4 +87,8 @@ a {
 .wrap {
   word-wrap: break-word; }
 
+.bot {
+  position: absolute;
+  bottom: 0; }
+
 /*# sourceMappingURL=base.css.map */
