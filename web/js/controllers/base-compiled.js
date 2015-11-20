@@ -28,11 +28,13 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
     $scope.articleList = [];
 
     $.getJSON('api/article/articleList', function (resp) {
-        switch (resp.list.status) {
-            case 1:
-                $scope.articleList = resp.list.articles;
-                break;
-        }
+        $scope.$apply(function () {
+            switch (resp.list.status) {
+                case 1:
+                    $scope.articleList = resp.list.articles;
+                    break;
+            }
+        });
     });
 }).controller('main', function ($scope, $rootScope) {
     $rootScope.rootdata = {

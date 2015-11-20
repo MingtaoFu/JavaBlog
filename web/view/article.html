@@ -8,20 +8,8 @@
     <div class="pad" id="mainArticle">
         <h2 class="txtC">文章标题</h2>
         <hr>
-        <p>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
-            blablablablablablablablabla<br>
+        <p ng-bind-html="article.content | trustHtml">
+
         </p>
         <hr>
         <h2 class="inb">评论</h2>
