@@ -40,7 +40,7 @@ public class Response {
     @POST
     @Path("delete")
     @Produces(MediaType.APPLICATION_JSON)
-    public RT_DeleteResponse deleteResponse(@FormParam("responseId") String responseId,
+    public RT_DeleteResponse deleteResponse(@FormParam("responseId") int responseId,
                                             @CookieParam("id") String id,
                                             @CookieParam("token") String token){
         if(token == null || id == null){

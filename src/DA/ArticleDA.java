@@ -1,6 +1,8 @@
 package DA;
 
 import PD.Article;
+import PD.Comment;
+import sun.jvmstat.monitor.IntegerMonitor;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -49,10 +51,8 @@ public class ArticleDA {
 
                 int a= rs.getInt("ID");
                 System.out.println(a);
-//                String b=rs.getNString("Title");
-//                String c=rs.getString(2);
-                //Article getArticle = new Article(rs.getRow(), rs.getNString("Title"), rs.getNString("Content"), rs.getTimestamp("Time"), rs.getTimestamp("ModifyTime"));
-                Article getArticle=new Article(rs.getInt("ID"),rs.getString("Title"),rs.getString("Content"),rs.getTimestamp(4),rs.getTimestamp(5));
+                Article getArticle=new Article(rs.getInt("ID"),rs.getString("Title"),rs.getString("Content"),rs.getString("Time"),rs.getString("ModifyTime"));
+                System.out.print(rs);
                 arrayList.add(getArticle);
             }
             return  arrayList;
@@ -68,7 +68,7 @@ public class ArticleDA {
         try{
             ResultSet rs =Base.statement.executeQuery(sql);
            if (rs.next()){
-               Article getArticle= new Article(rs.getRow(),rs.getNString("Title"),rs.getNString("Content"),rs.getTimestamp("Time"),rs.getTimestamp("ModifyTime"));
+               Article getArticle= new Article(rs.getRow(),rs.getNString("Title"),rs.getNString("Content"),rs.getString("Time"),rs.getString("ModifyTime"));
                return getArticle;
            }
         } catch (SQLException ex) {

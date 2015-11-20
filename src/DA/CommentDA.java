@@ -25,7 +25,7 @@ public class CommentDA {
         return 1;
     }
 
-    static public ArrayList<Comment> find(String articleId) {
+    static public ArrayList<Comment> find(int articleId) {
         String sql = "SELECT * FROM Comment WHERE ArticleId='" + articleId + "'";
         Comment comment;
         ArrayList<Comment> comments = new ArrayList<Comment>();
@@ -37,7 +37,7 @@ public class CommentDA {
             } else {
                 do {
                     comment = new Comment(resultSet.getString(4), resultSet.getString(2), resultSet.getString(5));
-                    comment.setId(resultSet.getString(1));
+                    comment.setId(resultSet.getInt(1));
                     String time = resultSet.getString(3);//去掉最后“.0”
                     comment.setTime(time.substring(0, time.length() - 2));
                     //comment.setResponses(ResponseDA.find(comment.getId()));
@@ -57,7 +57,7 @@ public class CommentDA {
         return comments;
     }
 
-    static public int delete(String ID) {
+    static public int delete(int ID) {
         String sql1="SELECT * FROM Comment WHERE Id='"+ID+"'";
         try {
             ResultSet resultSet=Base.statement.executeQuery(sql1);
@@ -79,7 +79,7 @@ public class CommentDA {
             int status;
             ResultSet resultSet=Base.statement.executeQuery(sql2);
             while (resultSet.next()){
-                status=ResponseDA.delete(resultSet.getString(1));
+                status=ResponseDA.delete(resultSet.getInt(1));
                 if (status==2)//不会存在返回5的情况。。。。
                     return 2;
             }
@@ -105,7 +105,7 @@ public class CommentDA {
         return 1;
     }
 
-    public static int getCommentNum(String articleId){
+    public static int getCommentNum(int articleId){
         String sql = "SELECT id FROM Comment WHERE ArticleId='"+articleId+"'";
         int num=0;
         try {

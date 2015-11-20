@@ -39,7 +39,19 @@ public class Article {
         Base.initialize();
         RT_Publish publish;
         User currentUser=User.validate(id,token);
-            PD.Article article=new PD.Article(0,title,content,null,new Timestamp(System.currentTimeMillis()));
+        //String modifytime="";
+        //long a=System.currentTimeMillis();
+        //        String modifyTimeStr = "";
+//        DateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+//        try {
+//            modifyTimeStr = sdf.format(modifyTime);
+//            return modifyTimeStr;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            modifyTimeStr="time get error";
+//            return modifyTimeStr;
+//        }
+        PD.Article article=new PD.Article(0,title,content,new Timestamp(System.currentTimeMillis()).toString(),new Timestamp(System.currentTimeMillis()).toString());
         if (currentUser != null && currentUser.getType().equals("root")){
             int index = article.add();
             if (index==0){
@@ -68,7 +80,6 @@ public class Article {
                             @CookieParam("token") String token){
         Base.initialize();
         RT_Modify modify;
-
         User currentUser=User.validate(id,token);
         PD.Article article;
         if (currentUser != null && currentUser.getType().equals("root")){
@@ -87,21 +98,14 @@ public class Article {
     @Produces(MediaType.APPLICATION_JSON)
     public  RT_ArticleList articleList() {
         Base.initialize();
-        ArticleDA articleDA=new ArticleDA();
-        RT_ArticleList articleList=new RT_ArticleList(1,articleDA.query());
+        RT_ArticleList articleList=new RT_ArticleList(1,PD.Article.queryList());
+        for(int i=0;i<articleList.articles.size();i++){
+            PD.Article article=articleList.articles.get(i);
+            int a=article.getId();
+            article.setCommentNum(PD.Comment.getCommentNum(Integer.toString(a)));
+        }
         Base.terminate();
         return  articleList;
-    }
-    @GET
-    @Path("articleContent")
-    @Produces(MediaType.APPLICATION_JSON)
-    public  RT_ArticleContent articleContent(@QueryParam("id")int index){
-        Base.initialize();
-        ArticleDA articleDA = new ArticleDA();
-        PD.Article article=articleDA.queryWithID(index);
-        RT_ArticleContent articleContent=new RT_ArticleContent(1,article.getId(),article.getTitle(),article.getContent(),article.getModifyTime());
-        Base.terminate();
-        return articleContent;
     }
 }
 

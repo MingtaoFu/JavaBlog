@@ -11,7 +11,7 @@ import java.util.ArrayList;
 //@XmlType(name = "comment")
 //    @XmlRootElement(name = "comment")
 public class Comment {
-    private String id;
+    private int id;
     private String time;
     private String articleId;
     private String content;
@@ -22,7 +22,7 @@ public class Comment {
     public Comment() {
     }
     @XmlElement()
-    public String getId() {
+    public int getId() {
         return id;
     }
     @XmlElement()
@@ -46,7 +46,7 @@ public class Comment {
 //        this.responses = responses;
 //    }
 
-    public void setId(String ID) {
+    public void setId(int ID) {
         this.id = ID;
     }
     public void setTime(String time) {
@@ -63,13 +63,13 @@ public class Comment {
     public int add(){
         return CommentDA.add(this);
     }
-    public static ArrayList<Comment> find(String articleId){
+    public static ArrayList<Comment> find(int articleId){
         return CommentDA.find(articleId);
     }
-    public static int delete(String ID){
+    public static int delete(int ID){
         return CommentDA.delete(ID);
     }
-    public static int getCommentNum(String articleId){return CommentDA.getCommentNum(articleId);}
+    public static int getCommentNum(int articleId){return CommentDA.getCommentNum(articleId);}
 //    public static ArrayList<String> getCommentId(String articleId){//???????????
 //        return CommentDA.getCommentId(articleId);
 //    }

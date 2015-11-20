@@ -18,7 +18,7 @@ import java.sql.Date;
 //@XmlRootElement(name = "response")
 
 public class Response {
-    private String id;
+    private int id;
     private String time;
     private String content;
     private String commentId;
@@ -29,7 +29,7 @@ public class Response {
     }
 
     @XmlElement()
-    public String getId() {
+    public int getId() {
         return id;
     }
     @XmlElement()
@@ -53,7 +53,7 @@ public class Response {
         return toUser ;
     }
 
-    public void setId(String ID) {
+    public void setId(int ID) {
         this.id = ID;
     }
     public void setTime(String time)
@@ -70,8 +70,8 @@ public class Response {
     public int add(){
         return ResponseDA.add(this);
     }
-    public static ArrayList<Response> find(String commentId){return ResponseDA.find(commentId);}
-    public static int delete(String ID){
+    public static ArrayList<Response> find(int commentId){return ResponseDA.find(commentId);}
+    public static int delete(int ID){
         return ResponseDA.delete(ID);
     }
 }
