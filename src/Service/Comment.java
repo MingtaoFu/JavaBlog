@@ -8,6 +8,7 @@ import javax.print.attribute.standard.MediaTray;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.awt.*;
+import java.sql.Timestamp;
 
 /**
  * Created by pc on 2015/11/8.
@@ -42,7 +43,7 @@ public class Comment {
     @POST
     @Path("delete")
     @Produces(MediaType.APPLICATION_JSON)//删除Comment时会把其所有Response也删除！
-    public RT_DeleteComment deleteComment(@FormParam("commentId") String commentId,
+    public RT_DeleteComment deleteComment(@FormParam("commentId") int commentId,
                                           @CookieParam("id") String id,
                                           @CookieParam("token") String token){
         if(token == null || id == null){

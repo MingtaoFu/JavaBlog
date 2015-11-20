@@ -26,7 +26,7 @@ public class ResponseDA {
         return 1;
     }
 
-    static public ArrayList<Response> find(String commentId){
+    static public ArrayList<Response> find(int commentId){
         String sql = "SELECT * FROM Response WHERE CommentId='"+commentId+"'";
         Response response;
         ArrayList<Response>responses = new ArrayList<Response>();
@@ -40,7 +40,7 @@ public class ResponseDA {
                 do {
                     response = new Response(resultSet.getString(2), resultSet.getString(4),
                             resultSet.getString(5),resultSet.getString(6));
-                    response.setId(resultSet.getString(1));
+                    response.setId(resultSet.getInt(1));
                     String time=resultSet.getString(3);//去掉最后“.0”
                     response.setTime(time.substring(0, time.length()-2));
                     responses.add(response);
@@ -56,7 +56,7 @@ public class ResponseDA {
         }
         return responses;
     }
-    static public int delete(String ID){
+    static public int delete(int ID){
         String sql1="SELECT * FROM Response WHERE Id='"+ID+"'";
         try {
             ResultSet resultSet=Base.statement.executeQuery(sql1);

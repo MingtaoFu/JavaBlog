@@ -20,7 +20,7 @@ public class GetAll {
     @GET
     @Path("oneArticleContent")
     @Produces(MediaType.APPLICATION_JSON)
-    public RT_All getAll(@QueryParam("articleId") String articleId
+    public RT_All getAll(@QueryParam("articleId") int articleId
                           /*@CookieParam("id") String id,
                          @CookieParam("token")String token*/){
         Base.initialize();
