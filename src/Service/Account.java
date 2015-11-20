@@ -117,5 +117,30 @@ public class Account {
         Base.terminate();
         return rt_base;
     }
+
+    //修改个人信息
+    @POST
+    @Path("modifyInfo")
+    @Produces(MediaType.APPLICATION_JSON)
+    public RT_Base modifyInfo(@FormParam("name") String name,
+                             @FormParam("intro") String intro,
+                             @CookieParam("id") String id,
+                             @CookieParam("token") String token) {
+        JedisDA.initialize();
+        Base.initialize();
+        RT_Base rt_base;
+        User user = User.validate(id, token);
+        if(user != null) {
+            if(user.modifyInfo(name, intro)) {
+                rt_base = new RT_Base(1);           //成功
+            } else {
+                rt_base = new RT_Base(2);           //SQL错误
+            }
+        } else {
+            rt_base = new RT_Base(0);           //身份验证错误
+        }
+        Base.terminate();
+        return rt_base;
+    }
 }
 

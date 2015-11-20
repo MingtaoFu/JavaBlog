@@ -86,8 +86,15 @@ public class UserDA {
         return user;
     }
 
-    public void update() {
+    public static boolean modifyInfo(String id, String name, String intro) {
+        String sql = "UPDATE User SET Name = '" + name + "' , Intro = '" + intro + "' WHERE Id = '" + id + "'";
 
+        try {
+            Base.statement.executeUpdate(sql);
+            return true;
+        } catch (SQLException e) {
+            return false;
+        }
     }
 
     public static void delete(User user) {

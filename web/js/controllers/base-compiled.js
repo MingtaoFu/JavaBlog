@@ -122,6 +122,25 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
         }
     });
 
+    //修改个人信息
+    $scope.modifyPersonalInfo = function () {
+        $.post('api/account/modifyInfo', $rootScope.rootdata.info, function (resp) {
+            $scope.$apply(function () {
+                switch (resp.data.status) {
+                    case 1:
+                        alert("操作成功");
+                        break;
+                    case 0:
+                        alert("登录状态失效，请重新登录");
+                        break;
+                    case 2:
+                        alert("服务器错误，请稍后再试");
+                        break;
+                }
+            });
+        });
+    };
+
     //修改密码
     $scope.modifyPwd = function () {
         $.post('api/account/modifyPwd', $scope.pwdData, function (resp) {

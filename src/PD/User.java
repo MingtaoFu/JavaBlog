@@ -59,6 +59,10 @@ public class User {
         return token;
     }
 
+    public boolean modifyInfo(String name, String intro) {
+        return UserDA.modifyInfo(this.getId(), name, intro);
+    }
+
     public boolean modifyPwd(String newPwd) {
         return UserDA.modifyPwd(this, newPwd);
     }
