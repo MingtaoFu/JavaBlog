@@ -1,8 +1,6 @@
 package DA;
 
 import PD.Article;
-import PD.Comment;
-import sun.jvmstat.monitor.IntegerMonitor;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

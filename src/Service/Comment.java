@@ -60,7 +60,7 @@ public class Comment {
         }
         return deleteComment;
     }
-//
+
 //    @POST
 //    @Path("getAll")
 //    @Produces(MediaType.APPLICATION_JSON)
