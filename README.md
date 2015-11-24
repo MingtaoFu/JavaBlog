@@ -1,16 +1,17 @@
 # JavaBlog
-##The works of OOP course.
->Members(ordered by first letter):
+The works of OOP course.
+It's a personal blog written in Java.
+##Members(ordered by first letter):
  - Lisa Peng
  - Mingtao Fu
  - Xiujia Zhao
  - Yingtian Zou
 
-It's a personal blog written in Java.
 
->dependencies:
+##dependencies:
   - jersey
   - TomEE
   - jedis
   - mysql-connector-java
+  - ckEditor
 
