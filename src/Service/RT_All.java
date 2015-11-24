@@ -24,7 +24,7 @@ class RT_All{
 //    private Date modifyTime;
     private ArrayList<PD.Comment> comments;
     private ArrayList<PD.Response> responses;
-
+    private PD.Article article;
 
     public void setStatus(int status) {
         this.status = status;
@@ -36,14 +36,16 @@ class RT_All{
     public ArrayList<PD.Response> getResponse() {
         return responses;
     }
+    public PD.Article getArticle(){return  article;}
 
     public RT_All(){}
 
     public RT_All(int status) {
         this.status = status;
     }
-    public RT_All(int status,ArrayList<PD.Comment> comments,ArrayList<PD.Response> responses) {
-        this.status=status;
+    public RT_All(int status,ArrayList<PD.Comment> comments,ArrayList<PD.Response> responses,PD.Article article) {
+        this.status = status;
+        this.article = article;
         this.comments = comments;
         this.responses = responses;
     }

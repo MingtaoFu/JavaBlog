@@ -76,4 +76,6 @@ public class Article {
         public  static ArrayList queryList(){
             return ArticleDA.query();
         }
+
+        public  static Article queryWithID(int index){return ArticleDA.queryWithID(index);}
     }
