@@ -34,7 +34,11 @@ CKEDITOR.editorConfig = function( config ) {
 	config.format_tags = 'p;h1;h2;h3;pre';
 
 	// Simplify the dialog windows.
+	config.extraPlugins = 'filetools';
 	config.removeDialogTabs = 'image:advanced;link:advanced';
     //config.extraPlugins = 'entities';
     //config.extraPlugins = 'bbcode';
+	config.filebrowserUploadUrl="actions/ckeditorUpload";
+    config.extraPlugins = 'uploadwidget';
+    config.extraPlugins = 'uploadimage';
 };
