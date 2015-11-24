@@ -203,6 +203,7 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
                 var data = resp.data;
                 switch (data.status) {
                     case 1:
+                        $scope.article = data.article;
                         //非常不优雅，要改
                         if (data.comments) {
                             if (typeof data.comments.length == "number") {
