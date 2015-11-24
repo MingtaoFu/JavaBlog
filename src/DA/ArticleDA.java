@@ -65,7 +65,7 @@ public class ArticleDA {
         try{
             ResultSet rs =Base.statement.executeQuery(sql);
            if (rs.next()){
-               Article getArticle= new Article(rs.getRow(),rs.getNString("Title"),rs.getNString("Content"),rs.getString("Time"),rs.getString("ModifyTime"));
+               Article getArticle= new Article(rs.getInt("ID"),rs.getNString("Title"),rs.getNString("Content"),rs.getString("Time"),rs.getString("ModifyTime"));
                return getArticle;
            }
         } catch (SQLException ex) {

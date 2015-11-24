@@ -29,6 +29,7 @@ public class GetAll {
 //            return new RT_All(0);
 //        }
         RT_All all;
+        PD.Article article = PD.Article.queryWithID(articleId);
 //        User currentUser=User.validate(id, token);
 //        if (currentUser==null){
 //            all=new RT_All(2);
@@ -63,7 +64,7 @@ public class GetAll {
                 }
             }
         }
-        all = new RT_All(1,comment,response1);
+        all = new RT_All(1,comment,response1,article);
 //        }
         Base.terminate();
         return all;
