@@ -30,7 +30,7 @@ public class ArticleDA {
     }
 
     static public void delete(int id) {
-        String sql = "DELETE FROM article WHERE ID=" + id;
+        String sql = "DELETE FROM Article WHERE Id=" + id;
         try {
             Base.statement.executeUpdate(sql);
         } catch (SQLException ex) {
@@ -41,7 +41,7 @@ public class ArticleDA {
     }
 
     static public ArrayList query() {
-        String sql = "SELECT * FROM Article order by ID desc  ";
+        String sql = "SELECT * FROM Article order by Id desc  ";
         try {
             ResultSet rs = Base.statement.executeQuery(sql);
             ArrayList<Article> arrayList=new ArrayList<Article>();
@@ -61,7 +61,7 @@ public class ArticleDA {
         return null;
     }
     static public Article queryWithID(int id){
-        String sql="SELECT * FROM article WHERE ID="+id;
+        String sql="SELECT * FROM Article WHERE Id="+id;
         try{
             ResultSet rs =Base.statement.executeQuery(sql);
            if (rs.next()){
