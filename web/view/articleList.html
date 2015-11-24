@@ -16,7 +16,7 @@
         <div class="article art{{$index%3+1}} padx" ng-repeat="article in articleList">
             <a href="#/article?articleId={{article.id}}"><h3 class="arTitle">{{article.title}}</h3></a>
             <hr>
-            <p class="preArticle inden2" ng-bind-html="article.content | trustHtml">
+            <p class="preArticle inden2" ng-bind-html="article.content | delTag">
             </p>
             <hr>
             <p>

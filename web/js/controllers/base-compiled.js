@@ -24,6 +24,12 @@ angular.module("app", ["jQueryRequest", "ngRoute"]).config(['$routeProvider', fu
     return function (input) {
         return $sce.trustAsHtml(input);
     };
+}).filter('delTag', function ($sce) {
+    return function (input) {
+        var reg = new RegExp("<[^<]*>", "gi");
+        //return input.replace(reg, '');
+        return $sce.trustAsHtml(input.replace(reg, ''));
+    };
 }).controller('index', function ($scope) {
     $scope.articleList = [];
 
