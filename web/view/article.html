@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="pad" id="mainArticle">
+        <h2 class="txtC">文章标题</h2>
+        <hr>
+        <p ng-bind-html="article.content | trustHtml">
+
+        </p>
+        <hr>
+        <h2 class="inb">评论</h2>
+        <p class="flr pad">
+            <a class="glyphicon glyphicon-edit" title="评论" style="text-decoration: none" ng-click="goto('commentArea')">
+            </a>
+        </p>
+        <div id="commentCon" class="pad">
+            <div class="comment" ng-repeat="comment in comments">
+                {{modifyForm.$invalid}}
+                <p>
+                    <img src="" width="24" height="24">
+                    <a>{{comment.user}}</a>:
+                    &nbsp;
+                    &nbsp;
+                </p>
+                <blockquote class="commentContent">
+                    {{comment.content}}
+                </blockquote>
+                <section class="responseCon padx" ng-init="p_index=$index">
+                    <p class="resp" title="回复" ng-repeat="resp in comment.resps" ng-click="changeToUser(p_index, $index)">
+                        <a>{{resp.fromUser}}</a>&nbsp;回复&nbsp;<a>{{resp.toUser}}</a>: {{resp.content}}
+                    </p>
+                    <form class="pad" ng-submit="postResponse(p_index)">
+                        <label class="fll">回复 {{commentUserList[$index]}}</label>
+                        <input class="form-control" ng-model="newResponse[p_index]" required>
+                        <br>
+                        <input class="btn btn-default" type="submit">
+                    </form>
+                </section>
+                <hr>
+            </div>
+
+            <form ng-submit="postComment()">
+                <label for="commentArea">撰写评论</label>
+                <textarea id="commentArea" class="form-control" ng-model="newComment" required></textarea>
+                <br>
+                <input type="submit" class="btn btn-default">
+            </form>
+            <!--<div contenteditable="true" id="commentArea" style="height: 100px;width: 100px"></div>-->
+
+        </div>
+    </div>
+</body>
+</html>

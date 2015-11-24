@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>个人博客</title>
+
+    <!-- External libraries, don't modify -->
+    <link type="text/css" rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/cssreset-min.css">
+    <link type="text/css" rel="stylesheet" href="css/cssbase-min.css">
+    <!-- External libraries End -->
+
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+    <link type="text/css" rel="stylesheet" href="css/common.css">
+    <link type="text/css" rel="stylesheet" href="css/index.css">
+
+    <!-- External libraries, don't modify -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <!-- External libraries End -->
+</head>
+<body ng-controller="main">
+    <div class="container">
+        <header id="header" class="boRa5">
+            <div id="hero">
+                <div class="inb rela" id="blogInfo">
+                    <h1 class="rela">XXX的博客</h1>
+                    <p class="rela slogan">slogan</p>
+                    <nav>
+                        <a href="/#/">主页</a>
+                        <a ng-if="!status.isValidated" href="javascript: void 0" ng-click="status.loginPanel=true">登录</a>
+                        <a ng-if="status.isValidated" href="/#/me">个人中心</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- aside bar -->
+        <aside class="boRa5 inb fll test2 padx" id="aside">
+            <section>
+                <div class="blTitle">
+                    <h2>关于我</h2>
+                </div>
+                <div class="txtC">
+                    <img src="" height="200" width="100">
+                </div>
+                <p class="inden2">
+                    blablabla<br>
+                    blablabla
+                    blablabla<br>
+                    blablabla<br>
+                    blablabla<br>
+                </p>
+
+            </section>
+
+            <hr>
+            <section>
+                <div class="blTitle">
+                    <h2>留言板</h2>
+                    <p class="message wrap">
+                        <a>hahaha</a>:
+                        dsadasdasdasdsadsdadadsdsadsadsadsadsadsa
+                    </p>
+                    <p class="message wrap">
+                        <a>hahaha</a>:
+                        dsadasdasdasdsadsdadadsdsadsadsadsadsadsa
+                    </p>
+                    <p class="message wrap">
+                        <a>hahaha</a>:
+                        dsadasdasdasdsadsdadadsdsadsadsadsadsadsa
+                    </p>
+                </div>
+            </section>
+
+        </aside>
+
+        <!-- document main block -->
+        <section id="main" class="fll boRa5 rela test3">
+            <div ng-view></div>
+        </section>
+
+
+
+        <footer>
+
+        </footer>
+    </div>
+
+    <!-- login and register -->
+    <div id="loginPanel" ng-show="status.loginPanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist" id="myTabs">
+            <li role="presentation" class="active">
+                <a href="javascript:void 0" data-target="login" aria-controls="login" role="tab" data-toggle="tab" ng-click="tab=1">登录</a>
+            </li>
+            <li role="presentation">
+                <a href="javascript:void 0" data-target="register" aria-controls="register" role="tab" data-toggle="tab">注册</a>
+            </li>
+        </ul>
+        <script>
+            $('#myTabs a').click(function (e) {
+                console.log(11);
+                e.preventDefault();
+                $(this).tab('show');
+            });
+        </script>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="login">
+                <div class="pad">
+                    <form class="pad" name="form" ng-submit = "loginSubmit()" novalidate>
+                        <p>
+                            <label for="loginNOInput">账号</label>&nbsp;
+                            <input id="loginNOInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2" ng-pattern="/^[A-Za-z0-9_]{6,20}$/"
+                                   ng-model="rootdata.login.id" name="id" required>
+                            <span ng-if="form.id.$error.required || form.id.$error.pattern"
+                                     class="error">
+                                6-20位，可含字母、数字及下划线
+                            </span>
+                        </p>
+                        <p>
+                            <label for="loginPWDInput">密码</label>&nbsp;
+                            <input id="loginPWDInput" type="password" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2" ng-pattern="/^[A-Za-z0-9_]{6,20}$/"
+                                   ng-model="rootdata.login.pwd" name="pwd" required>
+                            <span ng-if="form.pwd.$error.required || form.pwd.$error.pattern"
+                                     class="error">
+                                6-20位，可含字母、数字及下划线
+                            </span>
+                        </p>
+                        <br>
+                        <div class="btn-group loginBtn" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default" ng-click="status.loginPanel=false">关闭</button>
+                            <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">登录</button>
+                        </div>
+                        {{form.$invalid}}
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="register">
+                <div class="pad">
+                    <form class="pad">
+                        <p>
+                            <label for="registerNOInput">账号</label>&nbsp;
+                            <input id="registerNOInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <p>
+                            <label for="registerNameInput">昵称</label>&nbsp;
+                            <input id="registerNameInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <p>
+                            <label for="registerPWDInput">密码</label>&nbsp;
+                            <input id="registerPWDInput" type="text" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2">
+                        </p>
+                        <br>
+                        <div class="btn-group loginBtn" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default" ng-click="loginPanel=false">关闭</button>
+                            <button type="button" class="btn btn-primary">注册</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login and register ends-->
+
+    <script src="js/modules/request-compiled.js"></script>
+    <script src="js/controllers/base-compiled.js"></script>
+</body>
+</html>
