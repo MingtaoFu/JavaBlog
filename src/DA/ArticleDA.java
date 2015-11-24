@@ -41,12 +41,11 @@ public class ArticleDA {
     }
 
     static public ArrayList query() {
-        String sql = "SELECT * FROM Article";
+        String sql = "SELECT * FROM Article order by ID desc  ";
         try {
             ResultSet rs = Base.statement.executeQuery(sql);
             ArrayList<Article> arrayList=new ArrayList<Article>();
             while (rs.next()){
-
                 int a= rs.getInt("ID");
                 System.out.println(a);
                 Article getArticle=new Article(rs.getInt("ID"),rs.getString("Title"),rs.getString("Content"),rs.getString("Time"),rs.getString("ModifyTime"));
