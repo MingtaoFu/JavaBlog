@@ -6,7 +6,7 @@
  * main / article   login / personalCenter
  */
 
-angular.module("app", ["jQueryRequest", "ngRoute"])
+angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/', {
@@ -24,6 +24,9 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
             .when('/admin', {
                 templateUrl: 'view/editor.html',
                 controller: 'admin'
+            })
+            .when('/test', {
+                templateUrl: 'jQuery-File-Upload-9.11.2/index.html'
             });
     }])
     .filter('trustHtml', function ($sce) {
@@ -93,11 +96,31 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
             });
         };
     })
-    .controller('me', function($scope, $rootScope) {
+    .controller('me', ['$scope', '$rootScope', 'Upload', function($scope, $rootScope, Upload) {
 
         $scope.status = {
             //是否在编辑状态
             editModel: false
+        };
+
+        //给文件input增加监听器，一旦选定了，自动上传
+        $scope.$watch("file", function() {
+            if($scope.file) {
+                $scope.upload();
+            }
+        });
+
+        $scope.upload = function() {
+            Upload.upload({
+                url: 'api/file/uploadHead',
+                file: $scope.file
+            }).progress(function (evt) {
+                var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
+                console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
+            }).success(function (data, status, headers, config) {
+                console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
+                $rootScope.rootdata.info.logoUrl = 'img/head_' + $rootScope.rootdata.info.id;
+            });
         };
 
         $scope.pwdData = {
@@ -175,7 +198,7 @@ angular.module("app", ["jQueryRequest", "ngRoute"])
                 });
             });
         }
-    })
+    }])
     .controller('admin', function($scope) {
         $scope.publishStatus = '';
         $scope.data = {

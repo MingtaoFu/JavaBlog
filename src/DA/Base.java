@@ -41,7 +41,7 @@ public class Base {
         String[] sqlArr = {
                 "create table User(Id varchar(32) not null, Name varchar(32) not null, Pwd varchar(32) not null, " +
                         "Date timestamp not null default CURRENT_TIMESTAMP, Type varchar(16) not null, Intro text, " +
-                        "LogoUrl varchar(64) default '/static/logos/default', primary key (Id))",
+                        "LogoUrl varchar(64) default 'img/Head', primary key (Id))",
                 "create table Article(Id int not null auto_increment, Title varchar(64) not null, Content text, " +
                         "Time timestamp not null default CURRENT_TIMESTAMP, ModifyTime timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP," +
                         " primary key (Id))",

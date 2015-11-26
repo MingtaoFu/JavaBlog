@@ -12,8 +12,15 @@
         <hr>
         <div id="infoCon">
             <div>
-                <img srcset="rootdata.info.logo" width="200" height="200">
+                <img ng-src="{{rootdata.info.logoUrl}}" width="200" height="200">
             </div>
+            <form name="formUp">
+                上传头像
+                <div class="button btn btn-success" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+                     accept="image/*" ngf-max-size="20MB" ngf-min-height="1"
+                     ngf-resize="{width: 100, height: 100}">选择图片</div>
+                {{file}}
+            </form>
             <br>
             <form class="txtL rela" id="infoForm">
                 <div>
