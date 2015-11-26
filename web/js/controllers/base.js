@@ -70,7 +70,12 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
 
             },
             blogInfo: {
+                adminInfo: {
 
+                },
+                blogInfo: {
+
+                }
             }
         };
 
@@ -81,6 +86,13 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
                     $rootScope.rootdata.info = resp.data;
                     $rootScope.status.isValidated = true;
                 }
+            });
+        });
+
+        //博主信息
+        $.getJSON('mainInfo', function(resp) {
+            $scope.$apply(function() {
+                $rootScope.rootdata.blogInfo.adminInfo = resp.userData;
             });
         });
 

@@ -15,7 +15,34 @@ public class UserDA {
     static String type;
     static String intro;
     static String logoUrl;
-       //添加记录
+
+    public static User getMain() {
+        User user = null;
+        String sql = "SELECT * FROM User WHERE Type = 'root'";
+
+        try {
+            ResultSet rs = Base.statement.executeQuery(sql);
+            boolean gotIt = rs.next();
+
+            if(gotIt) {
+                name = rs.getString("Name");
+                intro = rs.getString("Intro");
+                logoUrl = rs.getString("LogoUrl");
+                user = new User();
+                user.setName(name);
+                user.setIntro(intro);
+                user.setLogoUrl(logoUrl);
+            } else {
+                return null;
+            }
+            rs.close();
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
+        return user;
+    }
+
+    //添加记录
     public static int add(User user){
 
         id = user.getId();
