@@ -74,6 +74,16 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
             }
         };
 
+        //自动登录
+        $.getJSON('api/account/personalInfo', function(resp) {
+            $scope.$apply(function() {
+                if(resp.data.status) {
+                    $rootScope.rootdata.info = resp.data;
+                    $rootScope.status.isValidated = true;
+                }
+            });
+        });
+
         $rootScope.status = {
             isValidated: false,
             loginPanel: false
