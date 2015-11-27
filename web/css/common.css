@@ -58,4 +58,9 @@ hr {
   color: red;
   font-size: 14px; }
 
+#blogAdminHead {
+  border-radius: 3px;
+  box-shadow: #ddd 2px 2px 2px;
+  margin-bottom: 10px; }
+
 /*# sourceMappingURL=common.css.map */

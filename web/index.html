@@ -29,7 +29,7 @@
             <div id="hero">
                 <div class="inb rela" id="blogInfo">
                     <h1 class="rela">{{rootdata.blogInfo.adminInfo.name}}的博客</h1>
-                    <p class="rela slogan">slogan</p>
+                    <p class="rela slogan">一切皆 web</p>
                     <nav>
                         <a href="/#/">主页</a>
                         <a ng-if="!status.isValidated" href="javascript: void 0" ng-click="status.loginPanel=true">登录</a>
@@ -48,7 +48,7 @@
                     <h2>关于博主</h2>
                 </div>
                 <div class="txtC">
-                    <img src="" height="200" width="100">
+                    <img id="blogAdminHead" src="{{rootdata.blogInfo.adminInfo.logoUrl}}" height="100" width="100">
                 </div>
                 <p class="inden2">
                     {{rootdata.blogInfo.adminInfo.intro}}
@@ -135,7 +135,6 @@
                             <button type="button" class="btn btn-default" ng-click="status.loginPanel=false">关闭</button>
                             <button type="submit" class="btn btn-primary" ng-disabled="form.$invalid">登录</button>
                         </div>
-                        {{form.$invalid}}
                     </form>
                 </div>
             </div>
