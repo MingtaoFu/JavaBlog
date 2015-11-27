@@ -221,7 +221,7 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
             });
         }
     }])
-    .controller('admin', function($scope) {
+    .controller('admin', function($scope, $timeout, $location) {
         $scope.publishStatus = '';
         $scope.data = {
             article: {
@@ -242,6 +242,9 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
                             break;
                         case 1:
                             $scope.publishStatus = "发表成功，跳转中...";
+                            $timeout(function() {
+                                $location.path("article").search({articleId: resp.data.index});
+                            }, 1000);
                             break;
                         case 2:
                             $scope.publishStatus = "服务器错误，请稍后再试";

@@ -34,6 +34,7 @@
                         <a href="/#/">主页</a>
                         <a ng-if="!status.isValidated" href="javascript: void 0" ng-click="status.loginPanel=true">登录</a>
                         <a ng-if="status.isValidated" href="/#/me">个人中心</a>
+                        <a ng-if="rootdata.info.type=='root'" href="/#/admin">写文章</a>
                     </nav>
                 </div>
             </div>
