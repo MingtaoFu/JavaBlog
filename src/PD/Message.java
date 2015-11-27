@@ -2,46 +2,54 @@ package PD;
 
 import DA.MessageDA;
 
+import javax.xml.bind.annotation.XmlElement;
 import java.sql.Timestamp;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
 
 /**
  * Created by mingtao on 15-11-4.
  */
 public class Message {
-    String ID;
+    int Id;
     String content;
-    Timestamp time;
-    String userID;
+    String  time;
+    String userId;
 
-    public Message(String content, Timestamp time, String userID) {
+    public Message(String content,String userID) {
         this.content = content;
+//        this.time = time;
+        this.userId = userID;
+    }
+
+    public void setId(int Id) {
+        this.Id = Id;
+    }
+
+    public void setTime(String time) {
         this.time = time;
-        this.userID = userID;
     }
-
-    public void setID(String ID) {
-        this.ID = ID;
+    @XmlElement()
+    public int getId() {
+        return Id;
     }
-
-    public String getID() {
-        return ID;
-    }
-
+    @XmlElement()
     public String getContent() {
         return content;
     }
-
-    public Timestamp getTime() {
+    @XmlElement()
+    public String getTime() {
         return time;
     }
-
-    public String getUserID() {
-        return userID;
+    @XmlElement()
+    public String getUserId() {
+        return userId;
     }
-    public void add(){
-        MessageDA.add(this);
+    public int add(){
+       return MessageDA.add(this);
     }
-    public static void delete(String ID){
-        MessageDA.delete(ID);
+    public static ArrayList<Message> find(){return MessageDA.find();}
+    public static int delete(int Id){
+        return MessageDA.delete(Id);
     }
 }

@@ -28,7 +28,7 @@ class RT_AddComment{
 class RT_DeleteComment {
     @XmlElement()
     private int status;
-
+    public RT_DeleteComment(){}
     public RT_DeleteComment(int status) {
         this.status = status;
     }
