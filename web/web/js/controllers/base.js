@@ -6,22 +6,7 @@
  * main / article   login / personalCenter
  */
 
-//自动登录
-function autoLogin($rootScope, $scope) {
-    $.getJSON('api/account/personalInfo', function (resp) {
-        $scope.$apply(function () {
-            if (resp.data.status) {
-                $rootScope.rootdata.info = resp.data;
-                $rootScope.status.isValidated = true;
-            } else {
-                $rootScope.rootdata.info = {};
-                $rootScope.status.isValidated = false;
-            }
-        });
-    });
-}
-
-angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
+angular.module("app", ["jQueryRequest", "ngRoute"])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/', {
@@ -39,21 +24,11 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
             .when('/admin', {
                 templateUrl: 'view/editor.html',
                 controller: 'admin'
-            })
-            .when('/test', {
-                templateUrl: 'jQuery-File-Upload-9.11.2/index.html'
             });
     }])
     .filter('trustHtml', function ($sce) {
         return function (input) {
             return $sce.trustAsHtml(input);
-        }
-    })
-    .filter('delTag', function ($sce) {
-        return function (input) {
-            var reg = new RegExp("<[^<]*>", "gi");
-            //return input.replace(reg, '');
-            return $sce.trustAsHtml(input.replace(reg, ''));
         }
     })
     .controller('index', function($scope) {
@@ -85,34 +60,14 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
 
             },
             blogInfo: {
-                adminInfo: {
 
-                },
-                blogInfo: {
-
-                }
             }
         };
-
-        //自动登录
-        autoLogin($rootScope, $scope);
-
-        //博主信息
-        $.getJSON('mainInfo', function(resp) {
-            $scope.$apply(function() {
-                $rootScope.rootdata.blogInfo.adminInfo = resp.userData;
-            });
-        });
 
         $rootScope.status = {
             isValidated: false,
             loginPanel: false
 
-        };
-
-        $scope.logout = function() {
-            document.cookie = 'token=';
-            autoLogin($rootScope, $scope);
         };
 
         $scope.loginSubmit = function() {
@@ -121,11 +76,8 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
                     if(resp.data.status) {
                         document.cookie = "id=" + $rootScope.rootdata.login.id;
                         document.cookie = "token=" + resp.data.token;
-                        /*
                         $rootScope.status.isValidated = true;
-                        */
                         $scope.status.loginPanel = false;
-                        autoLogin($rootScope, $scope);
                     } else {
 
                     }
@@ -134,31 +86,11 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
             });
         };
     })
-    .controller('me', ['$scope', '$rootScope', 'Upload', function($scope, $rootScope, Upload) {
+    .controller('me', function($scope, $rootScope) {
 
         $scope.status = {
             //是否在编辑状态
             editModel: false
-        };
-
-        //给文件input增加监听器，一旦选定了，自动上传
-        $scope.$watch("file", function() {
-            if($scope.file) {
-                $scope.upload();
-            }
-        });
-
-        $scope.upload = function() {
-            Upload.upload({
-                url: 'api/file/uploadHead',
-                file: $scope.file
-            }).progress(function (evt) {
-                var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
-                console.log('progress: ' + progressPercentage + '% ' + evt.config.file.name);
-            }).success(function (data, status, headers, config) {
-                console.log('file ' + config.file.name + 'uploaded. Response: ' + data);
-                $rootScope.rootdata.info.logoUrl = 'img/head_' + $rootScope.rootdata.info.id;
-            });
         };
 
         $scope.pwdData = {
@@ -236,8 +168,8 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
                 });
             });
         }
-    }])
-    .controller('admin', function($scope, $timeout, $location) {
+    })
+    .controller('admin', function($scope) {
         $scope.publishStatus = '';
         $scope.data = {
             article: {
@@ -258,9 +190,6 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
                             break;
                         case 1:
                             $scope.publishStatus = "发表成功，跳转中...";
-                            $timeout(function() {
-                                $location.path("article").search({articleId: resp.data.index});
-                            }, 1000);
                             break;
                         case 2:
                             $scope.publishStatus = "服务器错误，请稍后再试";
@@ -275,7 +204,6 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
 
     })
     .controller('article', function($scope, $location, $anchorScroll) {
-
         $scope.commentUserList = [];
 
         //回复时变换对象
@@ -397,55 +325,6 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
                                 alert("非法操作");
                                 break;
                         }
-                });
-            });
-        };
-    })
-    .controller('message', function($rootScope, $scope) {
-        $scope.messageData = [
-
-        ];
-
-        $scope.postMessageContent = '';
-
-        $scope.getMessage = function() {
-            $.getJSON('api/message/getAllMessage', function(resp) {
-                $scope.$apply(function() {
-                    var data = resp.data;
-                    switch (data.status) {
-                        case 1:
-                            if(data.messages) {
-                                if(typeof data.messages.length == "number") {
-                                    $scope.messageData = data.messages;
-                                } else {
-                                    $scope.messageData = [data.messages];
-                                }
-                            }
-                            break;
-                        default:
-
-                    }
-                });
-            });
-        };
-
-        $scope.getMessage();
-
-        $scope.postMessage = function() {
-            $.post('api/message/add', {"content": $scope.postMessageContent},function(resp) {
-                $scope.$apply(function() {
-                    var data = resp.data;
-                    switch (data.status) {
-                        case 1:
-                            $scope.getMessage();
-                            $scope.postMessageContent = '';
-                            break;
-                        case 2:
-                            alert("服务器错误");
-                            break;
-                        default:
-                            alert("请先登录");
-                    }
                 });
             });
         };

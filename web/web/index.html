@@ -19,8 +19,6 @@
     <script src="js/angular.min.js"></script>
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
     <script src="js/angular-route.min.js"></script>
-    <script src="js/ng-file-upload.min.js"></script>
-    <script src="js/ng-file-upload-shim.min.js"></script>
     <!-- External libraries End -->
 </head>
 <body ng-controller="main">
@@ -28,14 +26,12 @@
         <header id="header" class="boRa5">
             <div id="hero">
                 <div class="inb rela" id="blogInfo">
-                    <h1 class="rela">{{rootdata.blogInfo.adminInfo.name}}的博客</h1>
+                    <h1 class="rela">XXX的博客</h1>
                     <p class="rela slogan">slogan</p>
                     <nav>
                         <a href="/#/">主页</a>
                         <a ng-if="!status.isValidated" href="javascript: void 0" ng-click="status.loginPanel=true">登录</a>
                         <a ng-if="status.isValidated" href="/#/me">个人中心</a>
-                        <a ng-if="rootdata.info.type=='root'" href="/#/admin">写文章</a>
-                        <a ng-if="status.isValidated" ng-click="logout()" href="javascript: void 0">登出</a>
                     </nav>
                 </div>
             </div>
@@ -45,36 +41,37 @@
         <aside class="boRa5 inb fll test2 padx" id="aside">
             <section>
                 <div class="blTitle">
-                    <h2>关于博主</h2>
+                    <h2>关于我</h2>
                 </div>
                 <div class="txtC">
                     <img src="" height="200" width="100">
                 </div>
                 <p class="inden2">
-                    {{rootdata.blogInfo.adminInfo.intro}}
+                    blablabla<br>
+                    blablabla
+                    blablabla<br>
+                    blablabla<br>
+                    blablabla<br>
                 </p>
 
             </section>
 
             <hr>
-            <section ng-controller="message">
+            <section>
                 <div class="blTitle">
-                    <div class="pad">
-                        <h2>留言板</h2>
-                        <div class="message wrap" ng-repeat="message in messageData">
-                            <a>{{message.userId}}</a>:
-                            <p class="inden2">{{message.content}}</p>
-                            <hr>
-                        </div>
-                        <form ng-submit="postMessage()">
-                            <label for="messageInput">写留言</label>
-                        <textarea id="messageInput" class="form-control" ng-model="postMessageContent">
-
-                        </textarea>
-                            <input type="submit" class="btn btn-primary" id="messageBtn">
-                        </form>
-                    </div>
-
+                    <h2>留言板</h2>
+                    <p class="message wrap">
+                        <a>hahaha</a>:
+                        dsadasdasdasdsadsdadadsdsadsadsadsadsadsa
+                    </p>
+                    <p class="message wrap">
+                        <a>hahaha</a>:
+                        dsadasdasdasdsadsdadadsdsadsadsadsadsadsa
+                    </p>
+                    <p class="message wrap">
+                        <a>hahaha</a>:
+                        dsadasdasdasdsadsdadadsdsadsadsadsadsadsa
+                    </p>
                 </div>
             </section>
 
