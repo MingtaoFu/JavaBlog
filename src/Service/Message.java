@@ -59,9 +59,12 @@ public class Message {
     @Produces(MediaType.APPLICATION_JSON)
     public RT_GetAllMessage getAllMessage(){
         Base.initialize();
-        RT_GetAllMessage getAllMessage=null;
+        RT_GetAllMessage getAllMessage;
         ArrayList<PD.Message> messages= PD.Message.find();
-        if(messages!=null){
+        if(messages == null) {
+            getAllMessage=new RT_GetAllMessage(1,null);
+        }
+        else {
             if (messages.get(0).getUserId().equals("$")){
                 Base.terminate();
                 return new RT_GetAllMessage(2);
@@ -70,6 +73,7 @@ public class Message {
                 getAllMessage = new RT_GetAllMessage(1,messages);
             }
         }
+
         Base.terminate();
         return getAllMessage;
     }

@@ -56,19 +56,21 @@ public class MessageDA {
         Message message;
         ArrayList<Message> messages=new ArrayList<Message>();
         try {
-            ResultSet resultSet=Base.statement.executeQuery(sql);
-            if(!resultSet.next()){
+            ResultSet resultSet = Base.statement.executeQuery(sql);
+            if (!resultSet.next()) {
                 messages=null;
                 resultSet.close();
             }
-            else do{
-                message=new Message(resultSet.getString(2),resultSet.getString(4));
-                message.setId(resultSet.getInt(1));
-                String time=resultSet.getString(3);
-                message.setTime(time.substring(0,time.length()-2));
-                messages.add(message);
-            }while (resultSet.next());
-            resultSet.close();
+            else {
+                do {
+                    message = new Message(resultSet.getString(2), resultSet.getString(4));
+                    message.setId(resultSet.getInt(1));
+                    String time = resultSet.getString(3);
+                    message.setTime(time.substring(0, time.length() - 2));
+                    messages.add(message);
+                } while (resultSet.next());
+                resultSet.close();
+            }
         }
         catch (SQLException ex){
             System.out.println("SQLException: " + ex.getMessage());
