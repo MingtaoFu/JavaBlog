@@ -10,7 +10,7 @@ import java.util.Date;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "data")
-//@XmlSeeAlso({RT_GetAllResponse.class})
+@XmlSeeAlso({ArrayList.class})
 class RT_All{
     @XmlElement()
     private int status;
@@ -23,9 +23,22 @@ class RT_All{
 //    @XmlElement()
 //    private Date modifyTime;
     private ArrayList<PD.Comment> comments;
+//    @XmlElement()
+//    private ArrayList commentUserInfo;
     private ArrayList<PD.Response> responses;
     private PD.Article article;
 
+    public int getStatus() {
+        return status;
+    }
+//
+//    public void setCommentUserInfo(ArrayList commentUserInfo) {
+//        this.commentUserInfo = commentUserInfo;
+//    }
+//
+//    public ArrayList getCommentUserInfo() {
+//        return commentUserInfo;
+//    }
     public void setStatus(int status) {
         this.status = status;
     }

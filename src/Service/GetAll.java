@@ -44,12 +44,19 @@ public class GetAll {
 
 //        ArrayList<String> commentId = PD.Comment.getCommentId(articleId);
         ArrayList<PD.Comment> comment = PD.Comment.find(articleId);
-
+        ArrayList commentUserInfo = new ArrayList();
         if(comment != null) {
             if (comment.get(0).getUser().equals("$")) {
                 Base.terminate();
                 return new RT_All(2);
             }
+
+            for (int i = 0; i < comment.size(); i++) {
+                commentUserInfo = PD.Comment.getCommentUserInfo(comment.get(i).getId());
+                comment.get(i).setLogoUrl(commentUserInfo.get(0).toString());
+                comment.get(i).setName(commentUserInfo.get(1).toString());
+            }
+
             for (int i = 0; i < comment.size(); i++) {
                 response2 = PD.Response.find(comment.get(i).getId());
                 if (response2 != null) {
@@ -65,6 +72,7 @@ public class GetAll {
             }
         }
         all = new RT_All(1,comment,response1,article);
+//        all.setCommentUserInfo(commentUserInfo);
 //        }
         Base.terminate();
         return all;

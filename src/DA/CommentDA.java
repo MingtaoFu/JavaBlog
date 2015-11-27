@@ -123,7 +123,36 @@ public class CommentDA {
         }
         return num;
     }
+    public static ArrayList getCommentUserInfo(int commentId){
+        String sql="SELECT User.LogoUrl,User.Name FROM Comment,User " +
+                    "WHERE Comment.Id='"+commentId+"' AND User.Id=Comment.User";
+        ArrayList commentUserInfo=new ArrayList();
+        try {
+            ResultSet resultSet=Base.statement.executeQuery(sql);//一定会找到？
+            while (resultSet.next()){
+                String logoUrl = resultSet.getString("LogoUrl");
+                String name = resultSet.getString("Name");
+                commentUserInfo.add(logoUrl);
+                commentUserInfo.add(name);
+            }
+            resultSet.close();
+        }
+        catch (SQLException ex){
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+            ArrayList arrayList=new ArrayList();
+            arrayList.add("$");
+            return arrayList;
+        }
+        return commentUserInfo;
+    }
+
 }
+
+
+
+
 //    public static ArrayList<String> getCommentId(String articleId){//?????????????
 //        String sql = "SELECT id FROM Comment WHERE ArticleId='"+articleId+"'";
 //        ArrayList<String> commentId=new ArrayList<String>();

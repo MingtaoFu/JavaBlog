@@ -16,10 +16,26 @@ public class Comment {
     private String articleId;
     private String content;
     private String user;
+    private String logoUrl;
+    private String name;
 //    @XmlElement()//???????????????????????????????
 //    ArrayList<Response> responses;
 
     public Comment() {
+    }
+    @XmlElement()
+    public String getLogoUrl() {
+        return logoUrl;
+    }
+    public void setLogoUrl(String logoUrl) {
+        this.logoUrl = logoUrl;
+    }
+    @XmlElement()
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
     @XmlElement()
     public int getId() {
@@ -70,6 +86,8 @@ public class Comment {
         return CommentDA.delete(ID);
     }
     public static int getCommentNum(int articleId){return CommentDA.getCommentNum(articleId);}
+
+    public static ArrayList getCommentUserInfo(int commentId){return CommentDA.getCommentUserInfo(commentId);}
 //    public static ArrayList<String> getCommentId(String articleId){//???????????
 //        return CommentDA.getCommentId(articleId);
 //    }
