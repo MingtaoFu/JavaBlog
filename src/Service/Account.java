@@ -29,7 +29,7 @@ public class Account {
                          @FormParam("name") String name,
                          @FormParam("pwd") String pwd) {
         Base.initialize();
-        User user = new User(id, name, pwd, "normal", null, new Timestamp(System.currentTimeMillis()), null);
+        User user = new User(id, name, pwd, "normal", null, null, null);
         int status = User.add(user);
         RT_Register register;
         if(1 == status) {

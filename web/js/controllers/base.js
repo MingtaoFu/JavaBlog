@@ -118,7 +118,7 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
         $scope.loginSubmit = function() {
             $.post('api/account/login', $rootScope.rootdata.login, function(resp) {
                 $scope.$apply(function() {
-                    if(resp.data.status) {
+                    if(resp.data.status == 1) {
                         document.cookie = "id=" + $rootScope.rootdata.login.id;
                         document.cookie = "token=" + resp.data.token;
                         /*
@@ -127,7 +127,27 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
                         $scope.status.loginPanel = false;
                         autoLogin($rootScope, $scope);
                     } else {
+                        alert("账户名或密码错误");
 
+                    }
+                });
+
+            });
+        };
+
+        $scope.registerSubmit = function() {
+            $.post('api/account/register', $rootScope.rootdata.register, function(resp) {
+                $scope.$apply(function() {
+                    if(resp.data.status ==1) {
+                        document.cookie = "id=" + $rootScope.rootdata.register.id;
+                        document.cookie = "token=" + resp.data.token;
+                        /*
+                        $rootScope.status.isValidated = true;
+                        */
+                        $scope.status.loginPanel = false;
+                        autoLogin($rootScope, $scope);
+                    } else {
+                        alert("用户名已存在");
                     }
                 });
 

@@ -34,7 +34,7 @@
                         <a href="/#/">主页</a>
                         <a ng-if="!status.isValidated" href="javascript: void 0" ng-click="status.loginPanel=true">登录</a>
                         <a ng-if="status.isValidated" href="/#/me">个人中心</a>
-                        <a ng-if="rootdata.info.type=='root'" href="/#/admin">写文章</a>
+                        <a ng-if="rootdata.info.type=='root' && status.isValidated" href="/#/admin">写文章</a>
                         <a ng-if="status.isValidated" ng-click="logout()" href="javascript: void 0">登出</a>
                     </nav>
                 </div>
@@ -97,23 +97,17 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist" id="myTabs">
             <li role="presentation" class="active">
-                <a href="javascript:void 0" data-target="login" aria-controls="login" role="tab" data-toggle="tab" ng-click="tab=1">登录</a>
+                <a href="javascript:void 0" data-target="#login" aria-controls="login" role="tab" data-toggle="tab"
+                   >登录</a>
             </li>
             <li role="presentation">
-                <a href="javascript:void 0" data-target="register" aria-controls="register" role="tab" data-toggle="tab">注册</a>
+                <a href="javascript:void 0" data-target="#register" aria-controls="register" role="tab" data-toggle="tab">注册</a>
             </li>
         </ul>
-        <script>
-            $('#myTabs a').click(function (e) {
-                console.log(11);
-                e.preventDefault();
-                $(this).tab('show');
-            });
-        </script>
 
         <!-- Tab panes -->
         <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="login">
+            <div role="tabpanel" class="tab-pane active" id="login">
                 <div class="pad">
                     <form class="pad" name="form" ng-submit = "loginSubmit()" novalidate>
                         <p>
@@ -145,28 +139,28 @@
                     </form>
                 </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade" id="register">
+            <div role="tabpanel" class="tab-pane" id="register">
                 <div class="pad">
-                    <form class="pad">
+                    <form class="pad" ng-submit="registerSubmit()">
                         <p>
                             <label for="registerNOInput">账号</label>&nbsp;
                             <input id="registerNOInput" type="text" class="form-control" placeholder=""
-                                   aria-describedby="basic-addon2">
+                                   aria-describedby="basic-addon2" ng-model="rootdata.register.id">
                         </p>
                         <p>
                             <label for="registerNameInput">昵称</label>&nbsp;
                             <input id="registerNameInput" type="text" class="form-control" placeholder=""
-                                   aria-describedby="basic-addon2">
+                                   aria-describedby="basic-addon2" ng-model="rootdata.register.name">
                         </p>
                         <p>
                             <label for="registerPWDInput">密码</label>&nbsp;
-                            <input id="registerPWDInput" type="text" class="form-control" placeholder=""
-                                   aria-describedby="basic-addon2">
+                            <input id="registerPWDInput" type="password" class="form-control" placeholder=""
+                                   aria-describedby="basic-addon2" ng-model="rootdata.register.pwd">
                         </p>
                         <br>
                         <div class="btn-group loginBtn" role="group" aria-label="...">
                             <button type="button" class="btn btn-default" ng-click="loginPanel=false">关闭</button>
-                            <button type="button" class="btn btn-primary">注册</button>
+                            <button type="submit" class="btn btn-primary">注册</button>
                         </div>
                     </form>
                 </div>

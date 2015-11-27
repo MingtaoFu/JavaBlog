@@ -91,4 +91,10 @@ a {
   position: absolute;
   bottom: 0; }
 
+.conImg img {
+  max-width: 100%; }
+
+.tab-pane {
+  overflow: auto; }
+
 /*# sourceMappingURL=base.css.map */
