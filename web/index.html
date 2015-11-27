@@ -35,6 +35,7 @@
                         <a ng-if="!status.isValidated" href="javascript: void 0" ng-click="status.loginPanel=true">登录</a>
                         <a ng-if="status.isValidated" href="/#/me">个人中心</a>
                         <a ng-if="rootdata.info.type=='root'" href="/#/admin">写文章</a>
+                        <a ng-if="status.isValidated" ng-click="logout()" href="javascript: void 0">登出</a>
                     </nav>
                 </div>
             </div>
@@ -44,7 +45,7 @@
         <aside class="boRa5 inb fll test2 padx" id="aside">
             <section>
                 <div class="blTitle">
-                    <h2>关于我</h2>
+                    <h2>关于博主</h2>
                 </div>
                 <div class="txtC">
                     <img src="" height="200" width="100">

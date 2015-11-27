@@ -6,6 +6,21 @@
  * main / article   login / personalCenter
  */
 
+//自动登录
+function autoLogin($rootScope, $scope) {
+    $.getJSON('api/account/personalInfo', function (resp) {
+        $scope.$apply(function () {
+            if (resp.data.status) {
+                $rootScope.rootdata.info = resp.data;
+                $rootScope.status.isValidated = true;
+            } else {
+                $rootScope.rootdata.info = {};
+                $rootScope.status.isValidated = false;
+            }
+        });
+    });
+}
+
 angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
@@ -36,7 +51,7 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
     })
     .filter('delTag', function ($sce) {
         return function (input) {
-            var reg = new RegExp("<[^<]*>", "gi")
+            var reg = new RegExp("<[^<]*>", "gi");
             //return input.replace(reg, '');
             return $sce.trustAsHtml(input.replace(reg, ''));
         }
@@ -80,14 +95,7 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
         };
 
         //自动登录
-        $.getJSON('api/account/personalInfo', function(resp) {
-            $scope.$apply(function() {
-                if(resp.data.status) {
-                    $rootScope.rootdata.info = resp.data;
-                    $rootScope.status.isValidated = true;
-                }
-            });
-        });
+        autoLogin($rootScope, $scope);
 
         //博主信息
         $.getJSON('mainInfo', function(resp) {
@@ -102,14 +110,22 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
 
         };
 
+        $scope.logout = function() {
+            document.cookie = 'token=';
+            autoLogin($rootScope, $scope);
+        };
+
         $scope.loginSubmit = function() {
             $.post('api/account/login', $rootScope.rootdata.login, function(resp) {
                 $scope.$apply(function() {
                     if(resp.data.status) {
                         document.cookie = "id=" + $rootScope.rootdata.login.id;
                         document.cookie = "token=" + resp.data.token;
+                        /*
                         $rootScope.status.isValidated = true;
+                        */
                         $scope.status.loginPanel = false;
+                        autoLogin($rootScope, $scope);
                     } else {
 
                     }
