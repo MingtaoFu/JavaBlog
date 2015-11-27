@@ -52,7 +52,13 @@ public class Base {
                         "CommentId int not null, FromUser varchar(32) not null, ToUser varchar(32) not null, primary key (Id), " +
                         "foreign key (FromUser) references User(Id), foreign key (ToUser) references User(Id) )",
                 "create Table Message(Id int not null auto_increment, Content text not null, Time timestamp not null default CURRENT_TIMESTAMP," +
-                        "User varchar(32) not null, primary key(Id), foreign key (User) references User(Id))"
+                        "User varchar(32) not null, primary key(Id), foreign key (User) references User(Id))",
+                "create Table Praise(Id int not null auto_increment,ArticleId int not null,Time timestamp not null default CURRENT_TIMESTAMP,"+
+                        "User varchar(32) not null,"+
+                        "primary key (Id),foreign key (ArticleId) references Article(ID),foreign key(User) references User(Id))",
+                "create Table PageView(Id int not null auto_increment,ArticleId int not null,Time timestamp not null default CURRENT_TIMESTAMP,"+
+                        "User varchar(32) not null,Nums int not null,"+
+                        "primary key (Id),foreign key (ArticleId) references Article(ID),foreign key(User) references User(Id))"
         };
         //依次执行各语句以建表，具体执行在CreateTables.java中
         for(int i = 0; i < sqlArr.length; i++) {

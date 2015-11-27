@@ -5,6 +5,7 @@ import javax.ws.rs.*;
 
 import DA.Base;
 import DA.ArticleDA;
+import DA.PraiseDA;
 import PD.*;
 
 import javax.ws.rs.GET;
@@ -103,6 +104,8 @@ public class Article {
             PD.Article article=articleList.articles.get(i);
             int a=article.getId();
             article.setCommentNum(PD.Comment.getCommentNum(a));
+            int b = PraiseDA.queryCount(a);
+            article.setPraiseNum(PraiseDA.queryCount(a));
         }
         Base.terminate();
         return  articleList;

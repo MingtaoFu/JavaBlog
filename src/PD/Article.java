@@ -22,7 +22,10 @@ public class Article {
 	String time;
 	String modifyTime;
     int commentNum;
+    private int praiseNum;
 
+    @XmlElement()
+    public int getPraiseNum() {return praiseNum;}
     @XmlElement()
 	public int getId() {return id;}
     @XmlElement()
@@ -52,6 +55,7 @@ public class Article {
 
     public void setCommentNum(int comments){this.commentNum=comments;}
 
+    public void setPraiseNum(int praiseNum) {this.praiseNum = praiseNum;}
     public void setIndex (int id){
             this.id = id;
         }

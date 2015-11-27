@@ -309,6 +309,37 @@ angular.module("app", ["jQueryRequest", "ngRoute", "ngFileUpload"])
         $scope.newComment = '';
         $scope.newResponse = [];
 
+        $scope.isActive = false;
+        $scope.star = function() {
+            $.post('api/article/praise/add', $location.search(), function(resp) {
+                $scope.$apply(function() {
+                    var data = resp.data;
+                    switch (data.status) {
+                        case 0:
+                            alert("请重新登录");
+                            break;
+                        case 1:
+                            $scope.isActive = true;
+                            break;
+                        case 2:
+                            $scope.isActive = false;
+                            break;
+                        case 3:
+                            break;
+                    }
+
+                });
+            });
+        };
+
+        $.getJSON('api/article/praise/isStar', $location.search(), function(resp) {
+            $scope.$apply(function() {
+                if(resp.data.status == 1) {
+                    $scope.isActive = true;
+                }
+            });
+        });
+
         //获取评论和回复
         $scope.getData = function() {
             $.getJSON('api/article/oneArticleContent', $location.search(), function(resp) {

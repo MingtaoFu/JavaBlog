@@ -140,3 +140,10 @@
 #messageInput{
   resize: none;
 }
+
+//点赞
+#star{
+  &.pink{color: pink}
+  text-decoration: none;
+
+}
